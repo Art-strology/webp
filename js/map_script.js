@@ -17,17 +17,35 @@ const itemsLinks = document.querySelectorAll('.items_links');
 
 const showAllItems = document.querySelector('#show_all_items');
 showAllItems.addEventListener('click', function(event) {
+    event.preventDefault();
     allItems.style.display = 'block';
     itemsLinks.forEach((itemLink) => {
         itemLink.style.display = 'none'; // Hide each items link
     });
     gElements.forEach((gElement) => {
-        event.preventDefault();
         gElement.style.display = 'block';
         narrativeButton.style.display = 'none';
         itemsLinks.forEach((itemLink) => {
             itemLink.style.display = 'none';
         });    
+    });
+});
+
+const showItemsInChronologicalOrder = document.querySelector('#show_chronological_order');
+showItemsInChronologicalOrder.addEventListener('click', function(event) {
+    event.preventDefault();
+    allItems.style.display = 'none';
+    narrativeButton.style.display = 'block';
+    narrativeButton.href = 'item1.html';
+    itemsLinks.forEach((itemLink) => {
+        if (itemLink.classList.contains('chronological_links')) {
+            itemLink.style.display = 'block';
+        } else {
+            itemLink.style.display = 'none';
+        }
+    });
+    gElements.forEach((gElement) => {
+        gElement.style.display = 'block';   
     });
 });
 

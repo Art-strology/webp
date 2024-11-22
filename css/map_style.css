@@ -1,16 +1,17 @@
 .color1 {color: #bcb48c;}
-            .color2 {color: #cbc7a6;}
-            .color3 {color: #212d55;}
-            .color4 {color: #4d7a96;}
-            .color5 {color: #bcd9d8;}
+.color2 {color: #cbc7a6;}
+.color3 {color: #212d55;}
+.color4 {color: #4d7a96;}
+.color5 {color: #bcd9d8;}
 
 
-            .kanit-regular-italic {
-                font-family: "Kanit", sans-serif;
-                font-weight: 400;
-                font-style: italic;
-            } 
-           .dropdown-submenu {
+.kanit-regular-italic {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.dropdown-submenu {
     position: relative;
 }
 
@@ -31,363 +32,363 @@
     display: block;
 }
 
-          .main_container {
-                display: flex;
-                flex-direction: row;
-                background-color: #cbc7a6;
-                padding-left: 40px;
-                padding-right: 40px;
-                padding-top: 100px;
-                padding-bottom: 30px;
-          }
+.main_container {
+    display: flex;
+    flex-direction: row;
+    background-color: #cbc7a6;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
 
-           .map_container {
-                display: flex;
-                background-color: white;
-                width: fit-content;
-                height: 600px;
-                justify-content: center;
-                align-content: center;
-                flex-grow: 1;
-                overflow: hidden;
-                position: relative; 
-           }
+.map_container {
+    display: flex;
+    background-color: white;
+    width: fit-content;
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative; 
+}
+
+.image-mapper-shape {
+    fill: blue;
+    opacity: 30%;
+}
+
+g:hover .image-mapper-shape {
+    fill:aqua;
+    stroke: white;
+    stroke-width: 2px;
+    opacity: 30%;
+}
+
+.popover {
+    background-color: black;
+    align-items: center;
+    cursor: pointer;
+    max-width: 210px; 
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.popover-header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 17px;
+    font-family: Arial, sans-serif;
+}
+
+.popover body {
+    padding: 0px;
+}
+
+.popover img.vertical_img {
+    width: 150px;
+    height: 170px;
+}
+
+.popover img.horizontal_img {
+    width: 170px;
+    height: 150px;
+}
+
+.popover img.square_img {
+    width: 180px;
+    height: 180px;
+}
+
+#map_navbar {
+    background-color: #212d55;;
+    padding: 0px;
+}
+
+/* Navigation links */
+#map_navbar a {
+    float: left;
+    font-size: 16px;
+    font-family: 'Kanit';
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    border-color: black;
+    text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+    float: left;
+    overflow: hidden;
+    font-family: 'Kanit';
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: white;
+    padding: 20px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+
+/* Navigation hover */
+#map_navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: #4d7a96;
+    margin: 0;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #4d7a96;;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    font-family: 'Kanit';
+    float: left;
+    color: white;
+    text-decoration: none;
+    border-color: black;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #bcd9d8;;
+    color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
+}    
+
+.sidebar {
+    background-color: #212d55;;
+    float: right;
+    margin: 0;          
+    padding-top: 35px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 250px;
+    height: 600px;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+.sidebar a {
+    font-family: 'Kanit';
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #bcd9d8;;
+    color: black;
+    text-decoration: underline;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 14px;
+}
+.sidebar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #25335f;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #4d7a96;
+    border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #bcd9d8;
+}
+
+.explore_this_narrative_button_container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
             
-           .image-mapper-shape {
-                fill: blue;
-                opacity: 30%;
-            }
+#narrative_button {
+    display: none;
+    background-color: #4d7a96;;
+    color: white;
+    border-color: white;
+    text-decoration: bold 20px;
+    border-width: 3px;
+}
 
-            g:hover .image-mapper-shape {
-                fill:aqua;
-                stroke: white;
-                stroke-width: 2px;
-                opacity: 30%;
-            }
+#narrative_button:hover {
+    background-color: white;
+    color: #4d7a96;
+    border-color: #4d7a96;
+}
 
-           .popover {
-                background-color: black;
-                align-items: center;
-                cursor: pointer;
-                max-width: 210px; 
-                display: flex;
-                flex-direction: column;
-                padding: 0px;
-           }
+.btn {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
-           .popover-header {
-                background-color: black;
-                text-align: center;
-                color: white;
-                padding-top: 17px;
-                font-family: Arial, sans-serif;
-           }
-           
-           .popover body {
-             padding: 0px;
-           }
+.items_links {
+    display: none;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
+}
 
-           .popover img.vertical_img {
-             width: 150px;
-             height: 170px;
-           }
-
-           .popover img.horizontal_img {
-                width: 170px;
-                height: 150px;
-           }
-
-           .popover img.square_img {
-                width: 180px;
-                height: 180px;
-           }
-
-            #map_navbar {
-                background-color: #212d55;;
-                padding: 0px;
-            }
-
-            /* Navigation links */
-            #map_navbar a {
-                float: left;
-                font-size: 16px;
-                font-family: 'Kanit';
-                color: white;
-                text-align: center;
-                padding: 20px 16px;
-                border-color: black;
-                text-decoration: none;
-            }
-
-            /* The subnavigation menu */
-            .subnav {
-                float: left;
-                overflow: hidden;
-                font-family: 'Kanit';
-            }
-
-            /* Subnav button */
-            .subnav .subnavbtn {
-                font-size: 16px;
-                border: none;
-                outline: none;
-                text-decoration: none;
-                color: white;
-                padding: 20px 16px;
-                background-color: inherit;
-                margin: 0;
-            }
-
-            /* Add a red background color to navigation links on hover */
-            #map_navbar a:hover, .subnav:hover .subnavbtn {
-                background-color: #4d7a96;;
-                margin: 0;
-            }
-
-            /* Style the subnav content - positioned absolute */
-            .subnav-content {
-                display: none;
-                position: absolute;
-                left: 0;
-                background-color: #4d7a96;;
-                width: 100%;
-                z-index: 1;
-            }
-
-            /* Style the subnav links */
-            .subnav-content a {
-                font-family: 'Kanit';
-                float: left;
-                color: white;
-                text-decoration: none;
-                border-color: black;
-            }
-
-            /* Add a grey background color on hover */
-            .subnav-content a:hover {
-                background-color: #bcd9d8;;
-                color: black;
-            }
-
-            /* When you move the mouse over the subnav container, open the subnav content */
-            .subnav:hover .subnav-content {
-                display: block;
-            }    
-
-            .sidebar {
-                background-color: #212d55;;
-                float: right;
-                margin: 0;          
-                padding-top: 35px;
-                padding-left: 0px;
-                padding-right: 0px;
-                width: 250px;
-                height: 600px;
-                overflow-y: auto;
-                justify-content: center;
-            }
-
-            .sidebar a {
-                font-family: 'Kanit';
-                display: block;
-                color: white;
-                padding: 16px;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-            .sidebar a:hover:not(.active) {
-                background-color: #bcd9d8;;
-                color: black;
-                text-decoration: underline;
-            }
-
-            .sidebar::-webkit-scrollbar {
-                width: 14px;
-            }
-            .sidebar::-webkit-scrollbar-track {
-                border-radius: 10px;
-                background: #25335f;
-            }
-            .sidebar::-webkit-scrollbar-thumb {
-                background: #4d7a96;
-                border-radius: 10px;
-            }
-            .sidebar::-webkit-scrollbar-thumb:hover {
-                background: #bcd9d8;
-            }
-
-            .explore_this_narrative_button_container {
-                display: flex;
-                align-items: center;
-                padding: 20px;
-            }
-                        
-            #narrative_button {
-                display: none;
-                background-color: #4d7a96;;
-                color: white;
-                border-color: white;
-                text-decoration: bold 20px;
-                border-width: 3px;
-            }
-            
-            #narrative_button:hover {
-                background-color: white;
-                color: #4d7a96;
-                border-color: #4d7a96;
-            }
-
-           .btn {
-                padding-top: 10px;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-           }
-
-            .items_links {
-                display: none;
-                flex-wrap: wrap; /* Allow items to wrap */
-                justify-content: center; /* Center items horizontally */
-            }
-
-            /* Hover effect */
-            .items_links a:hover {
-                background-color: #0056b3; /* Darker shade on hover */
-            }
+/* Hover effect */
+.items_links a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
 
 
 
-           @media screen and (max-width: 1300px) {
-                
-                .layout-container {
-                    flex-direction: column; /* Stack items vertically */
-                }
+@media screen and (max-width: 1300px) {
+    
+    .layout-container {
+        flex-direction: column; /* Stack items vertically */
+    }
 
-                .sidebar {
-                    width: 100%; /* Full width for sidebar */
-                    height: 200px;
-                    overflow-y: auto;
-                }
+    .sidebar {
+        width: 100%; /* Full width for sidebar */
+        height: 200px;
+        overflow-y: auto;
+    }
 
-                .all_items {
-                    padding-top: 0px;
-                    justify-content: center;
-                    text-align: center;
-                }
+    .all_items {
+        padding-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
 
-                .explore_this_narrative_button_container {
-                    align-items: center;
-                }
+    .explore_this_narrative_button_container {
+        align-items: center;
+    }
 
-                .map_container {
-                    height: auto; /* Allow map container height to adjust */
-                }
+    .map_container {
+        height: auto; /* Allow map container height to adjust */
+    }
 
-                .popover {
-                    max-width: 150px;
-                }
+    .popover {
+        max-width: 150px;
+    }
 
-                .popover-header {
-                    font-size: 10px;
-                    text-align: center;
-                }
+    .popover-header {
+        font-size: 10px;
+        text-align: center;
+    }
 
-                .popover img.vertical_img {
-                    width: 100px;
-                    height: 120px;
-                }
+    .popover img.vertical_img {
+        width: 100px;
+        height: 120px;
+    }
 
-                .popover img.horizontal_img {
-                    width: 130px;
-                    height: 100px;
-                }
+    .popover img.horizontal_img {
+        width: 130px;
+        height: 100px;
+    }
 
-                .popover img.square_img {
-                    width: 120px;
-                    height: 120px;
-                }
+    .popover img.square_img {
+        width: 120px;
+        height: 120px;
+    }
 
-                .explore_this_narrative_button_container {
-                    justify-content: center;
-                }
+    .explore_this_narrative_button_container {
+        justify-content: center;
+    }
 
-                #narrative_button {
-                    width: 200px;
-                    height: 100px;
-                }
-                
-                .item_links_container {
-                    justify-content: center;
-                    text-align: center;
-                }
+    #narrative_button {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .item_links_container {
+        justify-content: center;
+        text-align: center;
+    }
 
-                .items_links {                   
-                    flex-direction: column; /* Stack links vertically */
-                    align-items: center; /* Center align items */
-                }
+    .items_links {                   
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align items */
+    }
 
-                .items_links a {
-                    flex: 0 1 calc(50% - 10px); 
-                }
-            }   
+    .items_links a {
+        flex: 0 1 calc(50% - 10px); 
+    }
+}   
 
-            @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
 
-                .main_container {
-                    padding-left: 0px;
-                    padding-right: 0px;
-                }
+    .main_container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
-                .sidebar a {
-                    text-align: center;
-                    float: none;
-                }
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
 
-                .popover {
-                    max-width: 35vw;
-                    padding: 0px;
-                }
+    .popover {
+        max-width: 35vw;
+        padding: 0px;
+    }
 
-                .popover img.vertical_img {
-                    width: 28vw;
-                    height: 30vw;
-                }
+    .popover img.vertical_img {
+        width: 28vw;
+        height: 30vw;
+    }
 
-                .popover img.horizontal_img {
-                        width: 30vw;
-                        height: 28vw;
-                }
+    .popover img.horizontal_img {
+            width: 30vw;
+            height: 28vw;
+    }
 
-                .popover img.square_img {
-                    width: 30vw;
-                    height: 30vw;
-                }
-                
-                .navbar a, .subnav .subnavbtn {
-                    font-size: 14px; /* Smaller font size */
-                    padding: 10px 12px; /* Smaller padding */
-                }
+    .popover img.square_img {
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    .navbar a, .subnav .subnavbtn {
+        font-size: 14px; /* Smaller font size */
+        padding: 10px 12px; /* Smaller padding */
+    }
 
-                .navbar {
-                    padding: 5px; /* Reduce navbar padding */
-                }
+    .navbar {
+        padding: 5px; /* Reduce navbar padding */
+    }
 
-                .subnav-content {
-                    padding-left: 5px;
-                    font-size: 11px; /* Smaller font size for subnav content */
-                }
+    .subnav-content {
+        padding-left: 5px;
+        font-size: 11px; /* Smaller font size for subnav content */
+    }
 
-                .explore_this_narrative_button_container {
-                    padding: 0px;
-                }
+    .explore_this_narrative_button_container {
+        padding: 0px;
+    }
 
-                #narrative_button {
-                    width: 200px;
-                    height: 60px;
-                    font-size: 15px;
-                    text-align:center;
-                    justify-content: center;
-                }
+    #narrative_button {
+        width: 200px;
+        height: 60px;
+        font-size: 15px;
+        text-align:center;
+        justify-content: center;
+    }
 
-            }
+}
