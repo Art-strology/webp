@@ -1,6 +1,6 @@
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /*4 for each row*/
+  grid-template-columns: repeat(3, 1fr); /*3 for each row*/
   gap: 20px; /*gap between cards */
   max-width: 1200px; 
   margin: 0 auto;
