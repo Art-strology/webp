@@ -1,0 +1,371 @@
+.navbar {
+    background-color: white;
+    padding-bottom: 0px !important;
+}
+
+.navbar .nav-link {
+    color: black; 
+}
+
+.navbar-brand {
+    color: black;
+}
+
+body {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h2 {
+    text-align: center;
+    font-family:Crimson Text, serif;
+    padding: 20px; /* Aggiunge spazio all'interno del bordo */
+    margin-top: 30px; /* Aggiunge spazio esterno sopra e sotto il titolo */
+    background-color: #f8f8f8;
+}
+
+h3 {
+    font-family: Crimson Text, serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*NARRATIVE PART*/
+
+.top-image-container {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    padding-top: 9%;
+    overflow: hidden; /* Nasconde le parti fuori dal riquadro */
+}
+
+.top-img {
+    position: absolute;
+    left: 50%; /* Sposta l'immagine verso destra */
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -52%); /* Centra l'immagine all'interno del contenitore */
+    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+    filter: opacity(0.7);
+}
+
+
+.narrative-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(224, 224, 224, 0.8);
+    font-size: 2.5vw;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+
+
+
+/*OBJECT PART*/
+
+.img-data-container {
+    position: relative;
+    display: flex;               /* Utilizza flexbox per il layout */
+    align-items: flex-start;    /* Allinea gli elementi all'inizio */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.data-container {
+    padding-top: 20px;
+}
+
+.image-container {
+    flex: 1;                   
+    margin-right: 50px;  
+    background-color: #f8f8f8;     
+    padding: 15px;
+    cursor: pointer;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container {
+    flex: 2;                   
+}
+
+.obj-img {
+    max-width: 100%;            /* Rende l'immagine responsiva */
+    height: 100%;  
+    object-fit: contain;  
+               
+}
+
+
+
+/*SMALLER SCREENS*/
+@media (max-width: 768px) {
+    .img-data-container {
+        display: block; /* Imposta i contenitori uno sotto l'altro */
+    }
+
+    .image-container {
+        margin-bottom: 20px; 
+    }
+
+    .info-container {
+        margin-bottom: 20px; 
+    }
+
+    h2 {
+        text-align: left; 
+    }
+
+    .obj-img {
+        max-width: 100%;   
+        height: auto;     
+    }
+
+    .image-container {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+
+}
+
+
+/*ARROWS*/
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1;
+}
+
+
+.left-arrow {
+    left: -100px;
+   
+}
+
+.right-arrow {
+    right: -100px
+}
+
+
+/* Tooltip base */
+.arrow::after {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(99, 99, 99);
+    border-radius: 15px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.arrow:hover::after {
+    opacity: 1;
+}
+
+.left-arrow::after {
+    content: "previous object";
+}
+
+.right-arrow::after {
+    content: "next object";
+}
+
+
+
+
+/*LIGHTBOX */
+#lightbox {
+    display: none;
+}
+
+.lightbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(248, 248, 248, 0.9); /*dietro non c'è niente*/
+    z-index: 1000;
+}
+
+#lightbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 95%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    text-align: center;
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#imageZoom { /*container*/
+    width: 550px;
+    height: 600px;
+    position: relative;
+}
+
+#main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+#imageZoom::after{
+    display: var(--display);
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: var(--url);
+    background-size: 200%;  /*potenza zoom*/
+    background-position: var(--zoom-x) var(--zoom-y);
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
+/*TABLE*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1.5px solid #efd199; 
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:last-child th {
+    border-bottom: none;
+}
+
+
+
+/*LINE*/
+.line {
+    background-color: #efd199;
+}
+
+
+/*ITEM DESCRIPTION*/
+
+.item-description {
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.item-description-text {
+    text-align: justify;
+
+}
+
+button.btn {
+    border-radius: 30px; 
+}
+
+button.btn:hover {
+    background-color: #f1e4ce;
+}
+
+
+.show-more-text {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s ease;
+}
+
+.show-more-text.expanded {
+    max-height: none;
+}
+
+
+/*OTHER NARRATIVES*/
+
+.other-narratives {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 40px;
+    background-color: #f0dab3;
+}
+
+h4 {
+    font-family:Crimson Text, serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h5 {
+    font-family:Crimson Text, serif;
+    text-align: center;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card-text {
+    font-size: 90%;
+    text-align: center;
+    
+}
+
+.card-img-top {
+    height: 250px; /* Imposta un'altezza fissa per tutte le immagini */
+    object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
+    width: 100%; /* Rende l'immagine larga quanto il contenitore */
+}
+
+
+.footer {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
