@@ -139,7 +139,7 @@
             }
 
             /* Add a red background color to navigation links on hover */
-            .navbar a:hover, .subnav:hover .subnavbtn {
+            #map_navbar a:hover, .subnav:hover .subnavbtn {
                 background-color: #4d7a96;;
                 margin: 0;
             }
