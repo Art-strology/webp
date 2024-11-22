@@ -1,7 +1,0 @@
-.vco-storyjs {
-    background-image: url('https://github.com/IMWT-project/timeline/blob/main/img_compressed/babylonian_hired_man_white.jpg?raw=true');
-    background-size: cover;  /* Adatta l'immagine alla dimensione dello sfondo */
-    background-position: center;  /* Centra l'immagine */
-    background-attachment: fixed; /* Mantiene l'immagine fissa mentre si scorre */
-    background-color: #f0f0f0; /* Colore di sfondo di fallback */
-}
