@@ -45,7 +45,8 @@ showItemsInChronologicalOrder.addEventListener('click', function(event) {
         }
     });
     gElements.forEach((gElement) => {
-        gElement.style.display = 'block';   
+        gElement.style.display = 'block';
+   
     });
 });
 

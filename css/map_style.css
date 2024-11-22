@@ -103,13 +103,13 @@ g:hover .image-mapper-shape {
     height: 180px;
 }
 
-#map_navbar {
-    background-color: #212d55;;
+.map_navbar {
+    background-color: #212d55;
     padding: 0px;
 }
 
 /* Navigation links */
-#map_navbar a {
+.map_navbar a {
     float: left;
     font-size: 16px;
     font-family: 'Kanit';
@@ -123,7 +123,7 @@ g:hover .image-mapper-shape {
 /* The subnavigation menu */
 .subnav {
     float: left;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Kanit';
 }
 
@@ -136,26 +136,22 @@ g:hover .image-mapper-shape {
     color: white;
     padding: 20px 16px;
     background-color: inherit;
+}
+
+.map_link:hover, .subnav:hover .subnavbtn {
+    background-color:#4d7a96 ;
     margin: 0;
 }
 
-/* Navigation hover */
-#map_navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: #4d7a96;
-    margin: 0;
-}
-
-/* Style the subnav content - positioned absolute */
 .subnav-content {
     display: none;
     position: absolute;
     left: 0;
-    background-color: #4d7a96;;
+    background-color: #4d7a96;
     width: 100%;
     z-index: 1;
 }
 
-/* Style the subnav links */
 .subnav-content a {
     font-family: 'Kanit';
     float: left;
@@ -164,9 +160,8 @@ g:hover .image-mapper-shape {
     border-color: black;
 }
 
-/* Add a grey background color on hover */
 .subnav-content a:hover {
-    background-color: #bcd9d8;;
+    background-color: #bcd9d8;
     color: black;
 }
 
@@ -176,7 +171,7 @@ g:hover .image-mapper-shape {
 }    
 
 .sidebar {
-    background-color: #212d55;;
+    background-color: #212d55;
     float: right;
     margin: 0;          
     padding-top: 35px;
@@ -198,7 +193,7 @@ g:hover .image-mapper-shape {
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #bcd9d8;;
+    background-color: #bcd9d8;
     color: black;
     text-decoration: underline;
 }
@@ -226,7 +221,7 @@ g:hover .image-mapper-shape {
             
 #narrative_button {
     display: none;
-    background-color: #4d7a96;;
+    background-color: #4d7a96;
     color: white;
     border-color: white;
     text-decoration: bold 20px;
