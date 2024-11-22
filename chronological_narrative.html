@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="css/css_chronological_narrative.css">
+    <!--link for icon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!--lightbox-->
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="timeline.html">Timeline</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <hr class="line">
+
+    </header>
+
+    <main>
+
+        <div class="top-image-container">
+            <h2 class="narrative-title">CHRONOLOGICAL NARRATIVE</h2>
+            <img class = "top-img" src="img/img_narratives/meridiana3.jpg" alt="meridiana">
+        </div>
+
+
+        <div class="img-data-container">
+            <div class="arrow left-arrow">&#10094;</div>
+            <div class="image-container">
+                <img class = "obj-img" src="img/egyptian_two_turtle.jpg" alt="palette depicting a pair of mud turtles">
+            </div>
+
+            <!--LIGHTBOX -->
+            <div id="lightbox">
+                <div class="lightbox-container">
+                    <div id="lightbox-content">
+                        <button id="close-btn" onclick="closeLightbox()">✕</button>
+                        <div id="imageZoom" style="
+                            --url: url(https://github.com/IMWT-project/timeline/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true);
+                            --zoom-x: 0%; --zoom-y: 0%
+                            --display: none ">
+                            <img id="main-image" src="img/egyptian_two_turtle.jpg" alt="Artwork">
+                        </div>
+                    </div>
+                </div>    
+            </div> 
+
+
+            <div class="info-container"> 
+                <h2>PALETTE DEPICTING A PAIR OF MUD TURTLES</h2>
+                <button type="button" class="btn btn-light btn-sm"> <i class="fa-regular fa-map"></i>  see the map</button>
+                <div class="data-container">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Data:</th>
+                                <td>ca. 3650–3500 B.C.</td>
+                            </tr>
+                            <tr>
+                                <th>Period:</th>
+                                <td>
+                                    Predynastic, early Naqada II
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Geography:</th>
+                                <td>Egypt</td>
+                            </tr>
+                            <tr>
+                                <th>Medium:</th>
+                                <td>Greywacke</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensions:</th>
+                                <td> H. 15.3 x W. 16 x Th. 0.6 cm (6 x 6 5/16 x 1/4 in.)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="arrow right-arrow">&#10095;</div>
+        </div>
+
+        <hr class="line">
+
+        <div class="item-description">
+
+            <h3>OBJECT DESCRIPTION</h3>
+            <p class="item-description-text">The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. 
+                The duo may represent a mating pair linking the palette’s imagery to the concept of fertility and therefore regeneration. In the Pharaonic Period, the turtle had a dual reputation, on one hand the animal was connected to chaos and disorder, 
+                and on the other, it could be a potent amulet when the turtle’s negative character was used as a protective force. Given the turtle is the subject of an implement for manufacturing pigment for eye paint, a protective interpretation seems fitting.
+            </p>
+            <p class="show-more-text">
+                The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. The duo may represent a mating pair linking the palette’s imagery 
+                to the concept of fertility and therefore regeneration. In the Pharaonic Period, the turtle had a dual reputation, on one hand the animal was connected to chaos and disorder, and on the other, it could be a potent amulet when the turtle’s 
+                negative character was used as a protective force. Given the turtle is the subject of an implement for manufacturing pigment for eye paint, a protective interpretation seems fitting.
+            </p>
+
+            <button type="button" class="btn btn-light btn-sm" id="btn_more" onclick="toggleDescription()"> <i class="fa-solid fa-plus"></i>  show more</button>
+        </div>
+    </main>
+
+<!--links to other narratives-->
+
+    <div class="other-narratives">
+        <h4>EXPLORE RELATED NARRATIVES</h4>
+        <div class="row">
+            <!--card 1-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="img/img_narratives/geogr_narrative.jpeg" class="card-img-top" alt="world map">
+                    <div class="card-body">
+                        <h5 class="card-title">Geographical Narrative</h5>
+                        <p class="card-text">Explore artworks coming from the same place.</p>
+                    </div>
+                </div>
+            </div> 
+            <!--card 2-->
+            <div class="col-sm-4">
+                <a href="shapes_narrative.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="img/img_narratives/shapes_narrative.jpeg" class="card-img-top" alt="shapes of constellations">
+                        <div class="card-body">
+                            <h5 class="card-title">Shapes Narrative</h5>
+                            <p class="card-text">Explore artworks representing constallations with same shape.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--card 3-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="img/img_narratives/constellation3.jpg" class="card-img-top" alt="image of stars forming constellations">
+                    <div class="card-body">
+                        <h5 class="card-title">Constellation Narrative</h5>
+                        <p class="card-text">Explore artworks representing the same constellation.</p>
+                    </div>
+                </div>
+            </div>
+            <!--card 4
+            <div class="col-sm-4">
+                <a href="timeline.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <img src="img/img_narratives/meridiana_2.jpg" class="card-img-top" alt="clessidra">
+                        <div class="card-body">
+                            <h5 class="card-title">Timeline</h5>
+                            <p class="card-text">Explore the artwork's position in the timeline.</p>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+        </div>
+    </div>
+ 
+
+
+    
+    <footer class="footer">
+            <p>. <br>. <br> footer <br> . <br> . </p>
+
+            
+    </footer>
+
+
+
+<!-- script for Lightbox -->
+ 
+<script>
+
+    function openLightbox() {
+        document.getElementById("lightbox").style.display = "block";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    // Event listener per aprire la lightbox al clic sull'immagine principale
+    document.querySelector(".obj-img").addEventListener("click", openLightbox);
+
+    //ZOOM
+    let imageZoom = document.getElementById('imageZoom');
+    imageZoom.addEventListener('mousemove', (event) => {
+        imageZoom.style.setProperty('--display', 'block');
+        let pointer = {
+            x: (event.offsetX * 100) / imageZoom.offsetWidth,
+            y: (event.offsetY * 100) / imageZoom.offsetHeight
+        }
+        imageZoom.style.setProperty('--zoom-x', pointer.x + '%');
+        imageZoom.style.setProperty('--zoom-y', pointer.y + '%');
+
+        console.log(pointer);
+    })
+    imageZoom.addEventListener('mouseout', () => {
+        imageZoom.style.setProperty('--display', 'none');
+    })
+    
+    
+
+    //TEXT EXPANSION
+    function toggleDescription() {
+        const descriptionText = document.querySelector('.show-more-text');
+        const button = document.getElementById('btn_more')
+
+        descriptionText.classList.toggle('expanded');
+        
+        // Cambia il testo del bottone
+        if (descriptionText.classList.contains('expanded')) {
+            button.innerHTML = '<i class="fa-solid fa-minus"></i> show less';
+        } else {
+            button.innerHTML = '<i class="fa-solid fa-plus"></i> show more';
+        }
+    }
+
+
+</script>
+
+    
+</body>
+</html>
