@@ -82,13 +82,13 @@
                 height: 180px;
            }
 
-            .navbar {
+            #map_navbar {
                 background-color: #212d55;;
                 padding: 0px;
             }
 
             /* Navigation links */
-            .navbar a {
+            #map_navbar a {
                 float: left;
                 font-size: 16px;
                 font-family: 'Kanit';
