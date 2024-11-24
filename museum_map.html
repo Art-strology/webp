@@ -89,28 +89,28 @@
         <div class="main_container row justify-content-center">
             <div class="map_navbar">
                 <div class="narratives_container">
-                    <a class="map_link" id="show_all_items" href="#">Show all items</a>
+                    <a class="map_link" id="show_all_items" href="#" items="all" items_links="all_items" narrative_button_link="" onclick="displayContent()">Show all items</a>
                     <div class="subnav">
                         <button class="subnavbtn">Geographical <i class="fa fa-caret-down"></i></button>
                         <div class="subnav-content">
-                            <a class="subnav-content-link" id="show_babilonian_items" href="#">Babilonia</a>
-                            <a class="subnav-content-link" id="show_egyptian_items" href="#">Egypt</a>
-                            <a class="subnav-content-link" id="show_greek_items" href="#">Greece</a>
-                            <a class="subnav-content-link" id="show_chinese_items" href="#">China</a>
+                            <a class="map_link subnav-content-link" id="show_babilonian_items" href="#" items="babilonian_item" items_links="babilonia_links" narrative_button_link="https://en.wikipedia.org/wiki/Babilonia#Altro" onclick="displayContent()">Babilonia</a>
+                            <a class="map_link subnav-content-link" id="show_egyptian_items" href="#" items="egyptian_item" items_links="egypt_links" narrative_button_link="https://en.wikipedia.org/wiki/Egitto" onclick="displayContent()">Egypt</a>
+                            <a class="map_link subnav-content-link" id="show_greek_items" href="#" items="greek_item" items_links="greece_links" narrative_button_link="https://en.wikipedia.org/wiki/Grecia" onclick="displayContent()">Greece</a>
+                            <a class="map_link subnav-content-link" id="show_chinese_items" href="#" items="chinese_item" items_links="china_links" narrative_button_link="https://en.wikipedia.org/wiki/Cina" onclick="displayContent()">China</a>
                         </div>
                     </div> 
-                    <a class="map_link" id="show_chronological_order" href="#">Chronological </a>
+                    <a class="map_link" id="show_chronological_order" href="#" items="all" items_links="chronological_links" narrative_button_link="https://en.wikipedia.org/wiki/Time" onclick="displayContent()">Chronological </a>
                     <div class="subnav">
                         <button class="subnavbtn"> Symbols <i class="fa fa-caret-down"></i></button>
                         <div class="subnav-content">
-                            <a id="show_bull_items" href="#">Bull</a>
-                            <a id="show_capricorn_items" href="#">Capricorn</a>
-                            <a id="show_human_items" href="#">Human figures</a>
-                            <a id="show_dragon_items" href="#">Dragon</a>
-                            <a id="show_turtle_items" href="#">Turtle</a>
+                            <a class="map_link subnav-content-link" id="show_bull_items" href="#" items="bull" items_links="bull_links" narrative_button_link="https://en.wikipedia.org/wiki/Bull" onclick="displayContent()">Bull</a>
+                            <a class="map_link subnav-content-link" id="show_capricorn_items" href="#" items="capricorn" items_links="capricorn_links" narrative_button_link="https://en.wikipedia.org/wiki/Capricorn_(astrology)" onclick="displayContent()">Capricorn</a>
+                            <a class="map_link subnav-content-link" id="show_human_items" href="#" items="human" items_links="human_links" narrative_button_link="https://en.wikipedia.org/wiki/Human" onclick="displayContent()">Human figures</a>
+                            <a class="map_link subnav-content-link" id="show_dragon_items" href="#" items="dragon" items_links="dragon_links" narrative_button_link="https://en.wikipedia.org/wiki/Dragon" onclick="displayContent()">Dragon</a>
+                            <a class="map_link subnav-content-link" id="show_turtle_items" href="#" items="turtle" items_links="turtle_links" narrative_button_link="https://en.wikipedia.org/wiki/Turtle" onclick="displayContent()">Turtle</a>
                         </div>
                     </div>
-                    <a class="map_link" id="show_zodiac" href="#">Zodiac </a>
+                    <a class="map_link" id="show_zodiac" href="#" items="zodiac" items_links="zodiac_links" narrative_button="yes" narrative_button_link="https://en.wikipedia.org/wiki/Zodiac" onclick="displayContent()">Zodiac </a>
                 </div>                                        
             </div>        
             <div class="map_container col-md-8">
@@ -149,7 +149,7 @@
                     <g class="custom_poover chinese_item zodiac dragon" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Mirror with animal heads and azure dragons" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/mirror_dragon.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="11" points="858.104 223.704 899.404 212.232 899.404 256.972 898.256 291.388 886.784 292.536 858.104 269.592"></polygon>
                     </g>
-                    <g class="custom_poover chinese_item zodiac bull" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with white tiger" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/tiger.jpg'&gt;">
+                    <g class="custom_poover chinese_item zodiac" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with white tiger" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/tiger.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="12" points="942.997 212.232 967.088 220.262 969.383 246.648 944.144 260.414"></polygon>
                     </g>
                     <g class="custom_poover chinese_item zodiac turtle" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Hanging scroll with rubbing of Xuanwu" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/turtle_scroll.jpg'&gt;">
@@ -224,6 +224,7 @@
                     </div>
                     <div class="items_links zodiac_links">
                         <a href="">1. Votive relief</a>
+                        <a href="">2. Cerimonial basin</a>
                         <a href="">3. Greenstone cylinder seal</a>
                         <a href="">5. Orange-cream shell cylinder seal</a>
                         <a href="">6. Neck amphora: Europa and the bull</a>
