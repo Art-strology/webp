@@ -106,6 +106,7 @@ g:hover .image-mapper-shape {
 .map_navbar {
     background-color: #212d55;
     padding: 0px;
+    position: relative;
 }
 
 /* Navigation links */
@@ -123,7 +124,7 @@ g:hover .image-mapper-shape {
 /* The subnavigation menu */
 .subnav {
     float: left;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Kanit';
 }
 
@@ -136,10 +137,16 @@ g:hover .image-mapper-shape {
     color: white;
     padding: 20px 16px;
     background-color: inherit;
+    position: relative;
 }
 
 .map_link:hover, .subnav:hover .subnavbtn {
     background-color:#4d7a96 ;
+    margin: 0;
+}
+
+.map_link.active, .subnav.active .subnavbtn {
+    background-color: purple;
     margin: 0;
 }
 
@@ -163,6 +170,11 @@ g:hover .image-mapper-shape {
 .subnav-content a:hover {
     background-color: #bcd9d8;
     color: black;
+}
+
+.subnav-content a.active {
+    background-color: purple;
+    color: white;
 }
 
 /* When you move the mouse over the subnav container, open the subnav content */

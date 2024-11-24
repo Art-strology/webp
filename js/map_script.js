@@ -19,6 +19,10 @@ mapLinks.forEach(mapLink => {
         var items_links = mapLink.getAttribute('items_links');     
         var narrative_button_link = mapLink.getAttribute('narrative_button_link');
         event.preventDefault();
+        mapLinks.forEach(function(otherLink) {
+            otherLink.classList.remove('active');
+        });
+        this.classList.add('active');
         showItems(items);
         showItemsLinks(items_links);
         narrativeButtonLink(narrative_button_link);
@@ -65,4 +69,11 @@ function narrativeButtonLink (link) {
     else {
         narrativeButton.style.display = 'none';
     };
+}
+
+function changeBackgroundColor () {
+    mapLinks.forEach(function(otherLink) {
+        otherLink.classList.remove('active');
+    });
+    this.classList.add('active');
 }
