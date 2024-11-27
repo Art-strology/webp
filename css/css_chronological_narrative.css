@@ -11,16 +11,18 @@
     color: black;
 }
 
+
 body {
-    background-color: white;
+    background-color: rgb(195, 248, 230);
     border-bottom: 1px solid #e0e0e0;
 }
+
 
 h2 {
     text-align: center;
     font-family:Crimson Text, serif;
-    padding: 20px; /* Aggiunge spazio all'interno del bordo */
-    margin-top: 30px; /* Aggiunge spazio esterno sopra e sotto il titolo */
+    padding: 20px; 
+    margin-top: 30px; 
     background-color: #f8f8f8;
 }
 
@@ -44,10 +46,10 @@ h3 {
 
 .top-img {
     position: absolute;
-    left: 50%; /* Sposta l'immagine verso destra */
+    left: 50%; 
     width: 100%;
     height: auto;
-    transform: translate(-50%, -52%); /* Centra l'immagine all'interno del contenitore */
+    transform: translate(-50%, -52%); 
     object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
     filter: opacity(0.7);
 }
@@ -66,15 +68,25 @@ h3 {
     padding: 10px;
 }
 
+@media (max-width: 1024px) {
+    .narrative-title {
+        font-size: 3.5vw !important;
+    }
+}
 
+@media (max-width:768px) {
+    .narrative-title {
+        font-size: 4.5vw;
+    }
+}
 
 
 /*OBJECT PART*/
 
 .img-data-container {
     position: relative;
-    display: flex;               /* Utilizza flexbox per il layout */
-    align-items: flex-start;    /* Allinea gli elementi all'inizio */
+    display: flex;               
+    align-items: flex-start;   
     margin-top: 50px;
     margin-bottom: 30px;
     margin-left: 10%;
@@ -103,43 +115,28 @@ h3 {
 }
 
 .obj-img {
-    max-width: 100%;            /* Rende l'immagine responsiva */
+    max-width: 100%;            
     height: 100%;  
     object-fit: contain;  
                
 }
 
 
-
-/*SMALLER SCREENS*/
 @media (max-width: 768px) {
     .img-data-container {
-        display: block; /* Imposta i contenitori uno sotto l'altro */
+        display: block ;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .image-container {
-        margin-bottom: 20px; 
+        margin-bottom: 30px;
+        margin-right: 0;
     }
-
-    .info-container {
-        margin-bottom: 20px; 
-    }
-
-    h2 {
-        text-align: left; 
-    }
-
-    .obj-img {
-        max-width: 100%;   
-        height: auto;     
-    }
-
-    .image-container {
-        max-width: 70%;
-        margin-left: 15%;
-    }
-
 }
+
+
+
 
 
 /*ARROWS*/
@@ -261,8 +258,6 @@ h3 {
 
 
 
-
-
 /*TABLE*/
 table {
     width: 100%;
@@ -324,6 +319,8 @@ button.btn:hover {
 }
 
 
+
+
 /*OTHER NARRATIVES*/
 
 .other-narratives {
@@ -357,15 +354,27 @@ h5 {
 }
 
 .card-img-top {
-    height: 250px; /* Imposta un'altezza fissa per tutte le immagini */
+    height: 250px; 
     object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
-    width: 100%; /* Rende l'immagine larga quanto il contenitore */
+    width: 100%; 
 }
 
 
+
+
+
+/* FOOTER */ 
 .footer {
     background-color: white;
     margin: 0px;
     padding: 0px;
     clear: both;
 }
+
+
+
+
+
+
+
+
