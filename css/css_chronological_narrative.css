@@ -15,6 +15,9 @@
 body {
     background-color: rgb(195, 248, 230);
     border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -40,6 +43,7 @@ h3 {
     margin-left: 2%;
     margin-right: 2%;
     width: 96%;
+    height: 100px;
     padding-top: 9%;
     overflow: hidden; /* Nasconde le parti fuori dal riquadro */
 }
@@ -77,6 +81,10 @@ h3 {
 @media (max-width:768px) {
     .narrative-title {
         font-size: 4.5vw;
+    }
+
+    .top-img {
+        transform: translate(-50%, -35%);
     }
 }
 
