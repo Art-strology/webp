@@ -124,7 +124,7 @@ h3 {
 
 @media (max-width: 768px) {
     .img-data-container {
-        display: block ;
+        display: block;
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -166,6 +166,14 @@ h3 {
 .right-arrow {
     right: -100px
 }
+
+
+@media (max-width: 768px) {
+    .arrow {
+      display: none;
+    }
+  }
+
 
 
 /* Tooltip base */
