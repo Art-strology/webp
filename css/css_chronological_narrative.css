@@ -136,6 +136,13 @@ h3 {
 }
 
 
+#map_btn {
+    border-radius: 30px;
+}
+
+#map_btn:hover {
+    background-color: #f1e4ce;
+}
 
 
 
