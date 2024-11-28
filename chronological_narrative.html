@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -217,7 +218,9 @@
 
     // LIGHTBOX
     function openLightbox() {
-        document.getElementById("lightbox").style.display = "block";
+        if (window.innerWidth > 768) {
+            document.getElementById("lightbox").style.display = "block";
+        }
     }
 
     function closeLightbox() {
