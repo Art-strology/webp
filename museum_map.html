@@ -93,85 +93,102 @@
                     <a class="map_link" id="show_all_items" href="#" items="all" items_links="all_items" narrative_button_link="" onclick="displayContent()">Show all items</a>
                     <div class="subnav">
                         <button class="subnavbtn">Geographical <i class="fa fa-caret-down"></i></button>
-                        <div class="subnav-content">
-                            <a class="map_link subnav-content-link" id="show_babilonian_items" href="#" items="babilonian_item" items_links="babilonia_links" narrative_button_link="https://en.wikipedia.org/wiki/Babilonia#Altro" onclick="displayContent()">Babilonia</a>
-                            <a class="map_link subnav-content-link" id="show_egyptian_items" href="#" items="egyptian_item" items_links="egypt_links" narrative_button_link="https://en.wikipedia.org/wiki/Egitto" onclick="displayContent()">Egypt</a>
-                            <a class="map_link subnav-content-link" id="show_greek_items" href="#" items="greek_item" items_links="greece_links" narrative_button_link="https://en.wikipedia.org/wiki/Grecia" onclick="displayContent()">Greece</a>
-                            <a class="map_link subnav-content-link" id="show_chinese_items" href="#" items="chinese_item" items_links="china_links" narrative_button_link="https://en.wikipedia.org/wiki/Cina" onclick="displayContent()">China</a>
+                        <div class="subnav-content" id="subnav_geographic">
+                            <a class="map_link subnav-content-link" id="show_babilonian_items" href="#" subnav_content_id="subnav_geographic" items="babilonian_item" items_links="babilonia_links" narrative_button_link="https://en.wikipedia.org/wiki/Babilonia#Altro">Babilonia</a>
+                            <a class="map_link subnav-content-link" id="show_egyptian_items" href="#" subnav_content_id="subnav_geographic" items="egyptian_item" items_links="egypt_links" narrative_button_link="https://en.wikipedia.org/wiki/Egitto">Egypt</a>
+                            <a class="map_link subnav-content-link" id="show_greek_items" href="#" subnav_content_id="subnav_geographic" items="greek_item" items_links="greece_links" narrative_button_link="https://en.wikipedia.org/wiki/Grecia">Greece</a>
+                            <a class="map_link subnav-content-link" id="show_chinese_items" href="#" subnav_content_id="subnav_geographic" items="chinese_item" items_links="china_links" narrative_button_link="https://en.wikipedia.org/wiki/Cina">China</a>
                         </div>
                     </div> 
-                    <a class="map_link" id="show_chronological_order" href="#" items="all" items_links="chronological_links" narrative_button_link="https://en.wikipedia.org/wiki/Time" onclick="displayContent()">Chronological </a>
+                    <a class="map_link" id="show_chronological_order" href="#" items="all" items_links="chronological_links" narrative_button_link="https://en.wikipedia.org/wiki/Time">Chronological </a>
                     <div class="subnav">
-                        <button class="subnavbtn"> Symbols <i class="fa fa-caret-down"></i></button>
-                        <div class="subnav-content">
-                            <a class="map_link subnav-content-link" id="show_bull_items" href="#" items="bull" items_links="bull_links" narrative_button_link="https://en.wikipedia.org/wiki/Bull" onclick="displayContent()">Bull</a>
-                            <a class="map_link subnav-content-link" id="show_capricorn_items" href="#" items="capricorn" items_links="capricorn_links" narrative_button_link="https://en.wikipedia.org/wiki/Capricorn_(astrology)" onclick="displayContent()">Capricorn</a>
-                            <a class="map_link subnav-content-link" id="show_human_items" href="#" items="human" items_links="human_links" narrative_button_link="https://en.wikipedia.org/wiki/Human" onclick="displayContent()">Human figures</a>
-                            <a class="map_link subnav-content-link" id="show_dragon_items" href="#" items="dragon" items_links="dragon_links" narrative_button_link="https://en.wikipedia.org/wiki/Dragon" onclick="displayContent()">Dragon</a>
-                            <a class="map_link subnav-content-link" id="show_turtle_items" href="#" items="turtle" items_links="turtle_links" narrative_button_link="https://en.wikipedia.org/wiki/Turtle" onclick="displayContent()">Turtle</a>
+                        <button class="subnavbtn"> Constellations <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content" id="subnav_constellations">
+                            <a class="map_link subnav-content-link" id="show_andromeda_items" href="#" subnav_content_id="subnav_constellations" items="andromeda" items_links="andromeda_links" narrative_button_link="https://it.wikipedia.org/wiki/Andromeda_(mitologia)">Andromeda</a>
+                            <a class="map_link subnav-content-link" id="show_aquarius_items" href="#" subnav_content_id="subnav_constellations" items="aquarius" items_links="aquarius_links" narrative_button_link="https://it.wikipedia.org/wiki/Aquario_(costellazione)">Aquarius</a>
+                            <a class="map_link subnav-content-link" id="show_aries_items" href="#" subnav_content_id="subnav_constellations" items="aries" items_links="aries_links" narrative_button_link="https://it.wikipedia.org/wiki/Ariete_(astrologia)">Aries</a>
+                            <a class="map_link subnav-content-link" id="show_canis_items" href="#" subnav_content_id="subnav_constellations" items="canis" items_links="canis_links" narrative_button_link="https://en.wikipedia.org/wiki/Canis_Major">Canis Major</a>
+                            <a class="map_link subnav-content-link" id="show_capricorn_items" href="#" subnav_content_id="subnav_constellations" items="capricorn" items_links="capricorn_links" narrative_button_link="https://it.wikipedia.org/wiki/Capricorno_(astrologia)">Capricorn</a>
+                            <a class="map_link subnav-content-link" id="show_draco_items" href="#" subnav_content_id="subnav_constellations" items="draco" items_links="draco_links" narrative_button_link="https://en.wikipedia.org/wiki/Draco_(constellation)">Draco</a>
+                            <a class="map_link subnav-content-link" id="show_leo_items" href="#" subnav_content_id="subnav_constellations" items="leo" items_links="leo_links" narrative_button_link="https://en.wikipedia.org/wiki/Leo_(constellation)">Leo</a>
+                            <a class="map_link subnav-content-link" id="show_scorpius_items" href="#" subnav_content_id="subnav_constellations" items="scorpius" items_links="scorpius_links" narrative_button_link="https://en.wikipedia.org/wiki/Scorpius">Scorpius</a>
+                            <a class="map_link subnav-content-link" id="show_taurus_items" href="#" subnav_content_id="subnav_constellations" items="taurus" items_links="taurus_links" narrative_button_link="https://en.wikipedia.org/wiki/Taurus_(constellation)">Taurus</a>
+                            <a class="map_link subnav-content-link" id="show_ursa_items" href="#" subnav_content_id="subnav_constellations" items="ursa" items_links="ursa_links" narrative_button_link="https://en.wikipedia.org/wiki/Ursa_Major">Ursa Major</a>
                         </div>
                     </div>
-                    <a class="map_link" id="show_zodiac" href="#" items="zodiac" items_links="zodiac_links" narrative_button="yes" narrative_button_link="https://en.wikipedia.org/wiki/Zodiac" onclick="displayContent()">Zodiac </a>
+                    <div class="subnav">
+                        <button class="subnavbtn"> Symbols <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content" id="subnav_symbols">
+                            <a class="map_link subnav-content-link" id="show_bird_items" href="#" subnav_content_id="subnav_symbols" items="bird" items_links="bird_links" narrative_button_link="https://en.wikipedia.org/wiki/Bird">Bird</a>
+                            <a class="map_link subnav-content-link" id="show_bull_items" href="#" subnav_content_id="subnav_symbols" items="bull" items_links="bull_links" narrative_button_link="https://en.wikipedia.org/wiki/Bull">Bull</a>
+                            <a class="map_link subnav-content-link" id="show_dragon_items" href="#" subnav_content_id="subnav_symbols" items="dragon" items_links="dragon_links" narrative_button_link="https://en.wikipedia.org/wiki/Dragon">Dragon</a>
+                            <a class="map_link subnav-content-link" id="show_goat-fish_items" href="#" subnav_content_id="subnav_symbols" items="goat-fish" items_links="goat-fish_links" narrative_button_link="https://en.wikipedia.org/wiki/Capricorn_(astrology)">Goat-fish</a>
+                            <a class="map_link subnav-content-link" id="show_human_items" href="#" subnav_content_id="subnav_symbols" items="human" items_links="human_links" narrative_button_link="https://en.wikipedia.org/wiki/Human">Human figure</a>
+                            <a class="map_link subnav-content-link" id="show_lion_items" href="#" subnav_content_id="subnav_symbols" items="lion" items_links="lion_links" narrative_button_link="https://en.wikipedia.org/wiki/Lion">Lion</a>
+                            <a class="map_link subnav-content-link" id="show_tiger_items" href="#" subnav_content_id="subnav_symbols" items="tiger" items_links="tiger_links" narrative_button_link="https://en.wikipedia.org/wiki/Tiger">Tiger</a>
+                            <a class="map_link subnav-content-link" id="show_turtle_items" href="#" subnav_content_id="subnav_symbols" items="turtle" items_links="turtle_links" narrative_button_link="https://en.wikipedia.org/wiki/Turtle">Turtle</a>
+                        </div>
+                    </div>
                 </div>                                        
             </div>        
             <div class="map_container col-md-8">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 60 1211 800">                            
                     <image xlink:href="map_images/map.jpeg"></image>
-                    <g class="babilonian_item zodiac bull" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Votive relief" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/bull_of_heaven.jpg'&gt;">
+                    <g class="babilonian_item taurus bull" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Votive relief" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/bull_of_heaven.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="1" points="345.307 548.361 360.22 541.478 369.398 551.802 369.398 580.482 355.632 587.366 345.307 577.041"></polygon>
                     </g>
-                    <g class="babilonian_item zodiac capricorn" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Cerimonial basin" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/babilonia_capricorn.JPG'&gt;">
+                    <g class="babilonian_item capricorn goat-fish" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Cerimonial basin" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/babilonia_capricorn.JPG'&gt;">
                     <polygon class="image-mapper-shape" data-index="2" points="386.606 539.183 400.372 532.3 410.697 542.625 410.697 577.041 395.783 583.924 386.606 572.452"></polygon>
                     </g>
-                    <g class="babilonian_item zodiac human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Greenstone cylinder seal" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/the_great_one.jpg'&gt;">
+                    <g class="babilonian_item aquarius human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Greenstone cylinder seal" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/the_great_one.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="3" points="487.559 538.036 501.326 531.153 511.651 540.331 511.651 565.569 496.737 572.452 487.559 563.274"></polygon>
                     </g>
-                    <g class="babilonian_item not_zodiac" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Limestone cylinder seal" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/goddess_anunitu.jpg'&gt;">
+                    <g class="babilonian_item andromeda human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Limestone cylinder seal" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/goddess_anunitu.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="4" points="364.809 610.31 378.576 604.574 387.753 614.898 386.606 638.99 377.428 642.431 369.398 635.548 364.809 637.842"></polygon>
                     </g>
-                    <g class="babilonian_item zodiac human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Orange-cream shell cylinder seal" data-bs-toggle="popover" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/hired_man.jpg'&gt;">
+                    <g class="babilonian_item aries human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Orange-cream shell cylinder seal" data-bs-toggle="popover" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/hired_man.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="5" points="281.064 595.396 294.83 588.513 305.155 598.838 305.155 627.518 290.241 634.401 281.064 625.223"></polygon>
                     </g>
-                    <g class="custom_poover greek_item zodiac bull" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Neck amphora: Europa and the bull" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/bull_and_europa.jpg'&gt;">
+                    <g class="greek_item taurus bull" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Neck amphora: Europa and the bull" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/bull_and_europa.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="6" points="599.985 268.444 618.34 253.531 632.106 268.444 632.106 310.891 608.015 292.536 599.985 285.652"></polygon>
                     </g>
-                    <g class="custom_poover greek_item not_zodiac human" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Wall painting: Perseus and Andromeda in landscape" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='vertical_img'src='map_images/andromeda.jpg'&gt;">
+                    <g class="greek_item andromeda human" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Wall painting: Perseus and Andromeda in landscape" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='vertical_img'src='map_images/andromeda.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="7" points="624.076 214.526 689.466 208.79 690.613 251.236 673.406 291.388 658.492 298.272 625.223 259.267"></polygon>
                     </g>
-                    <g class="custom_poover greek_item zodiac capricorn" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Bronze relief of a veiled woman riding a sea-goat" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/greek_capricorn.jpg'&gt;">
+                    <g class="greek_item capricorn goat-fish" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Bronze relief of a veiled woman riding a sea-goat" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='horizontal_img' src='map_images/greek_capricorn.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="8" points="708.969 250.089 716.999 232.881 739.943 246.648 739.943 281.064 708.969 277.622"></polygon>
                     </g>
-                    <g class="custom_poover greek_item not_zodiac dragon" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Herakles and the golden apples of the Hesperides" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/heracles_and_dragon.jpg'&gt;">
+                    <g class="greek_item draco dragon" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Herakles and the golden apples of the Hesperides" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/heracles_and_dragon.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="9" points="757.151 332.688 729.618 359.073 702.085 318.921 699.791 277.622 756.692 283.817 757.151 308.596"></polygon>
                     </g>
-                    <g class="custom_poover greek_item zodiac" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Neck amphora: Herakles and the nemean lion" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img'src='map_images/lion_of_nemea.jpg'&gt;">
+                    <g class="greek_item leo lion" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Neck amphora: Herakles and the nemean lion" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img'src='map_images/lion_of_nemea.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="10" points="635.548 309.744 676.847 290.241 679.141 336.129 672.258 373.987 636.695 351.043"></polygon>
                     </g>
-                    <g class="custom_poover chinese_item zodiac dragon" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Mirror with animal heads and azure dragons" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/mirror_dragon.jpg'&gt;">
+                    <g class="chinese_item scorpius dragon" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Mirror with animal heads and azure dragons" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/mirror_dragon.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="11" points="858.104 223.704 899.404 212.232 899.404 256.972 898.256 291.388 886.784 292.536 858.104 269.592"></polygon>
                     </g>
-                    <g class="custom_poover chinese_item zodiac" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with white tiger" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/tiger.jpg'&gt;">
+                    <g class="chinese_item taurus tiger" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with white tiger" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/tiger.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="12" points="942.997 212.232 967.088 220.262 969.383 246.648 944.144 260.414"></polygon>
                     </g>
-                    <g class="custom_poover chinese_item zodiac turtle" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Hanging scroll with rubbing of Xuanwu" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/turtle_scroll.jpg'&gt;">
+                    <g class="chinese_item aquarius turtle" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Hanging scroll with rubbing of Xuanwu" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/turtle_scroll.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="13" points="1001.5 307.449 977.413 320.068 948.733 292.536 946.439 314.332 930.378 308.596 929.231 266.15 1001.5 229.44 1003.8 275.328"></polygon>
                     </g>
-                    <g class="custom_poover chinese_item zodiac" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with red bird of south" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/bird.jpg'&gt;">
+                    <g class="chinese_item leo bird" data-bs-custom-class="custom_popover" data-bs-toggle="popover" tabindex="0" data-bs-title="Roof tile end with red bird of south" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/bird.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="14" points="861.546 294.83 905.14 291.388 903.992 331.54 883.343 326.952 861.546 317.774"></polygon>
                     </g>
-                    <g class="custom_poover egyptian_item zodiac turtle" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Palette depicting a pair of mud turtles" data-bs-toggle="popover" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/two_turtle.jpg'&gt;">
+                    <g class="egyptian_item leo turtle" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Palette depicting a pair of mud turtles" data-bs-toggle="popover" data-bs-placement="left" data-bs-html="true" data-bs-content="&lt;img class='square_img' src='map_images/two_turtle.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="15" points="695.202 438.23 711.263 414.139 741.09 435.935 739.943 476.087 699.791 468.057 699.791 472.646 695.202 470.351"></polygon>
                     </g>
-                    <g class="custom_poover egyptian_item not_zodiac bull" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Stele of Âbkaou" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/stele.JPG'&gt;">
+                    <g class="egyptian_item ursa bull" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Stele of Âbkaou" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/stele.JPG'&gt;">
                     <polygon class="image-mapper-shape" data-index="16" points="772.065 380.87 837.455 407.255 835.161 451.996 780.095 489.854 778.948 482.971 772.065 480.676"></polygon>
                     </g>
-                    <g class="custom_poover egyptian_item zodiac capricorn" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Figurine of god Khnum" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/khnum.jpg'&gt;">
+                    <g class="egyptian_item capricorn goat-fish" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Figurine of god Khnum" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/khnum.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="17" points="828.277 458.879 855.81 442.819 867.282 469.204 867.282 494.443 858.104 502.473 836.308 501.326 825.983 495.59"></polygon>
                     </g>
-                    <g class="custom_poover egyptian_item zodiac bull" data-bs-custom-class="custom_popover"tabindex="0" data-bs-title="Statue of god Apis" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/apis.jpg'&gt;">
+                    <g class="egyptian_item taurus bull" data-bs-custom-class="custom_popover"tabindex="0" data-bs-title="Statue of god Apis" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/apis.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="18" points="808.775 485.265 843.191 505.915 843.191 512.798 805.333 526.564 806.481 511.651"></polygon>
                     </g>
-                    <g class="custom_poover egyptian_item not_zodiac human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Isis of Coptos" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/isis.jpg'&gt;">
+                    <g class="egyptian_item canis human" data-bs-custom-class="custom_popover" tabindex="0" data-bs-title="Isis of Coptos" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" data-bs-content="&lt;img class='vertical_img' src='map_images/isis.jpg'&gt;">
                     <polygon class="image-mapper-shape" data-index="19" points="700.938 469.204 778.948 484.118 778.948 517.387 764.034 528.859 729.618 523.122 700.938 510.503"></polygon>
                     </g>
                 </svg>         
@@ -223,22 +240,6 @@
                         <a href="">11. Mirror with animal heads and azure dragons</a>
                         <a href="">13. Hanging scroll with rubbing of Xuanwu</a>
                     </div>
-                    <div class="items_links zodiac_links">
-                        <a href="">1. Votive relief</a>
-                        <a href="">2. Cerimonial basin</a>
-                        <a href="">3. Greenstone cylinder seal</a>
-                        <a href="">5. Orange-cream shell cylinder seal</a>
-                        <a href="">6. Neck amphora: Europa and the bull</a>
-                        <a href="">7. Neck amphora: Herakles and the nemean lion</a>
-                        <a href="">8. Bronze relief of a veiled woman riding a sea-goat</a>
-                        <a href="">11. Mirror with animal heads and azure dragons</a>
-                        <a href="">12. Roof tile end with white tiger</a>
-                        <a href="">13. Hanging scroll with rubbing of Xuanwu</a>
-                        <a href="">14. Roof tile end with red bird of south</a>
-                        <a href="">15. Palette depicting a pair of mud turtle</a>
-                        <a href="">17. Figurine of god Khnum</a>
-                        <a href="">18. Statue of god Apis</a>
-                    </div>
                     <div class="items_links babilonia_links">
                         <a href="">1. Votive relief</a>
                         <a href="">2. Cerimonial basin</a>
@@ -258,7 +259,6 @@
                         <a href="">12. Roof tile end with white tiger</a>
                         <a href="">13. Hanging scroll with rubbing of Xuanwu</a>
                         <a href="">14. Roof tile end with red bird of south</a>
-    
                     </div>
                     <div class="items_links egypt_links">
                         <a href="">15. Palette depicting a pair of mud turtle</a>
@@ -267,13 +267,59 @@
                         <a href="">18. Statue of god Apis</a>
                         <a href="">19. Isis of Coptos</a>
                     </div>
+                    <div class="items_links andromeda_links">
+                        <a href="">4. Limestone cylinder seal</a>
+                        <a href="">10. Wall painting: Perseus and Andromeda in landscape</a>
+                    </div>
+                    <div class="items_links aquarius_links">
+                        <a href="">3. Greenstone cylinder seal</a>
+                        <a href="">13. Hanging scroll with rubbing of Xuanwu</a>
+                    </div>
+                    <div class="items_links aries_links">
+                        <a href="">5. Orange-cream shell cylinder seal</a>
+                    </div>
+                    <div class="items_links canis_links">
+                        <a href="">19. Isis of Coptos</a>
+                    </div>
+                    <div class="items_links capricorn_links">
+                        <a href="">2. Cerimonial basin</a>
+                        <a href="">8. Bronze relief of a veiled woman riding a sea-goat</a>
+                        <a href="">17. Figurine of god Khnum</a>
+                    </div>
+                    <div class="items_links draco_links">
+                        <a href="">9. Herakles and the golden apples of the Hesperides</a>
+                    </div>
+                    <div class="items_links leo_links">
+                        <a href="">7. Neck amphora: Herakles and the nemean lion</a>
+                        <a href="">14. Roof tile end with red bird of south</a>
+                        <a href="">15. Palette depicting a pair of mud turtle</a>
+                    </div>
+                    <div class="items_links scorpius_links">
+                        <a href="">11. Mirror with animal heads and azure dragons</a>
+                    </div>
+                    <div class="items_links taurus_links">
+                        <a href="">1. Votive relief</a>
+                        <a href="">6. Neck amphora: Europa and the bull</a>
+                        <a href="">12. Roof tile end with white tiger</a>
+                        <a href="">18. Statue of god Apis</a>
+                    </div>
+                    <div class="items_links ursa_links">
+                        <a href="">16. Stele of Âbkaou</a>
+                    </div>
+                    <div class="items_links bird_links">
+                        <a href="">14. Roof tile end with red bird of south</a>
+                    </div>
                     <div class="items_links bull_links">
                         <a href="">1. Votive relief</a>
                         <a href="">6. Neck amphora: Europa and the bull</a>
                         <a href="">16. Stele of Âbkaou</a>
                         <a href="">18. Statue of god Apis</a>
                     </div>
-                    <div class="items_links capricorn_links">
+                    <div class="items_links dragon_links">
+                        <a href="">9. Herakles and the golden apples of the Hesperides</a>
+                        <a href="">11. Mirror with animal heads and azure dragons</a>
+                    </div>
+                    <div class="items_links goat-fish_links">
                         <a href="">2. Cerimonial basin</a>
                         <a href="">8. Bronze relief of a veiled woman riding a sea-goat</a>
                         <a href="">17. Figurine of god Khnum</a>
@@ -284,9 +330,11 @@
                         <a href="">10. Wall painting: Perseus and Andromeda in landscape</a>
                         <a href="">19. Isis of Coptos</a>
                     </div>
-                    <div class="items_links dragon_links">
-                        <a href="">9. Herakles and the golden apples of the Hesperides</a>
-                        <a href="">11. Mirror with animal heads and azure dragons</a>
+                    <div class="items_links lion_links">
+                        <a href="">7. Neck amphora: Herakles and the nemean lion</a>
+                    </div>
+                    <div class="items_links tiger_links">
+                        <a href="">12. Roof tile end with white tiger</a>
                     </div>
                     <div class="items_links turtle_links">
                         <a href="">13. Hanging scroll with rubbing of Xuanwu</a>
