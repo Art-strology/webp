@@ -6,7 +6,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: serif;
   }
 
   section {
@@ -27,6 +27,11 @@ body, html {
     background-color:lightblue;
   }
   
+  h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .parallax_hero {
     position: relative;
     background-image: url("https://github.com/colakogluezgi00/test/blob/main/52515250436_6ea8fea1ca_o.jpg?raw=true");
@@ -78,8 +83,8 @@ body, html {
     height: 300px;
     overflow: hidden;
     margin-top: 5%;
+    margin-bottom: 5%;
     position: relative;
-    border-radius: 25px;
   }
 
   .brightness img {
@@ -97,21 +102,6 @@ body, html {
     opacity: 0.8;
   }
 
-  .blur img {
-    transition: transform 1s, filter 2s ease-in-out;
-    filter: blur(2px);
-    transform: scale(1.2);
-  }
-
-  .blur:hover img {
-    filter: blur(0);
-    transform: scale(1);
-  }
-
-  .blur img:hover {
-    opacity: 0.8;
-  }
-
   .hover-wrapper .overlay {
     position: absolute;
     width: 50%;
@@ -126,36 +116,35 @@ body, html {
   }
 
   .hover-wrapper .overlay h2 {
-    color: black;
-    font-size: 60px;
-    line-height: 74px;
+    color: white;
+    font-size: 56px;
     margin: 0 0 10px;
   }
 
   .card-wrapper {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
     font-weight: 300;
     color: #444;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
+    border-radius: 15px;
     overflow: hidden;
   }
 
   .card-wrapper.vertical
   {
-    width: 300px;
-    min-width: 300px;
     height: 667px;
+    margin-right: 5%;
+    margin-left: 5%; 
+    margin-top: 5%;
   }
 
   .card-wrapper.horizontal{
     width: 667px;
     height: 300px;
-    min-height: 300px;    
+    margin-right: 5%;
+    margin-top: 5%;    
   }
 
   .card-wrapper:hover h1 {
@@ -166,21 +155,21 @@ body, html {
     transform: scale(1.25);
   }
   .card-wrapper:hover .caption.bottom-up.geo {
-    top: 25%;
+    top: 30%;
     bottom: 0%;
   }
 
   .card-wrapper:hover .caption.bottom-up.sym {
-    top: 10%;
+    top: 15%;
     bottom: 0%;
   }
 
   .card-wrapper:hover .caption.right-left {
     right: 0%;
-    left: 50%;
+    left: 35%;
   } 
   .card-wrapper:hover .caption.left-right {
-    right: 50%;
+    right: 35%;
     left: 0%;
   } 
 
@@ -189,7 +178,7 @@ body, html {
     top: 20px;
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
     font-size: 35px;
     opacity: 1;
     transform: scale(1);
@@ -217,7 +206,7 @@ body, html {
     right: -100%;
     left: 100%;
     height: 100%;
-    width: 50%;
+    width: 65%;
     padding: 20px;
   }
 
@@ -225,14 +214,8 @@ body, html {
     right: 100%;
     left: -100%;
     height: 100%;
-    width: 50%;
+    width: 65%;
     padding: 20px;
-  }
-
-  .card-wrapper .caption h3 {
-    font-size: 25px;
-    margin: 0 0 10px;
-    padding: 0;
   }
   .card-wrapper .caption p {
     font-size: 14px;
@@ -245,13 +228,33 @@ body, html {
     justify-content: center;
     margin: 10px 0 0;
     padding: 10px 10px;
-    background-color: #1abc9c;
+    background-color: lightblue;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: black;
     font-size: 14px;
     cursor: pointer;
   }
+
+
+  @media (min-width: 1260px) and (max-width: 1399.98px) {
+    .hover-wrapper .overlay h2{
+      font-size: 52px;
+    }
+  }
+
+  @media (min-width: 1064px) and (max-width: 1259.98px) {
+    .card-wrapper .caption.right-left p {
+      font-size: 13.5px;
+    }
+    .card-wrapper .caption.left-right p {
+      font-size: 13.5px;
+    }
+    .hover-wrapper .overlay h2{
+      font-size: 48px;
+    }
+  }
+
 
 .dropdown-submenu {
     position: relative;
@@ -274,3 +277,54 @@ body, html {
     display: block;
 }
 
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 19));
+  }
+}
+.slider {
+  background: #444;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 250px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1250px;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 28);
+}
+.slider .slide {
+  height: 250px;
+  width: 250px;
+}
+.slider .slide img{
+  height: 250px;
+  width: 250px;
+  padding: 25px;
+}
+.slider .slide-track:hover{
+  animation-play-state: paused;
+}
+
+button.btn {
+  border-radius: 30px;
+   
+}
+
+button.btn:hover {
+  background-color: #f1e4ce;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
