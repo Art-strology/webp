@@ -1,5 +1,15 @@
+/*
+COLOR PALETTE
+#f0dab3
+#4d7a96
+#bcd9d8     */
+
+
+
+
+
 .navbar {
-    background-color: white;
+    background-color: #94afc0;
     padding-bottom: 0px !important;
 }
 
@@ -133,14 +143,15 @@ h3 {
 @media (max-width: 768px) {
     .img-data-container {
         display: block;
-        margin-left: 5%;
-        margin-right: 5%;
     }
 
     .image-container {
-        margin-bottom: 30px;
-        margin-right: 0;
+        margin: 0 auto 30px auto;
+        width: 300px;
+        
     }
+
+
 }
 
 
@@ -324,6 +335,7 @@ tr:last-child th {
 
 button.btn {
     border-radius: 30px; 
+    border: none;
 }
 
 button.btn:hover {
@@ -388,7 +400,7 @@ h5 {
 
 /* FOOTER */ 
 .footer {
-    background-color: white;
+    background-color: #94afc0;
     margin: 0px;
     padding: 0px;
     clear: both;
