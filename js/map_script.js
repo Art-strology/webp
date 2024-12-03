@@ -6,7 +6,8 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
     container: '.map_container'
 }));
 
-const mapLinks = document.querySelectorAll('.map_link')
+const mapLinks = document.querySelectorAll('.map_link') 
+const mainMapBtns = document.querySelectorAll('.main_btn')
 const subNavBtns = document.querySelectorAll('.subnavbtn')
 const subNavContents = document.querySelectorAll('.subnav-content')
 const subNavContentLinks = document.querySelectorAll('.subnav-content-link')
@@ -22,13 +23,10 @@ mapLinks.forEach(mapLink => {
         var items_links = mapLink.getAttribute('items_links');     
         var narrative_button_link = mapLink.getAttribute('narrative_button_link');
         event.preventDefault();
-        mapLinks.forEach(function(otherLink) {
-            otherLink.classList.remove('active');
-        });
-        this.classList.add('active');
         showItems(items);
         showItemsLinks(items_links);
         narrativeButtonLink(narrative_button_link);
+        colorChangeForActiveLinks(mapLinks, mapLink);
     });
 });
 
@@ -37,26 +35,13 @@ subNavBtns.forEach(subnavBtn => {
         const subNavContentId = subnavBtn.getAttribute('subnav_content_id');
         const subNavContent = document.getElementById(subNavContentId);
         if (subNavContent.style.display === 'block') {
-            subNavContent.style.display = 'none'; // Hide it
+            subNavContent.style.display = 'none';
         } else {
-            subNavContent.style.display = 'block'; // Show it
+            subNavContent.style.display = 'block';
         }
-        subNavBtns.forEach(function(otherLink) {
-            otherLink.classList.remove('active');
-        });
-        this.classList.add('active');
+        colorChangeForActiveLinks(subNavBtns, subnavBtn)
     });
 });
-
-//function showSubnavContent (subnav_content) {
-    //subnav = document.getElementById(subnav_content)
-    //if (subnav_content) {
-        //subnav.style.display = 'block';
-    //}
-    //else {
-        //subnav.style.display = 'none';
-    //}
-//}
 
 function showItems (narrative) {
     if (narrative != 'all'){
@@ -98,4 +83,11 @@ function narrativeButtonLink (link) {
     else {
         narrativeButton.style.display = 'none';
     };
+}
+
+function colorChangeForActiveLinks (className, link) {
+    className.forEach(function(otherLink) {
+        otherLink.classList.remove('active');
+        });
+    link.classList.add('active');
 }

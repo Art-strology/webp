@@ -140,14 +140,18 @@ g:hover .image-mapper-shape {
     position: relative;
 }
 
-.map_link:hover, .subnav:hover .subnavbtn {
+.map_link:hover, .subnav:hover {
     background-color:#4d7a96 ;
     margin: 0;
 }
 
-.map_link.active, .subnav.active .subnavbtn {
+.map_link.active, .subnav.active {
     background-color: purple;
     margin: 0;
+}
+
+.subnavbtn.active {
+    background-color: rgb(246, 144, 246);
 }
 
 .subnav-content {
