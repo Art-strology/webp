@@ -7,7 +7,7 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 }));
 
 const mapLinks = document.querySelectorAll('.map_link') 
-const mainMapBtns = document.querySelectorAll('.main_btn')
+const noSubnavBtn = document.querySelectorAll('.no_subnav_btn')
 const subNavBtns = document.querySelectorAll('.subnavbtn')
 const subNavContents = document.querySelectorAll('.subnav-content')
 const subNavContentLinks = document.querySelectorAll('.subnav-content-link')
@@ -30,15 +30,34 @@ mapLinks.forEach(mapLink => {
     });
 });
 
+noSubnavBtn.forEach(noSubnavBtn => {
+    noSubnavBtn.addEventListener('click', function() {
+        subNavContents.forEach(subNavContent => {
+            subNavContent.style.display = 'none';
+        });
+        subNavBtns.forEach(subnavBtn => {
+            subnavBtn.classList.remove('active');
+        });
+    });
+});
+
 subNavBtns.forEach(subnavBtn => {
     subnavBtn.addEventListener('click', function() {
         const subNavContentId = subnavBtn.getAttribute('subnav_content_id');
-        const subNavContent = document.getElementById(subNavContentId);
-        if (subNavContent.style.display === 'block') {
-            subNavContent.style.display = 'none';
-        } else {
-            subNavContent.style.display = 'block';
-        }
+        const subNavContentToShow = document.getElementById(subNavContentId);
+        subNavContents.forEach(subNavContent => {
+            if (subNavContent != subNavContentToShow) {
+                subNavContent.style.display ='none'
+            }    
+            else {
+                if (subNavContentToShow.style.display ==='none') {
+                    subNavContentToShow.style.display = 'block'
+                }
+                else {
+                    subNavContentToShow.style.display ='none'  
+                }
+            }
+        });
         colorChangeForActiveLinks(subNavBtns, subnavBtn)
     });
 });
