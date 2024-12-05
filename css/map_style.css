@@ -46,12 +46,14 @@
     display: flex;
     background-color: white;
     width: fit-content;
-    height: 600px;
+    height: 700px;
     justify-content: center;
     align-content: center;
     flex-grow: 1;
     overflow: hidden;
-    position: relative; 
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 40px;
 }
 
 .image-mapper-shape {
@@ -181,11 +183,6 @@ g:hover .image-mapper-shape {
     color: white;
 }
 
-/* When you move the mouse over the subnav container, open the subnav content */
-.subnav:hover .subnav-content {
-    display: block;
-}    
-
 .sidebar {
     background-color: #212d55;
     float: right;
@@ -194,7 +191,7 @@ g:hover .image-mapper-shape {
     padding-left: 0px;
     padding-right: 0px;
     width: 250px;
-    height: 600px;
+    height: 700px;
     overflow-y: auto;
     justify-content: center;
 }

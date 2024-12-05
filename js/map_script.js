@@ -50,11 +50,11 @@ subNavBtns.forEach(subnavBtn => {
                 subNavContent.style.display ='none'
             }    
             else {
-                if (subNavContentToShow.style.display ==='none') {
-                    subNavContentToShow.style.display = 'block'
+                if (subNavContentToShow.style.display ==='block') {
+                    subNavContentToShow.style.display ='none'
                 }
                 else {
-                    subNavContentToShow.style.display ='none'  
+                    subNavContentToShow.style.display ='block'  
                 }
             }
         });
