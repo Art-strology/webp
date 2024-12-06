@@ -55,15 +55,15 @@
     <main>
 
         <div class="top-image-container">
-            <h2 class="narrative-title">CHRONOLOGICAL NARRATIVE</h2>
+            <h2 id="narrative" class="narrative-title">CHRONOLOGICAL NARRATIVE</h2>
             <img class = "top-img" src="img_compressed/meridiana3.jpg" alt="meridiana">
         </div>
 
 
         <div class="img-data-container">
-            <div class="arrow left-arrow">&#10094;</div>
+            <div id="buttonPrevious" class="arrow left-arrow">&#10094;</div>
             <div class="image-container">
-                <img class = "obj-img" src="img_compressed/egyptian_two_turtle.jpg" alt="palette depicting a pair of mud turtles">
+                <img id="img" class = "obj-img" src="img_compressed/egyptian_two_turtle.jpg" alt="palette depicting a pair of mud turtles">
             </div>
 
             <!--LIGHTBOX -->
@@ -83,11 +83,11 @@
 
 
             <div class="info-container"> 
-                <h2>PALETTE DEPICTING A PAIR OF MUD TURTLES</h2>
+                <h2 id="header">PALETTE DEPICTING A PAIR OF MUD TURTLES</h2>
                 <a href="museum_map.html" class="btn btn-light btn-sm" id="map_btn">
                     <i class="fa-regular fa-map"></i> see the map
                 </a>
-                <div class="data-container">
+                <div id="infoTable" class="data-container">
                     <table>
                         <tbody>
                             <tr>
@@ -120,7 +120,7 @@
                     </table>
                 </div>
             </div>
-            <div class="arrow right-arrow">&#10095;</div>
+            <div id="buttonNext" class="arrow right-arrow">&#10095;</div>
         </div>
 
         <hr class="line">
@@ -128,16 +128,16 @@
         <div class="item-description">
 
             <h3>OBJECT DESCRIPTION</h3>
-            <p class="item-description-text" id="para1"> 1 The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. 
+            <p class="item-description-text" id="shortInfo"> 1 The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. 
                 The duo may represent a mating pair linking the palette’s imagery to the concept of fertility and therefore regeneration. In the Pharaonic Period, the turtle had a dual reputation, on one hand the animal was connected to chaos and disorder, 
                 and on the other, it could be a potent amulet when the turtle’s negative character was used as a protective force. Given the turtle is the subject of an implement for manufacturing pigment for eye paint, a protective interpretation seems fitting.
             </p>
-            <p class="item-description-text" id="para2" style="display: none;">
+            <p class="item-description-text" id="longInfo" style="display: none;">
                 2 The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. The duo may represent a mating pair linking the palette’s imagery 
                 to the concept of fertility and therefore regeneration. In the Pharaonic Period, the turtle had a dual reputation, on one hand the animal was connected to chaos and disorder, and on the other, it could be a potent amulet when the turtle’s 
                 negative character was used as a protective force. Given the turtle is the subject of an implement for manufacturing pigment for eye paint, a protective interpretation seems fitting.
             </p>
-            <p class="item-description-text" id="para3" style="display: none;">
+            <p class="item-description-text" id="fullInfo" style="display: none;">
                 3 The large mud turtle, Trionyx triunguis, which inhabited the Nile River and its canals, is the subject of many palettes and this one is quite unusual in depicting a pair. The duo may represent a mating pair linking the palette’s imagery 
                 to the concept of fertility and therefore regeneration. In the Pharaonic Period, the turtle had a dual reputation, on one hand the animal was connected to chaos and disorder, and on the other, it could be a potent amulet when the turtle’s 
                 negative character was used as a protective force. Given the turtle is the subject of an implement for manufacturing pigment for eye paint, a protective interpretation seems fitting.
@@ -253,9 +253,9 @@
     let currentState = 1;
 
     function toggleDescription() {
-        const para1 = document.getElementById('para1');
-        const para2 = document.getElementById('para2');
-        const para3 = document.getElementById('para3');
+        const para1 = document.getElementById('shortInfo');
+        const para2 = document.getElementById('longInfo');
+        const para3 = document.getElementById('fullInfo');
         const button = document.getElementById('btn_more')
 
         if (currentState === 1) {

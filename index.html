@@ -10,83 +10,114 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\homepage-stylesheet.css">
 </head>
 
 <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Title</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+      <nav class="navbar navbar-expand-lg bg-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Title</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                  href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    Narratives
+                </a>
+                <ul class="dropdown-menu" 
+                aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" 
+                    href="chronological_narrative.html">Chronological</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item 
+                        dropdown-toggle" href="#">Geographical</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                            href="#">Babylon</a></li>
+                            <li><a class="dropdown-item"
+                            href="#">Egypt</a></li>
+                            <li><a class="dropdown-item"
+                            href="#">Greece</a></li>
+                            <li><a class="dropdown-item"
+                            href="#">China</a></li>  
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item 
+                      dropdown-toggle" href="#">Constellations</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item"
+                          href="#">Andromeda</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Aquarius</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Aries</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Canis Major</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Capricorn</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Draco</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Leo</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Scorpio</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Taurus</a></li> 
+                          <li><a class="dropdown-item"
+                          href="#">Ursa Major</a></li> 
+                      </ul>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"
-                     href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                        Narratives
-                    </a>
-                    <ul class="dropdown-menu" 
-                    aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" 
-                        href="chronological_narrative.html">Chronological</a></li>
-                        <li><a class="dropdown-item" 
-                          href="#">Zodiac</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item 
-                            dropdown-toggle" href="#">Geographical</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                href="#">Babylon</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">Egypt</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">Greece</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">China</a></li>  
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                          <a class="dropdown-item 
-                          dropdown-toggle" href="#">Shape/Symbol</a>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item"
-                              href="#">Bull</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Goat-Fish</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Humanoid</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Snake/Dragon</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Turtle</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Sheep</a></li>    
-                          </ul>
-                      </li>
-                    </ul>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="museum_map.html">Map</a>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item 
+                      dropdown-toggle" href="#">Symbols</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item"
+                          href="#">Bird</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Bull</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Dragon</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Goat-Fish</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Humanoid</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Lion</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Tiger</a></li>
+                          <li><a class="dropdown-item"
+                          href="#">Turtle</a></li>    
+                      </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="timeline.html">Timeline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="collection-page.html">Collection</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
-                  </li>
-                  
-              </div>
-            </div>
+                </ul>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="museum_map.html">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="timeline.html">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="collection-page.html">Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+              </li>
+            </ul>     
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -96,7 +127,7 @@
             <h3 style="font-size:50px">title</h3>
           </div>
         </div>
-      <section class="dark" id="about">
+      <section id="about">
         <div class="text-wrapper">
           <h2>About</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet tortor orci, quis porta sem venenatis at. 
@@ -104,134 +135,204 @@
             nisl lectus accumsan sem, eget vulputate eros massa a ante. In vel ligula.</p>
         </div>
       </section>
-      <section class="light" id="collection">
+      <section id="collection">
         <div class="text-wrapper">
           <h2>Collection</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
         </div>
         <div class="row">
-          <div class="center">
-            <a href="collection-page.html" class="btn btn-light btn-lg">
-              <i class="fa-regular fa-map"></i> View Our Collection</a>
-          </div>
-        </div>
-        <div class="row">
           <div class="slider">
             <div class="slide-track">
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/andromeda.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_bull_of_heaven.jpeg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/apis.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goatfish.JPG?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/babilonia_capricorn.JPG?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goddess.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bird.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_hired_man.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bull_and_europa.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_the_great_one.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bull_of_heaven.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_bird.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/goddess_anunitu.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_dragon.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/greek_capricorn.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_tiger.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/heracles_and_dragon.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_turtle.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/hired_man.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_isis_sopdet.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/isis.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_leg_of_bull.JPG?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/khnum.jpg?raw=true"/>
+                <img src="https://raw.githubusercontent.com/IMWT-project/webp/refs/heads/main/img_compressed/egyptian_sheep.webp"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/lion_of_nemea.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_taurus.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/mirror_dragon.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/stele.JPG?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_andromeda.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/the_great_one.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_capricorn.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/tiger.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_draco.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/turtle_scroll.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_leo.jpeg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/two_turtle.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_taurus.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/andromeda.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_bull_of_heaven.jpeg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/apis.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goatfish.JPG?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/babilonia_capricorn.JPG?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goddess.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bird.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_hired_man.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bull_and_europa.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_the_great_one.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/bull_of_heaven.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_bird.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/goddess_anunitu.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_dragon.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/greek_capricorn.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_tiger.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/heracles_and_dragon.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_turtle.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/hired_man.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_isis_sopdet.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/isis.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_leg_of_bull.JPG?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/khnum.jpg?raw=true"/>
+                <img src="https://raw.githubusercontent.com/IMWT-project/webp/refs/heads/main/img_compressed/egyptian_sheep.webp"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/lion_of_nemea.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_taurus.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/mirror_dragon.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/stele.JPG?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_andromeda.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/the_great_one.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_capricorn.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/tiger.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_draco.jpg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/turtle_scroll.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_leo.jpeg?raw=true"/>
               </div>
+            </a>
+            <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/map_images/two_turtle.jpg?raw=true"/>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_taurus.jpg?raw=true"/>
               </div>
+            </a>
             </div>
           </div>
         </div>
@@ -242,7 +343,7 @@
           <h3 style="background-color:transparent;font-size:40px;color: #090000;">Per aspera ad astra</h3>
         </div>
       </div>
-      <section class="dark" id="narratives">
+      <section id="narratives">
         <div class="text-wrapper">
           <h2>Narratives</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet tortor orci, quis porta sem venenatis at. 
@@ -250,12 +351,24 @@
             nisl lectus accumsan sem, eget vulputate eros massa a ante. In vel ligula.</p>
         </div>
         <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10">
+              <div class="card-wrapper horizontal">
+                <div class="h1-hor">Chronological</div>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/meridiana3.jpg?raw=true" style="height: 300px; width: 100%;"/>
+                <div class="caption right-left">
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                  <button>More Info</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-sm-4">
               <div class="card-wrapper vertical">
-                <h1 style="left: 20px;">Geographical</h1>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/worldmap1.jpg?raw=true" style="height: 667px;" />
-                <div class="caption bottom-up geo">
+                <h1>Geographical</h1>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/worldmap1.jpg?raw=true" style="height: 700px;" />
+                <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <div class="row justify-content-around">
                     <button>Babylon</button>
@@ -267,44 +380,57 @@
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="row">
-                <div class="card-wrapper horizontal">
-                  <h1 style="left: 20px;">Chronological</h1>
-                  <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/meridiana_2.jpg?raw=true" style="width: 667px;height: 300px;"/>
-                  <div class="caption right-left">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    <button>
-                      More Info
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="card-wrapper horizontal">
-                  <h1 style="right: 20px;">Zodiac</h1>
-                  <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/constellation3.jpg?raw=true" style="width: 667px;height: 300px;"/>
-                  <div class="caption left-right">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    <button>
-                      More Info
-                    </button>
+              <div class="card-wrapper vertical">
+                <h1>Constellations</h1>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/constellation3.jpg?raw=true" style="height: 700px;"/>
+                <div class="caption bottom-up">
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                  <div class="row justify-content-center">  
+                    <div class="col">  
+                      <div class="row justify-content-around"  style="margin-right: 1px;">
+                        <button>Andromeda</button>
+                        <button>Aquarius</button>
+                        <button>Aries</button>
+                        <button>Canis Major</button>
+                        <button>Capricorn</button>
+                      </div>
+                    </div>
+                    <div class="col">  
+                      <div class="row justify-content-around" style="margin-left: 1px;">
+                        <button>Draco</button>
+                        <button>Leo</button>
+                        <button>Scorpio</button>
+                        <button>Taurus</button>
+                        <button>Ursa Major</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="card-wrapper vertical">
-                <h1 style="left: 20px;">Shape/Symbol</h1>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/shapes_1.jpg?raw=true" style="height: 667px;" />
-                <div class="caption bottom-up sym">
+                <h1>Symbols</h1>
+                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/shapes_1.jpg?raw=true" style="height: 700px;" />
+                <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <div class="row justify-content-around">
-                    <button>Bull</button>
-                    <button>Goat-Fish</button>
-                    <button>Humanoid</button>
-                    <button>Snake/Dragon</button>
-                    <button>Turtle</button>
-                    <button>Sheep</button>
+                  <div class="row justify-content-center">  
+                    <div class="col">  
+                      <div class="row justify-content-around"  style="margin-right: 1px;">
+                        <button>Bird</button>
+                        <button>Bull</button>
+                        <button>Dragon</button>
+                        <button>Goat-Fish</button>
+                      </div>
+                    </div>
+                    <div class="col">  
+                      <div class="row justify-content-around" style="margin-left: 1px;">
+                        <button>Humanoid</button>
+                        <button>Lion</button>
+                        <button>Tiger</button>
+                        <button>Turtle</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -314,7 +440,7 @@
       </section>
       <div class="parallax">
       </div>
-      <section class="light" id="explore">
+      <section id="explore">
         <div class="text-wrapper">
           <h2>Explore</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
@@ -322,8 +448,8 @@
         <div class="row justify-content-center">
           <div class="col-md-9">
             <div class="hover-wrapper">
-              <a href="museum_map-main/museum_map.html" itemprop="url" class="brightness">
-                <img src="https://github.com/colakogluezgi00/test/blob/main/52515250436_6ea8fea1ca_o.jpg?raw=true">
+              <a href="museum_map.html" class="brightness">
+                <img src="https://github.com/colakogluezgi00/test/blob/main/map.jpeg?raw=true">
                 <div class="overlay">
                   <h2>Interactive Map</h2>
                 </div>
@@ -331,11 +457,11 @@
             </div> 
           </div>
         </div>
-        <hr style="height:3px;border-width:0;color:#d49a2e;background-color:#d49a2e">
+        <hr style="height:3px;border-width:0;color:#4d7a96;background-color:#4d7a96;opacity: 0.5;">
         <div class="row justify-content-center">
           <div class="col-md-9">
             <div class="hover-wrapper">
-              <a href="#" itemprop="url" class="brightness">
+              <a href="timeline.html" class="brightness">
                 <img src="https://github.com/colakogluezgi00/test/blob/main/52515250436_6ea8fea1ca_o.jpg?raw=true">
                 <div class="overlay">
                   <h2>Interactive Timeline</h2>
