@@ -3,9 +3,9 @@
 {
     "meta": {
       "startWith": 0,
-      "startNarrative": "interests",  
-      "startValue": "reading",       
-      "narratives": ["location", "age", "interests", "hobbies"] 
+      "startNarrative": "date",  
+      "startValue": "3650 BCE — 3500 BCE",       
+      "narratives": ["date", "geography", "constellation", "symbol"] 
     },
     "people": [ 
 
