@@ -46,12 +46,14 @@
     display: flex;
     background-color: white;
     width: fit-content;
-    height: 600px;
+    height: 700px;
     justify-content: center;
     align-content: center;
     flex-grow: 1;
     overflow: hidden;
-    position: relative; 
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 40px;
 }
 
 .image-mapper-shape {
@@ -140,14 +142,18 @@ g:hover .image-mapper-shape {
     position: relative;
 }
 
-.map_link:hover, .subnav:hover .subnavbtn {
+.map_link:hover, .subnav:hover {
     background-color:#4d7a96 ;
     margin: 0;
 }
 
-.map_link.active, .subnav.active .subnavbtn {
+.map_link.active, .subnav.active {
     background-color: purple;
     margin: 0;
+}
+
+.subnavbtn.active {
+    background-color: rgb(246, 144, 246);
 }
 
 .subnav-content {
@@ -177,20 +183,15 @@ g:hover .image-mapper-shape {
     color: white;
 }
 
-/* When you move the mouse over the subnav container, open the subnav content */
-.subnav:hover .subnav-content {
-    display: block;
-}    
-
 .sidebar {
     background-color: #212d55;
     float: right;
     margin: 0;          
-    padding-top: 35px;
+    padding-top: 50px;
     padding-left: 0px;
     padding-right: 0px;
     width: 250px;
-    height: 600px;
+    height: 700px;
     overflow-y: auto;
     justify-content: center;
 }
