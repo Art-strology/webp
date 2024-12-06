@@ -3,8 +3,8 @@
 {
     "meta": {
       "startWith": 0,
-      "startNarrative": "date",  
-      "startValue": "3650 BCE — 3500 BCE",       
+      "startNarrative": "geography",  
+      "startValue": "Egypt",       
       "narratives": ["date", "geography", "constellation", "symbol"] 
     },
     "people": [ 
