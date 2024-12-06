@@ -4,7 +4,7 @@
     "meta": {
       "startWith": 0,
       "startNarrative": "date",  
-      "startValue": "3650 BCE — 3500 BCE",       
+      "startValue": "date",       
       "narratives": ["date", "geography", "constellation", "symbol"] 
     },
     "people": [ 
