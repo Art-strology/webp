@@ -8,7 +8,7 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
-	fetch('object.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
+	fetch('objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
 	.then(response => response.json()) //When the response is received, response.json() parses the response as JSON = JSON data is parsed as a JavaScript object (it's like a python dictionary).//
 	.then(data => {	//data = data obtained from the JSON file//
 		people = data.people //retriving properties from data//
