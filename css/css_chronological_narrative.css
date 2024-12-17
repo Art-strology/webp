@@ -316,7 +316,9 @@ tr:last-child th {
 
 /*LINE*/
 .line {
-    background-color: #efd199;
+    background-color: #efd199; 
+    height: 1px;
+    border: none;
 }
 
 
