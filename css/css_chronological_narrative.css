@@ -5,25 +5,7 @@ COLOR PALETTE
 #bcd9d8     */
 
 
-
-
-
-.navbar {
-    background-color: #94afc0;
-    padding-bottom: 0px !important;
-}
-
-.navbar .nav-link {
-    color: black; 
-}
-
-.navbar-brand {
-    color: black;
-}
-
-
 body {
-    background-color: rgb(195, 248, 230);
     border-bottom: 1px solid #e0e0e0;
     margin: 0;
     padding: 0;
@@ -314,12 +296,6 @@ tr:last-child th {
 
 
 
-/*LINE*/
-.line {
-    background-color: #efd199; 
-    height: 1px;
-    border: none;
-}
 
 
 /*ITEM DESCRIPTION*/
@@ -411,7 +387,49 @@ h5 {
 
 
 
+/*Navbar*/
+
+.bg-nav{
+    background-color: #94afc0;
+}
+    
+.dropdown-submenu {
+    position: relative;
+    background-color: #bcd9d8;
+}
+    
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 0;
+    border-radius: 0.25rem;
+    display: none;
+    background-color: #bcd9d8;
+}
+    
+.dropdown-menu .dropdown-item:hover{
+    background-color: lightblue;
+}
+    
+.nav-item:hover{
+    background-color: lightblue;
+}
+    
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;    
+}
+    
+.dropdown-menu.show {
+    display: block;
+    background-color: #bcd9d8;
+}
 
 
-
+/*LINE*/
+.line {
+    background-color: #efd199; 
+    height: 1px;
+    border: none;
+}
 
