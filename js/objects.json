@@ -7,7 +7,7 @@
       "startValue": "Egypt",       
       "narratives": ["date", "geography", "constellation", "symbol"] 
     },
-    "people": [ 
+    "objects": [ 
 
       {
         "@sort": 1, 
@@ -220,7 +220,7 @@
         "fullInfo": "...",
         "info": {
           "date": "540BCE - 530BCE.",
-          "geography": "Greek",
+          "geography": "Greece",
           "medium": "Terracotta", 
           "dimension": "Height: 41.3 cm, Diameter: 31.5 cm ", 
           "constellation": "Leo", 
@@ -240,7 +240,7 @@
         "fullInfo": "...",
         "info": {
           "date": "440BCE.",
-          "geography": "Greek",
+          "geography": "Greece",
           "medium": "Pottery", 
           "dimension": "Height: 32 cm, Width: 18.5 cm, Weight: 1.24 kg", 
           "constellation": "Taurus", 
@@ -260,11 +260,11 @@
         "fullInfo": "...",
         "info": {
           "date": "4th century BCE..",
-          "geography": "Greek",
+          "geography": "Greece",
           "medium": "Bronze", 
           "dimension": "Height: 8.9 cm, Width: 10.5 cm)", 
           "constellation": "Capricorn", 
-          "symbol": "Goatfish"  
+          "symbol": "Goat-Fish"  
        }
       },
 
@@ -304,7 +304,7 @@
           "medium": "Earthenware", 
           "dimension": "Diameter: 18.4 cm",
           "constellation": "mostly Hydra and Leo", 
-          "symbol": "Vermilion Bird"  
+          "symbol": "Bird"  
         }
       },
 
@@ -323,7 +323,7 @@
           "geography": "China", 
           "medium": "Earthenware", 
           "dimension": "Diameter: 19.3 cm", 
-          "constellation": "mostly Taurus and Orion",
+          "constellation": "Taurus",
           "symbol": "Tiger"  
         }
       },
@@ -383,8 +383,8 @@
           "geography": "China", 
           "medium": "Paper", 
           "dimension": "Height:142.50 cm, Width: 79.50 cm, Thickness: 4cm.",
-          "constellation": "mostly Taurus and Orion", 
-          "symbol": "Turtel"  
+          "constellation": "Taurus", 
+          "symbol": "Turtle"  
         }
       }
     ]
