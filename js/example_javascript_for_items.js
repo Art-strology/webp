@@ -45,38 +45,43 @@ function showInfo(index) {    //is designed to display detailed information abou
 	byId("img").src = object.image
 	byId("img").alt = object.itemName
 	createInfoTable(object)
-
-	inner("shortInfo",object.shortInfo); 
-	inner("longerInfo","<p>"+object.longerInfo.join("</p><p>")+ '</p>'); 
-	inner("fullInfo", "<p>"+object.fullInfo+ '</p>');
-
-	const button = document.getElementById('btn_more');
-	button.style.display = 'block';
-	button.innerHTML = '<i class="fa-solid fa-plus"></i> Show more';
+	inner("shortInfo",object.shortInfo)
+	inner("longerInfo","<p>"+ object.longerInfo.join("</p><p>") + "</p>")
+	inner("fullInfo", "<p>"+ object.fullInfo + "</p>")
 	
 	prepareNavigationButtons(index)
 }
 
-function more() {
-	hide("shortInfo") ;
-	show("longerInfo") ;
-	hide("fullInfo") ;
-}
-function less() {
-	hide("longerInfo") ;
-	show("shortInfo") ;
-	hide("fullInfo") ;
-}
-function muchMore() {
-	hide("longerInfo") ;
-	hide("shortInfo") ;
-	show("fullInfo") ;
-}
-function hideFullInfo() {
-	hide("longerInfo") ;
-	show("shortInfo") ;
-	hide("fullInfo") ;
-	show("mainCard") ;
+let currentState = 1;
+
+function toggleDescription() {
+    const para1 = document.getElementById('shortInfo');
+    const para2 = document.getElementById('longerInfo');
+    const para3 = document.getElementById('fullInfo');
+    const button = document.getElementById('btn_more');
+
+    if (currentState === 1) {
+        // Mostra il secondo paragrafo
+        para1.classList.remove('d-none');
+        para2.classList.remove('d-none');
+        para3.classList.add('d-none');
+        button.innerHTML = '<i class="fa-solid fa-plus"></i> show even more';
+        currentState = 2;
+    } else if (currentState === 2) {
+        // Mostra il terzo paragrafo
+        para1.classList.remove('d-none');
+        para2.classList.remove('d-none');
+        para3.classList.remove('d-none');
+        button.innerHTML = '<i class="fa-solid fa-minus"></i> show less';
+        currentState = 3;
+    } else if (currentState === 3) {
+        // Chiudi il terzo paragrafo e torna al primo
+        para1.classList.remove('d-none');
+        para2.classList.add('d-none');
+        para3.classList.add('d-none');
+        button.innerHTML = '<i class="fa-solid fa-plus"></i> show more';
+        currentState = 1;
+    }
 }
 
 function createInfoTable(object) {
