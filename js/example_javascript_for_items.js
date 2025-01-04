@@ -45,9 +45,14 @@ function showInfo(index) {    //is designed to display detailed information abou
 	byId("img").src = object.image
 	byId("img").alt = object.itemName
 	createInfoTable(object)
-	inner("shortInfo",object.shortInfo + '<a type="button" class="btn btn-outline-primary btn-sm" onclick="more()">Tell me more...</a>'); 
-	inner("longerInfo","<p>"+object.longerInfo.join("</p><p>")+ '<a type="button" class="btn btn-outline-primary btn-sm" onclick="less()">Tell me less</a> or <a type="button" class="btn btn-outline-primary btn-sm" onclick="muchMore()">Tell me even more...</a></p>'); 
-	inner("fullInfo", "<p>"+object.fullInfo+ '<a type="button" class="btn btn-outline-primary btn-sm" onclick="less()">Tell me less</a></p>');
+
+	inner("shortInfo",object.shortInfo); 
+	inner("longerInfo","<p>"+object.longerInfo.join("</p><p>")+ '</p>'); 
+	inner("fullInfo", "<p>"+object.fullInfo+ '</p>');
+
+	const button = document.getElementById('btn_more');
+	button.style.display = 'block';
+	button.innerHTML = '<i class="fa-solid fa-plus"></i> Show more';
 	
 	prepareNavigationButtons(index)
 }
