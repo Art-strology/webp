@@ -6,7 +6,6 @@ var currentNarrative = ""
 var currentValue = ""
 var currentSort = ""
 
-
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
 	fetch('js/objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 	.then(data => {	//data = data obtained from the JSON file//
 		objects = data.objects //retriving properties from data//
 		var startWith = data.meta.startWith
-		var objects = objects[startWith]
+		var object = objects[startWith]
 
 		narratives = data.meta.narratives
 		currentNarrative = data.meta.startNarrative
