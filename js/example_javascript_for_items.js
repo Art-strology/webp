@@ -45,7 +45,7 @@ function showInfo(index) {    //is designed to display detailed information abou
 	byId("img").src = object.image
 	byId("img").alt = object.itemName
 	createInfoTable(object)
-	inner("shortInfo",object.shortInfo)
+	inner("shortInfo",object.shortInfo.join('')); //added join otherwise i wasn't able to cut the pharagraphs in the code without seeing the comma in the website//
 	inner("longerInfo","<p>"+ object.longerInfo.join("</p><p>") + "</p>")
 	inner("fullInfo", "<p>"+ object.fullInfo + "</p>")
 	

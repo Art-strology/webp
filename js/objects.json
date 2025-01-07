@@ -13,11 +13,13 @@
         "@sort": 1, 
         "itemName": "PALETTE DEPICTING A PAIR OF MUD TURTLES", 
         "image": "img_compressed/egyptian_two_turtle.jpg", 
-        "shortInfo": "This finely crafted palette, made of greywacke, features a rare depiction of a pair of mud turtles (Trionyx triunguis), a species native to the Nile River and its canals. The imagery of two turtles is thought to symbolize fertility and regeneration, connecting the palette to significant cultural and spiritual concepts of the time. During the Pharaonic Period, turtles held a dual symbolic role. They were associated with chaos and disorder but could also serve as powerful amulets, harnessing their perceived negative traits for protective purposes. Given that this palette was likely used to grind pigments for eye paint, this connection becomes even more fitting. In ancient Egypt, eye paint was not merely decorative but also served protective functions, shielding the wearer from infection, sunlight and malevolent forces.A unique Egyptian palette featuring a pair of Nile mud turtles, Trionyx triunguis, symbolizing fertility and regeneration.", 
-        "longerInfo": [ 
-          "2) longer info ",
-          "..."
+        "shortInfo": [
+          "This finely crafted palette, made of greywacke, features a rare depiction of a pair of mud turtles <i>(Trionyx triunguis)</i>, a species native to the Nile River and its canals. ", 
+          "The imagery of two turtles is thought to symbolize <b>fertility and regeneration</b>, connecting the palette to significant cultural and spiritual concepts of the time. During the Pharaonic Period, turtles held a dual symbolic role. ",
+          "They were associated with <b>chaos and disorder</b> but could also serve as powerful amulets, harnessing their perceived negative traits for <b>protective purposes</b>. <br> Given that this palette was likely used to grind pigments for eye paint, this connection becomes even more fitting. ", 
+          "In ancient Egypt, eye paint was not merely decorative but also served protective functions, shielding the wearer from infection, sunlight and malevolent forces. A unique Egyptian palette featuring a pair of Nile mud turtles, Trionyx triunguis, symbolizing fertility and regeneration."
         ],
+        "longerInfo": "longer info ", 
         "fullInfo": "3) full info ",
         "info": { 
           "date": "3650 BCE — 3500 BCE", 
