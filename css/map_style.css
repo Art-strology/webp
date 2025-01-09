@@ -83,7 +83,7 @@ g:hover .image-mapper-shape {
     text-align: center;
     color: white;
     padding-top: 17px;
-    font-family: Arial, sans-serif;
+    font-family: Crimson Text, serif;
 }
 
 .popover body {
@@ -115,7 +115,7 @@ g:hover .image-mapper-shape {
 .map_navbar a {
     float: left;
     font-size: 16px;
-    font-family: 'Kanit';
+    font-family: Crimson Text, serif;
     color: white;
     text-align: center;
     padding: 20px 16px;
@@ -127,7 +127,7 @@ g:hover .image-mapper-shape {
 .subnav {
     float: left;
     overflow: hidden;
-    font-family: 'Kanit';
+    font-family: Crimson Text, serif;
 }
 
 /* Subnav button */
@@ -166,7 +166,7 @@ g:hover .image-mapper-shape {
 }
 
 .subnav-content a {
-    font-family: 'Kanit';
+    font-family: Crimson Text, serif;
     float: left;
     color: white;
     text-decoration: none;
@@ -197,7 +197,7 @@ g:hover .image-mapper-shape {
 }
 
 .sidebar a {
-    font-family: 'Kanit';
+    font-family: Crimson Text, serif;
     display: block;
     color: white;
     padding: 16px;
@@ -364,8 +364,8 @@ g:hover .image-mapper-shape {
     }
 
     .popover img.horizontal_img {
-            width: 30vw;
-            height: 28vw;
+        width: 30vw;
+        height: 28vw;
     }
 
     .popover img.square_img {
@@ -374,17 +374,17 @@ g:hover .image-mapper-shape {
     }
     
     .navbar a, .subnav .subnavbtn {
-        font-size: 14px; /* Smaller font size */
-        padding: 10px 12px; /* Smaller padding */
+        font-size: 10px; 
+        padding: 6px 8px; 
     }
 
     .navbar {
-        padding: 5px; /* Reduce navbar padding */
+        padding: 5px; 
     }
 
     .subnav-content {
         padding-left: 5px;
-        font-size: 11px; /* Smaller font size for subnav content */
+        font-size: 11px; 
     }
 
     .explore_this_narrative_button_container {
