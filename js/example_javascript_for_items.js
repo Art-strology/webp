@@ -8,24 +8,38 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
+	
+	const urlParams = new URLSearchParams(window.location.search);
+    const startNarrative = urlParams.get('startNarrative');
+    const startValue = urlParams.get('startValue');
+
+	if (startNarrative && startValue) {
+        console.log(`Found parameters: startNarrative = ${startNarrative}, startValue = ${startValue}`);
+    } else {
+        console.log("No query parameters found. Default behavior will be used.");
+        currentNarrative = data.meta.startNarrative
+		currentValue = data.meta.startValue         
+    }
+
 	fetch('js/objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
 	.then(response => response.json()) //When the response is received, response.json() parses the response as JSON = JSON data is parsed as a JavaScript object (it's like a python dictionary).//
 	.then(data => {	//data = data obtained from the JSON file//
 		objects = data.objects //retriving properties from data//
 		var startWith = data.meta.startWith
 		var object = objects[startWith]
-
 		narratives = data.meta.narratives
-		currentNarrative = data.meta.startNarrative
-		currentValue = data.meta.startValue
+		currentNarrative = startNarrative 
+		currentValue = startValue 
+        console.log(`Starting with Narrative: ${currentNarrative}, Value: ${currentValue}`);
+
 		prepareNarratives()
 	})
 });
 
 function prepareNarratives() {
 	currentSelection = objects.filter( i =>  //filter is ann array method that works like a python for loop = it filter each person (i) in the people array//
-		i.info[currentNarrative]?.includes(currentValue) //accesses the info object of the person (i) and retrieves the value of the key currentNarrative, a variable that holds a narrative identifier or name. ?.: This is the optional chaining operator, which ensures that if i.info[currentNarrative] is undefined or null, it won't throw an error. Instead, it will return undefined. .includes(currentValue) checks if the string or array contains currentValue, another variable which represents a specific value related to the narrative.// 
-	)                                                    //the result of this line is that currentSelection will only include people whose info[currentNarrative] contains currentValue//
+		i.info[currentNarrative]?.includes(currentValue)//accesses the info object of the person (i) and retrieves the value of the key currentNarrative, a variable that holds a narrative identifier or name. ?.: This is the optional chaining operator, which ensures that if i.info[currentNarrative] is undefined or null, it won't throw an error. Instead, it will return undefined. .includes(currentValue) checks if the string or array contains currentValue, another variable which represents a specific value related to the narrative.// 
+	)                                                //the result of this line is that currentSelection will only include people whose info[currentNarrative] contains currentValue//
 	currentSelection.sort( (i,j) =>  // This sorts the currentSelection array.  The sort function compares the values of the @sort property in each person object (i and j are the two people being compared in each iteration)//
 		i['@sort'] < j['@sort'] ? -1 : 1  //comparator function for sorting = If i['@sort'] is less than j['@sort'], it returns -1, which means i comes before j in the sorted order; If i['@sort'] is not less than j['@sort'], it returns 1, meaning i comes after j //
 	)
