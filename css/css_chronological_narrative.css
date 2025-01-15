@@ -26,12 +26,24 @@ h2 {
     background-color: #f8f8f8;
 }
 
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
 h3 {
     font-family: Crimson Text, serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+}
 
 /*NARRATIVE PART*/
 
@@ -163,25 +175,45 @@ h3 {
     z-index: 1;
 }
 
-
 .left-arrow {
-    left: -100px;
-   
+    left: -100px;  
 }
+
+@media (max-width: 1024px) {
+    .left-arrow {
+        left: -70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-arrow {
+        left: -25px;
+        top: 25%;
+        font-size: 2rem;
+    }
+}
+
 
 .right-arrow {
     right: -100px
 }
 
+@media (max-width: 1024px) {
+    .right-arrow {
+        right: -70px;
+    }
+}
 
 @media (max-width: 768px) {
-    .arrow {
-      display: none;
+    .right-arrow {
+        right: -25px;
+        top: 25%;
+        font-size: 2rem;
     }
-  }
+}
 
 
-
+ 
 /* Tooltip base */
 .arrow::after {
     position: absolute;
@@ -195,6 +227,13 @@ h3 {
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .arrow::after {
+        white-space: wrap;
+        text-align: center;
+    }
 }
 
 .arrow:hover::after {
