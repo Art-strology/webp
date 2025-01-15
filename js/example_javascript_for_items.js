@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 	const urlParams = new URLSearchParams(window.location.search);
     const startNarrative = urlParams.get('startNarrative');
     const startValue = urlParams.get('startValue');
+	//const sortValue = urlParams.get('sortValue');
 
 	if (startNarrative && startValue) {
         console.log(`Found parameters: startNarrative = ${startNarrative}, startValue = ${startValue}`);
