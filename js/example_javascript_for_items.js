@@ -45,8 +45,10 @@ function prepareNarratives() {
 	)
 	if (currentSelection.length==0) 
 		currentSelection = objects	//if no people meet the condition, this line resets currentSelection to the full people array//
-
-	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort ) //This searches through the currentSelection array to find the index of the person whose @sort property matches currentSort//
+    console.log(currentSelection)
+	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort )
+	console.log(currentSort)
+	console.log(index) //This searches through the currentSelection array to find the index of the person whose @sort property matches currentSort//
 	if (index == -1) index = 0
 	showInfo(index)
 }
