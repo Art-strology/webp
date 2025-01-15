@@ -8,8 +8,8 @@ var currentSort = ""
 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
-	
-	const urlParams = new URLSearchParams(window.location.search);
+
+	/*const urlParams = new URLSearchParams(window.location.search);
     const startNarrative = urlParams.get('startNarrative');
     const startValue = urlParams.get('startValue');
 	//const sortValue = urlParams.get('sortValue');
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         console.log("No query parameters found. Default behavior will be used.");
         currentNarrative = data.meta.startNarrative
 		currentValue = data.meta.startValue         
-    }
+    }*/
 
 	fetch('js/objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
 	.then(response => response.json()) //When the response is received, response.json() parses the response as JSON = JSON data is parsed as a JavaScript object (it's like a python dictionary).//
@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 		var startWith = data.meta.startWith
 		var object = objects[startWith]
 		narratives = data.meta.narratives
-		currentNarrative = startNarrative 
-		currentValue = startValue 
+		currentNarrative = data.meta.startNarrative //startNarrative
+		currentValue = data.meta.startValue //startValue 
         console.log(`Starting with Narrative: ${currentNarrative}, Value: ${currentValue}`);
 
 		prepareNarratives()
 	})
-});
+})
 
 function prepareNarratives() {
 	currentSelection = objects.filter( i =>  //filter is ann array method that works like a python for loop = it filter each person (i) in the people array//
