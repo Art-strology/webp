@@ -9,33 +9,59 @@ var currentSort = ""
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
 
-	/*const urlParams = new URLSearchParams(window.location.search);
-    const startNarrative = urlParams.get('startNarrative');
-    const startValue = urlParams.get('startValue');
-	//const sortValue = urlParams.get('sortValue');
-
-	if (startNarrative && startValue) {
-        console.log(`Found parameters: startNarrative = ${startNarrative}, startValue = ${startValue}`);
-    } else {
-        console.log("No query parameters found. Default behavior will be used.");
-        currentNarrative = data.meta.startNarrative
-		currentValue = data.meta.startValue         
-    }*/
 
 	fetch('js/objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
 	.then(response => response.json()) //When the response is received, response.json() parses the response as JSON = JSON data is parsed as a JavaScript object (it's like a python dictionary).//
 	.then(data => {	//data = data obtained from the JSON file//
 		objects = data.objects //retriving properties from data//
-		var startWith = data.meta.startWith
-		var object = objects[startWith]
 		narratives = data.meta.narratives
+
+        getItemfromLink ()
+
+		const params = new URLSearchParams(window.location.search);//checks url
+        if (!params.has("narrative") && !params.has("value")) {//if url does NOT have narrative and value parameters, 
+
 		currentNarrative = data.meta.startNarrative //startNarrative
 		currentValue = data.meta.startValue //startValue 
-        console.log(`Starting with Narrative: ${currentNarrative}, Value: ${currentValue}`);
+        console.log(currentNarrative, currentValue);
 
 		prepareNarratives()
-	})
+    }})
 })
+
+function getItemfromLink (){
+	const urlParams = new URLSearchParams(window.location.search);
+    const urlNarrative = urlParams.get('narrative');
+    const urlValue = urlParams.get('value');
+	const urlObject = urlParams.get('object');
+
+	if (urlNarrative && urlValue && urlObject) {
+
+        console.log(urlNarrative, urlValue, urlObject);
+		
+		currentNarrative = urlNarrative
+		const startObject = objects.find(i => i.itemName === urlObject);
+
+		if (startObject) {
+			currentValue = urlValue
+			currentSort = startObject['@sort'];
+			console.log(currentValue, currentSort)
+
+			prepareNarratives();
+
+			const index = currentSelection.findIndex(i => i.itemName === urlObject);
+			if (index !== -1) {
+				showInfo(index);
+			} else {
+				console.error("Item not found in the current selection.");
+			}
+		} else {
+			console.error("Item specified in the URL not found in the items list.");
+		}
+	} else {
+		console.warn("URL does not contain narrative or item parameters.");
+	}
+}
 
 function prepareNarratives() {
 	currentSelection = objects.filter( i =>  //filter is ann array method that works like a python for loop = it filter each person (i) in the people array//
@@ -46,10 +72,7 @@ function prepareNarratives() {
 	)
 	if (currentSelection.length==0) 
 		currentSelection = objects	//if no people meet the condition, this line resets currentSelection to the full people array//
-    console.log(currentSelection)
-	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort )
-	console.log(currentSort)
-	console.log(index) //This searches through the currentSelection array to find the index of the person whose @sort property matches currentSort//
+	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort )//This searches through the currentSelection array to find the index of the person whose @sort property matches currentSort//
 	if (index == -1) index = 0
 	showInfo(index)
 }
@@ -160,8 +183,6 @@ function hide(id) {
 }
 
 function inner(id,content, emptyFirst=true) {
-	console.log(id)
-	console.log(content)
 	if(emptyFirst) document.getElementById(id).innerHTML = "" ; 
 	document.getElementById(id).innerHTML += content ; 
 }
