@@ -4,6 +4,9 @@
 .color4 {color: #4d7a96;}
 .color5 {color: #bcd9d8;}
 
+html, body {
+    overflow-x: hidden;
+}
 
 .kanit-regular-italic {
     font-family: "Kanit", sans-serif;
@@ -341,7 +344,7 @@ g:hover .image-mapper-shape {
     }
 }   
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 660px) {
 
     .main_container {
         padding-left: 0px;
@@ -354,26 +357,26 @@ g:hover .image-mapper-shape {
     }
 
     .popover {
-        max-width: 35vw;
+        max-width: 24vw;
         padding: 0px;
     }
 
     .popover img.vertical_img {
-        width: 28vw;
-        height: 30vw;
+        width: 19vw;
+        height: 21vw;
     }
 
     .popover img.horizontal_img {
-        width: 30vw;
-        height: 28vw;
+        width: 21vw;
+        height: 19vw;
     }
 
     .popover img.square_img {
-        width: 30vw;
-        height: 30vw;
+        width: 21vw;
+        height: 21vw;
     }
     
-    .navbar a, .subnav .subnavbtn {
+    .navbar a {
         font-size: 10px; 
         padding: 6px 8px; 
     }
