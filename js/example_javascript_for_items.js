@@ -70,7 +70,7 @@ function prepareNarratives() {
 	currentSelection.sort( (i,j) =>  // This sorts the currentSelection array.  The sort function compares the values of the @sort property in each person object (i and j are the two people being compared in each iteration)//
 		i['@sort'] < j['@sort'] ? -1 : 1  //comparator function for sorting = If i['@sort'] is less than j['@sort'], it returns -1, which means i comes before j in the sorted order; If i['@sort'] is not less than j['@sort'], it returns 1, meaning i comes after j //
 	)
-	if (currentSelection.length==0) 
+	if (currentSelection.length==0 || currentNarrative=='date')
 		currentSelection = objects	//if no people meet the condition, this line resets currentSelection to the full people array//
 	var index  = currentSelection.findIndex( i => i['@sort'] == currentSort )//This searches through the currentSelection array to find the index of the person whose @sort property matches currentSort//
 	if (index == -1) index = 0
@@ -161,7 +161,12 @@ function prepareNavigationButtons(index) {
 		byId("buttonNext").onclick = null
 		//byId("buttonNext").innerHTML = "--"
 	}
-	inner('narrative', currentNarrative+": "+currentValue) //This line updates an element (with the id="narrative") to display the current narrative and value//
+	if (currentNarrative!='date') {	
+		inner('narrative', currentNarrative+": "+currentValue)
+	} else {
+		inner('narrative', "chronological order")
+	}
+ //This line updates an element (with the id="narrative") to display the current narrative and value//
 }
 
 function changeNarrative(narrative,value) {
