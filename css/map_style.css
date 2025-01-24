@@ -6,6 +6,31 @@
 
 html, body {
     overflow-x: hidden;
+    background-color: #f0dab3;
+}
+
+#intro {
+    padding: 20px; 
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;  
+    background-color: #212d55;
+    color: white;
+    text-align: left;
+    text-decoration: solid;
+}
+
+h2 {
+    font-family: Alatsi, sans-serif;
+}
+
+p {
+    font-size: 20px;
+    font-family:Crimson Text, serif;
+}
+
+hr {
+    color: #f0dab3;
 }
 
 .kanit-regular-italic {
@@ -14,6 +39,7 @@ html, body {
     font-style: italic;
 }
 
+/*Main navbar*/
 .dropdown-submenu {
     position: relative;
 }
@@ -35,14 +61,12 @@ html, body {
     display: block;
 }
 
+/*Map*/
+
 .main_container {
     display: flex;
     flex-direction: row;
-    background-color: #f0dab3;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding: 40px;
 }
 
 .map_container {
@@ -108,13 +132,14 @@ g:hover .image-mapper-shape {
     height: 180px;
 }
 
+/*Map navbar*/
+
 .map_navbar {
     background-color: #212d55;
     padding: 0px;
     position: relative;
 }
 
-/* Navigation links */
 .map_navbar a {
     float: left;
     font-size: 16px;
@@ -126,14 +151,13 @@ g:hover .image-mapper-shape {
     text-decoration: none;
 }
 
-/* The subnavigation menu */
+/*Map navba subnavigation*/
 .subnav {
     float: left;
     overflow: hidden;
     font-family: Crimson Text, serif;
 }
 
-/* Subnav button */
 .subnav .subnavbtn {
     font-size: 16px;
     border: none;
@@ -150,7 +174,7 @@ g:hover .image-mapper-shape {
     margin: 0;
 }
 
-.map_link.active, .subnav.active {
+.narrative.active, .map_link.active, .subnav.active {
     background-color: purple;
     margin: 0;
 }
@@ -186,6 +210,7 @@ g:hover .image-mapper-shape {
     color: white;
 }
 
+/*Items link subnav*/
 .sidebar {
     background-color: #212d55;
     float: right;
@@ -229,6 +254,7 @@ g:hover .image-mapper-shape {
     background: #bcd9d8;
 }
 
+/*Explore th narrative button*/
 .explore_this_narrative_button_container {
     display: flex;
     align-items: center;
@@ -259,13 +285,13 @@ g:hover .image-mapper-shape {
 
 .items_links {
     display: none;
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
-/* Hover effect */
+
 .items_links a:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3; 
 }
 
 
@@ -346,9 +372,71 @@ g:hover .image-mapper-shape {
 
 @media screen and (max-width: 660px) {
 
+    #intro {
+        margin-top: 35px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     .main_container {
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    .narratives_container {
+        flex-direction: column; 
+        width: 100%;
+        height: 150px; 
+        overflow-y: scroll;
+        justify-content: center;
+    }
+
+    .narrative {
+        width: 100%; 
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .narrative a {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .subnavbtn {
+        display: block;
+        text-align: center;
+        padding: 16px; 
+        width: 100%; 
+        font-size: 14px;
+    }
+
+    .subnav-content {
+        width: 100%; 
+        height: auto;
+        overflow-y: scroll;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .subnav-content a {
+        float: none;
+        text-align: center;
+    }
+
+    .explore_this_narrative_button_container {
+        padding: 0px;
+    }
+
+    #narrative_button {
+        width: 200px;
+        height: 60px;
+        font-size: 15px;
+        text-align:center;
+        justify-content: center;
     }
 
     .sidebar a {
@@ -374,32 +462,6 @@ g:hover .image-mapper-shape {
     .popover img.square_img {
         width: 21vw;
         height: 21vw;
-    }
-    
-    .navbar a {
-        font-size: 10px; 
-        padding: 6px 8px; 
-    }
-
-    .navbar {
-        padding: 5px; 
-    }
-
-    .subnav-content {
-        padding-left: 5px;
-        font-size: 11px; 
-    }
-
-    .explore_this_narrative_button_container {
-        padding: 0px;
-    }
-
-    #narrative_button {
-        width: 200px;
-        height: 60px;
-        font-size: 15px;
-        text-align:center;
-        justify-content: center;
     }
 
 }

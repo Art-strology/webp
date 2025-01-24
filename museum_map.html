@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -88,11 +89,19 @@
             </div>
       </nav>
         </header>
+        <div id="intro">
+            <h2>INTERACTIVE MAP</h2>
+            <hr>
+            <p>Explore our collection and plan your visit!</p>
+            <p>Play with the museum's interactive map! Select the narrative you prefer and browse trough the items.</p>
+        </div>
         <div class="main_container row justify-content-center">
             <div class="map_navbar">
                 <div class="narratives_container">
-                    <a class="map_link no_subnav_btn" id="show_all_items" href="#" items="all" items_links="all_items" narrative_button_link="" onclick="displayContent()">Show all items</a>
-                    <div class="subnav">
+                    <div class="narrative">
+                        <a class="map_link no_subnav_btn" id="show_all_items" href="#" items="all" items_links="all_items" narrative_button_link="" onclick="displayContent()">Show all items</a>
+                    </div>
+                    <div class="narrative subnav">
                         <button class="subnavbtn" subnav_content_id="subnav_geographic">Geographical <i class="fa fa-caret-down"></i></button>
                         <div class="subnav-content" id="subnav_geographic">
                             <a class="map_link subnav-content-link" id="show_babilonian_items" href="#" subnav_content_id="subnav_geographic" items="babilonian_item" items_links="babilonia_links" narrative_button_link="chronological_narrative.html?narrative=geography&value=Babylon&object=Orange-cream shell cylinder seal">Babylon</a>
@@ -100,9 +109,11 @@
                             <a class="map_link subnav-content-link" id="show_greek_items" href="#" subnav_content_id="subnav_geographic" items="greek_item" items_links="greece_links" narrative_button_link="chronological_narrative.html?narrative=geography&value=Greece&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION">Greece</a>
                             <a class="map_link subnav-content-link" id="show_chinese_items" href="#" subnav_content_id="subnav_geographic" items="chinese_item" items_links="china_links" narrative_button_link="chronological_narrative.html?narrative=geography&value=China&object=ROOF TILE END WITH RED BIRD OF THE SOUTH">China</a>
                         </div>
-                    </div> 
-                    <a class="map_link no_subnav_btn" id="show_chronological_order" href="#" items="all" items_links="chronological_links" narrative_button_link="/chronological_narrative.html">Chronological </a>
-                    <div class="subnav">
+                    </div>
+                    <div class="narrative">
+                        <a class="map_link no_subnav_btn" id="show_chronological_order" href="#" items="all" items_links="chronological_links" narrative_button_link="/chronological_narrative.html">Chronological</a>
+                    </div>
+                    <div class="narrative subnav">
                         <button class="subnavbtn" subnav_content_id="subnav_constellations"> Constellations <i class="fa fa-caret-down"></i></button>
                         <div class="subnav-content" id="subnav_constellations">
                             <a class="map_link subnav-content-link" id="show_andromeda_items" href="#" subnav_content_id="subnav_constellations" items="andromeda" items_links="andromeda_links" narrative_button_link="chronological_narrative.html?narrative=constellation&value=Andromeda&object=Limestone Cylinder Seal">Andromeda</a>
@@ -117,7 +128,7 @@
                             <a class="map_link subnav-content-link" id="show_ursa_items" href="#" subnav_content_id="subnav_constellations" items="ursa" items_links="ursa_links" narrative_button_link="chronological_narrative.html?narrative=constellation&value=Ursa Major&object=STELE OF ABKAOU">Ursa Major</a>
                         </div>
                     </div>
-                    <div class="subnav">
+                    <div class="narrative subnav">
                         <button class="subnavbtn" subnav_content_id="subnav_symbols"> Symbols <i class="fa fa-caret-down"></i></button>
                         <div class="subnav-content" id="subnav_symbols">
                             <a class="map_link subnav-content-link" id="show_bird_items" href="#" subnav_content_id="subnav_symbols" items="bird" items_links="bird_links" narrative_button_link="chronological_narrative.html?narrative=symbol&value=Bird&object=ROOF TILE END WITH RED BIRD OF THE SOUTH">Bird</a>
