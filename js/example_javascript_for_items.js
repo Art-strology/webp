@@ -194,13 +194,13 @@ function inner(id,content, emptyFirst=true) {
 }
 
 function headerImg () {
-	var dict = {"date" : "https://github.com/IMWT-project/webp/blob/main/img_compressed/meridiana3.jpg?raw=true",
-				"geography" : "https://github.com/IMWT-project/webp/blob/main/img_compressed/worldmap1.jpg?raw=true",
-				"constellation" : "https://github.com/IMWT-project/webp/blob/main/img_compressed/constellation3.jpg?raw=true",
-				"symbol" : "https://github.com/IMWT-project/webp/blob/main/img_compressed/shapes_1_cutt.jpg?raw=true"
+	var dict = {"date" : "img_compressed/meridiana3.jpg",
+				"geography" : "img_compressed/worldmap1.jpg",
+				"constellation" : "img_compressed/constellation3.jpg",
+				"symbol" : "img_compressed/shapes_1_cutt.jpg"
 	};
 
-	var img = byId("top-image-container").byId("top-img");
+	var img = document.querySelector('.top-image-container .top-img');
 
 	for(var key in dict) {
 		if(currentNarrative == key){
