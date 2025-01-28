@@ -199,7 +199,7 @@ function headerImg () {
 				"symbol" : "https://github.com/IMWT-project/webp/blob/main/img_compressed/shapes_1_cutt.jpg?raw=true"
 	};
 
-	var img = byId("top-img");
+	var img = byId("top-image-container").byId("top-img");
 
 	for(var key in dict) {
 		if(currentNarrative == key){
