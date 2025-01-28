@@ -90,7 +90,6 @@ function showInfo(index) {    //is designed to display detailed information abou
 	inner("fullInfo", "<p>"+ object.fullInfo + "</p>")
 	
 	prepareNavigationButtons(index)
-	headerImg();
 }
 
 let currentState = 1;
