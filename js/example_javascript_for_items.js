@@ -212,18 +212,19 @@ function otherNarrativesImg(){
 		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
 		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
 };
-	let narrs = ["date","geography","constellation","symbol"];
+	let narrs = ["date","geography","symbol","constellation"];
 	const idx = narrs.indexOf(currentNarrative);
 	narrs = narrs.splice(idx,idx);
 	const cards = document.getElementsByClassName('card');
 	for(let i = 0; i < cards.length; i++){
 		var narr = narrs[i];
 		var img = cards[i].getElementsByTagName("img");
-		img.src = dict.narr[0];
+		var currarr = dict[narr];
+		img.src = currarr[0];
 		var title = cards[i].querySelector('.card-body .card-title');
-		title.innerHTML = dict.narr[1];
+		title.innerHTML = currarr[1];
 		var text = cards[i].querySelector('.card-body .card-text');
-		text.innerHTML = dict.narr[2];
+		text.innerHTML = currarr[2];
 	};
 
 }
