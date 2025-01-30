@@ -91,6 +91,7 @@ function showInfo(index) {    //is designed to display detailed information abou
 	
 	prepareNavigationButtons(index)
 	headerImg()
+	otherNarrativesImg()
 }
 
 let currentState = 1;
@@ -202,4 +203,27 @@ function headerImg () {
 
 	var img = document.querySelector('.top-image-container .top-img');
 	img.src = dict[currentNarrative];
+}
+
+
+function otherNarrativesImg(){
+	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the timeline."],
+		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
+		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
+		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
+};
+	let narrs = ["date","geography","constellation","symbol"];
+	const idx = narrs.indexOf(currentNarrative);
+	narrs = narrs.splice(idx,idx);
+	const cards = document.getElementsByClassName('card');
+	for(let i = 0; i < cards.length; i++){
+		var narr = narrs[i];
+		var img = cards[i].getElementsByTagName("img");
+		img.src = dict[narr][0];
+		var title = cards[i].querySelector('.card-body .card-title');
+		title.innerHTML = dict[narr][1];
+		var text = cards[i].querySelector('.card-body .card-text');
+		text.innerHTML = dict[narr][2];
+	};
+
 }

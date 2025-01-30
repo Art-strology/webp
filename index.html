@@ -14,62 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\homepage-stylesheet.css">
-    <script>
-      function chroNarrative(){
-        location.href = "chronological_narrative.html"
-      }
-      function geoNarrative (class_){
-        const base = "chronological_narrative.html";
-        const geo = "?narrative=geography";
-        const objects = {"Babylon": "&object=Orange-cream shell cylinder seal",
-                      "Egypt": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
-                      "Greece": "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
-                      "China": "&object=ROOF TILE END WITH RED BIRD OF THE SOUTH",};
-        var value = "&value=" + class_;
-        var obj = objects[class_];
-        var urlNarrative = base + geo + value + obj;
-        location.href = urlNarrative;
-        
-      }
-
-      function consNarrative (class_){
-        const base = "chronological_narrative.html";
-        const cons = "?narrative=constellation";
-        const objects = {"Andromeda" : "&object=Limestone Cylinder Seal",
-                      "Aquarius" : "&object=The Adda Seal",
-                      "Aries" : "&object=Orange-cream shell cylinder seal",
-                      "Canis Major" : "&object=ISIS OF COPTOS",
-                      "Capricorn" : "&object=Ceremonial Basin",
-                      "Draco" : "&object=HERAKLES AND THE GOLDEN APPLES",
-                      "Leo" : "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
-                      "Scorpio" : "&object=MIRROR WITH ANIMAL HEADS AND AZURE DRAGONS",
-                      "Taurus" : "&object=Votive Relief",
-                      "Ursa Major": "&object=STELE OF ABKAOU",
-        };
-        var value = "&value=" + class_;
-        var obj = objects[class_];
-        var urlNarrative = base + cons + value + obj;
-        location.href = urlNarrative;
-      }
-
-      function symNarrative(class_){
-        const base = "chronological_narrative.html";
-        const sym = "?narrative=symbol";
-        const objects = {"Bird" : "&object=ROOF TILE END WITH RED BIRD OF THE SOUTH",
-                      "Bull" : "&object=Votive Relief",
-                      "Dragon" : "&object=HERAKLES AND THE GOLDEN APPLES",
-                      "Goat-Fish" : "&object=Ceremonial Basin",
-                      "Humanoid" : "&object=Orange-cream shell cylinder seal",
-                      "Lion" : "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
-                      "Tiger" : "&object=ROOF TILE END WITH TIGER",
-                      "Turtle": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
-        };
-        var value = "&value=" + class_;
-        var obj = objects[class_];
-        var urlNarrative = base + sym + value + obj;
-        location.href = urlNarrative;
-      }
-    </script>
+    <script src = "js/redirect_to_narrative_buttons.js"></script>
 </head>
 
 <body>
@@ -94,67 +39,67 @@
                 <ul class="dropdown-menu" 
                 aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" 
-                    href="chronological_narrative.html">Chronological</a></li>
+                      onclick="chroNarrative();">Chronological</a></li>
                     <li class="dropdown-submenu">
                         <a class="dropdown-item 
                         dropdown-toggle" href="#">Geographical</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"
-                            href="#">Babylon</a></li>
-                            <li><a class="dropdown-item"
-                            href="#">Egypt</a></li>
-                            <li><a class="dropdown-item"
-                            href="#">Greece</a></li>
-                            <li><a class="dropdown-item"
-                            href="#">China</a></li>  
+                            <li><a class="dropdown-item Babylon"
+                            onclick="geoNarrative(this.getAttribute('class'));">Babylon</a></li>
+                            <li><a class="dropdown-item Egypt"
+                            onclick="geoNarrative(this.getAttribute('class'));">Egypt</a></li>
+                            <li><a class="dropdown-item Greece"
+                            onclick="geoNarrative(this.getAttribute('class'));">Greece</a></li>
+                            <li><a class="dropdown-item China"
+                            onclick="geoNarrative(this.getAttribute('class'));">China</a></li>  
                         </ul>
                     </li>
                     <li class="dropdown-submenu">
                       <a class="dropdown-item 
                       dropdown-toggle" href="#">Constellations</a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item"
-                          href="#">Andromeda</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Aquarius</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Aries</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Canis Major</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Capricorn</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Draco</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Leo</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Scorpio</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Taurus</a></li> 
-                          <li><a class="dropdown-item"
-                          href="#">Ursa Major</a></li> 
+                          <li><a class="dropdown-item Andromeda"
+                          onclick="consNarrative(this.getAttribute('class'));">Andromeda</a></li>
+                          <li><a class="dropdown-item Aquarius"
+                          onclick="consNarrative(this.getAttribute('class'));">Aquarius</a></li>
+                          <li><a class="dropdown-item Aries"
+                          onclick="consNarrative(this.getAttribute('class'));">Aries</a></li>
+                          <li><a class="dropdown-item Canis Major"
+                          onclick="consNarrative(this.getAttribute('class'));">Canis Major</a></li>
+                          <li><a class="dropdown-item Capricorn"
+                          onclick="consNarrative(this.getAttribute('class'));">Capricorn</a></li>
+                          <li><a class="dropdown-item Draco"
+                          onclick="consNarrative(this.getAttribute('class'));">Draco</a></li>
+                          <li><a class="dropdown-item Leo"
+                          onclick="consNarrative(this.getAttribute('class'));">Leo</a></li>
+                          <li><a class="dropdown-item Scorpio"
+                          onclick="consNarrative(this.getAttribute('class'));">Scorpio</a></li>
+                          <li><a class="dropdown-item Taurus"
+                          onclick="consNarrative(this.getAttribute('class'));">Taurus</a></li> 
+                          <li><a class="dropdown-item Ursa Major"
+                          onclick="consNarrative(this.getAttribute('class'));">Ursa Major</a></li> 
                       </ul>
                   </li>
                     <li class="dropdown-submenu">
                       <a class="dropdown-item 
                       dropdown-toggle" href="#">Symbols</a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item"
-                          href="#">Bird</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Bull</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Dragon</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Goat-Fish</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Humanoid</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Lion</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Tiger</a></li>
-                          <li><a class="dropdown-item"
-                          href="#">Turtle</a></li>    
+                          <li><a class="dropdown-item Bird"
+                          onclick="symNarrative(this.getAttribute('class'));">Bird</a></li>
+                          <li><a class="dropdown-item Bull"
+                          onclick="symNarrative(this.getAttribute('class'));">Bull</a></li>
+                          <li><a class="dropdown-item Dragon"
+                          onclick="symNarrative(this.getAttribute('class'));">Dragon</a></li>
+                          <li><a class="dropdown-item Goat-Fish"
+                          onclick="symNarrative(this.getAttribute('class'));">Goat-Fish</a></li>
+                          <li><a class="dropdown-item Humanoid"
+                          onclick="symNarrative(this.getAttribute('class'));">Humanoid</a></li>
+                          <li><a class="dropdown-item Lion"
+                          onclick="symNarrative(this.getAttribute('class'));">Lion</a></li>
+                          <li><a class="dropdown-item Tiger"
+                          onclick="symNarrative(this.getAttribute('class'));">Tiger</a></li>
+                          <li><a class="dropdown-item Turtle"
+                          onclick="symNarrative(this.getAttribute('class'));">Turtle</a></li>    
                       </ul>
                   </li>
                 </ul>
@@ -201,192 +146,192 @@
             <div class="slide-track">
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_bull_of_heaven.jpeg?raw=true"/>
+                <img src="img_compressed/babylonian_bull_of_heaven.jpeg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goatfish.JPG?raw=true"/>
+                <img src="img_compressed/babylonian_goatfish.JPG"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goddess.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_goddess.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_hired_man.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_hired_man.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_the_great_one.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_the_great_one.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_bird.jpg?raw=true"/>
+                <img src="img_compressed/chinese_bird.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_dragon.jpg?raw=true"/>
+                <img src="img_compressed/chinese_dragon.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_tiger.jpg?raw=true"/>
+                <img src="img_compressed/chinese_tiger.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_turtle.jpg?raw=true"/>
+                <img src="img_compressed/chinese_turtle.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_isis_sopdet.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_isis_sopdet.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_leg_of_bull.JPG?raw=true"/>
+                <img src="img_compressed/egyptian_leg_of_bull.JPG"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://raw.githubusercontent.com/IMWT-project/webp/refs/heads/main/img_compressed/egyptian_sheep.webp"/>
+                <img src="img_compressed/egyptian_sheep.webp"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_taurus.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_taurus.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_two_turtle.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_andromeda.jpg?raw=true"/>
+                <img src="img_compressed/greek_andromeda.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_capricorn.jpg?raw=true"/>
+                <img src="img_compressed/greek_capricorn.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_draco.jpg?raw=true"/>
+                <img src="img_compressed/greek_draco.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_leo.jpeg?raw=true"/>
+                <img src="img_compressed/greek_leo.jpeg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_taurus.jpg?raw=true"/>
+                <img src="img_compressed/greek_taurus.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_bull_of_heaven.jpeg?raw=true"/>
+                <img src="img_compressed/babylonian_bull_of_heaven.jpeg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goatfish.JPG?raw=true"/>
+                <img src="img_compressed/babylonian_goatfish.JPG"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_goddess.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_goddess.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_hired_man.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_hired_man.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/babylonian_the_great_one.jpg?raw=true"/>
+                <img src="img_compressed/babylonian_the_great_one.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_bird.jpg?raw=true"/>
+                <img src="img_compressed/chinese_bird.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_dragon.jpg?raw=true"/>
+                <img src="img_compressed/chinese_dragon.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_tiger.jpg?raw=true"/>
+                <img src="img_compressed/chinese_tiger.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/chinese_turtle.jpg?raw=true"/>
+                <img src="img_compressed/chinese_turtle.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_isis_sopdet.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_isis_sopdet.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_leg_of_bull.JPG?raw=true"/>
+                <img src="img_compressed/egyptian_leg_of_bull.JPG"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://raw.githubusercontent.com/IMWT-project/webp/refs/heads/main/img_compressed/egyptian_sheep.webp"/>
+                <img src="img_compressed/egyptian_sheep.webp"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_taurus.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_taurus.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true"/>
+                <img src="img_compressed/egyptian_two_turtle.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_andromeda.jpg?raw=true"/>
+                <img src="img_compressed/greek_andromeda.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_capricorn.jpg?raw=true"/>
+                <img src="img_compressed/greek_capricorn.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_draco.jpg?raw=true"/>
+                <img src="img_compressed/greek_draco.jpg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_leo.jpeg?raw=true"/>
+                <img src="img_compressed/greek_leo.jpeg"/>
               </div>
             </a>
             <a href="collection-page.html">
               <div class="slide">
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/greek_taurus.jpg?raw=true"/>
+                <img src="img_compressed/greek_taurus.jpg"/>
               </div>
             </a>
             </div>
@@ -411,7 +356,7 @@
             <div class="col-sm-10">
               <div class="card-wrapper horizontal">
                 <div class="h1-hor">Chronological</div>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/meridiana3.jpg?raw=true" style="height: 300px; width: 100%;"/>
+                <img src="img_compressed/meridiana3.jpg" style="height: 300px; width: 100%;"/>
                 <div class="caption right-left">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <button class = "date" onclick="chroNarrative();">More Info</button>
@@ -423,7 +368,7 @@
             <div class="col-sm-4">
               <div class="card-wrapper vertical">
                 <h1>Geographical</h1>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/worldmap1.jpg?raw=true" style="height: 700px;" />
+                <img src="img_compressed/worldmap1.jpg" style="height: 700px;" />
                 <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <div class="row justify-content-around">
@@ -438,7 +383,7 @@
             <div class="col-sm-4">
               <div class="card-wrapper vertical">
                 <h1>Constellations</h1>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/constellation3.jpg?raw=true" style="height: 700px;"/>
+                <img src="img_compressed/constellation3.jpg" style="height: 700px;"/>
                 <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <div class="row justify-content-center">  
@@ -467,7 +412,7 @@
             <div class="col-sm-4">
               <div class="card-wrapper vertical">
                 <h1>Symbols</h1>
-                <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/shapes_1.jpg?raw=true" style="height: 700px;" />
+                <img src="img_compressed/shapes_1_cutt.jpg" style="height: 700px;" />
                 <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <div class="row justify-content-center">  

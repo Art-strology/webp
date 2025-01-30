@@ -66,6 +66,7 @@
 
   .dropdown-menu .dropdown-item:hover{
     background-color: lightblue;
+    cursor: pointer;
   }
 
   .nav-item:hover{
