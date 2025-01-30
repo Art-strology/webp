@@ -91,7 +91,7 @@ function showInfo(index) {    //is designed to display detailed information abou
 	
 	prepareNavigationButtons(index)
 	headerImg()
-	otherNarrativesImg()
+	//otherNarrativesImg()
 }
 
 let currentState = 1;
@@ -205,13 +205,13 @@ function headerImg () {
 	img.src = dict[currentNarrative];
 }
 
-
+/*
 function otherNarrativesImg(){
 	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the timeline."],
 		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
 		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
 		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
-};
+	};
 	let narrs = ["date","geography","symbol","constellation"];
 	const idx = narrs.indexOf(currentNarrative);
 	narrs = narrs.splice(idx,idx);
@@ -227,4 +227,4 @@ function otherNarrativesImg(){
 		text.innerHTML = currarr[2];
 	};
 
-}
+}*/
