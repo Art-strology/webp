@@ -14,6 +14,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\homepage-stylesheet.css">
+    <script>
+      function chroNarrative(){
+        location.href = "chronological_narrative.html"
+      }
+      function geoNarrative (class_){
+        const base = "chronological_narrative.html";
+        const geo = "?narrative=geography";
+        const objects = {"Babylon": "&object=Orange-cream shell cylinder seal",
+                      "Egypt": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+                      "Greece": "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
+                      "China": "&object=ROOF TILE END WITH RED BIRD OF THE SOUTH",};
+        var value = "&value=" + class_;
+        var obj = objects[class_];
+        var urlNarrative = base + geo + value + obj;
+        location.href = urlNarrative;
+        
+      }
+
+      function consNarrative (class_){
+        const base = "chronological_narrative.html";
+        const cons = "?narrative=constellation";
+        const objects = {"Andromeda" : "&object=Limestone Cylinder Seal",
+                      "Aquarius" : "&object=The Adda Seal",
+                      "Aries" : "&object=Orange-cream shell cylinder seal",
+                      "Canis Major" : "&object=ISIS OF COPTOS",
+                      "Capricorn" : "&object=Ceremonial Basin",
+                      "Draco" : "&object=HERAKLES AND THE GOLDEN APPLES",
+                      "Leo" : "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+                      "Scorpio" : "&object=MIRROR WITH ANIMAL HEADS AND AZURE DRAGONS",
+                      "Taurus" : "&object=Votive Relief",
+                      "Ursa Major": "&object=STELE OF ABKAOU",
+        };
+        var value = "&value=" + class_;
+        var obj = objects[class_];
+        var urlNarrative = base + cons + value + obj;
+        location.href = urlNarrative;
+      }
+
+      function symNarrative(class_){
+        const base = "chronological_narrative.html";
+        const sym = "?narrative=symbol";
+        const objects = {"Bird" : "&object=ROOF TILE END WITH RED BIRD OF THE SOUTH",
+                      "Bull" : "&object=Votive Relief",
+                      "Dragon" : "&object=HERAKLES AND THE GOLDEN APPLES",
+                      "Goat-Fish" : "&object=Ceremonial Basin",
+                      "Humanoid" : "&object=Orange-cream shell cylinder seal",
+                      "Lion" : "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
+                      "Tiger" : "&object=ROOF TILE END WITH TIGER",
+                      "Turtle": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+        };
+        var value = "&value=" + class_;
+        var obj = objects[class_];
+        var urlNarrative = base + sym + value + obj;
+        location.href = urlNarrative;
+      }
+    </script>
 </head>
 
 <body>
@@ -358,7 +414,7 @@
                 <img src="https://github.com/IMWT-project/webp/blob/main/img_compressed/meridiana3.jpg?raw=true" style="height: 300px; width: 100%;"/>
                 <div class="caption right-left">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <button id = "date">More Info</button>
+                  <button class = "date" onclick="chroNarrative();">More Info</button>
                 </div>
               </div>
             </div>
@@ -371,10 +427,10 @@
                 <div class="caption bottom-up">
                   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                   <div class="row justify-content-around">
-                    <button id = "Babylon">Babylon</button>
-                    <button id = "Egypt">Egypt</button>
-                    <button id = "Greece">Greece</button>
-                    <button id = "China">China</button>
+                    <button class = "Babylon" onclick="geoNarrative(this.getAttribute('class'));">Babylon</button>
+                    <button class = "Egypt" onclick="geoNarrative(this.getAttribute('class'));">Egypt</button>
+                    <button class = "Greece" onclick="geoNarrative(this.getAttribute('class'));">Greece</button>
+                    <button class = "China" onclick="geoNarrative(this.getAttribute('class'));">China</button>
                   </div>
                 </div>
               </div>
@@ -388,20 +444,20 @@
                   <div class="row justify-content-center">  
                     <div class="col">  
                       <div class="row justify-content-around"  style="margin-right: 1px;">
-                        <button id = "Andromeda">Andromeda</button>
-                        <button id = "Aquarius">Aquarius</button>
-                        <button id = "Aries">Aries</button>
-                        <button id = "Canis Major">Canis Major</button>
-                        <button id = "Capricorn">Capricorn</button>
+                        <button class = "Andromeda" onclick="consNarrative(this.getAttribute('class'));">Andromeda</button>
+                        <button class = "Aquarius" onclick="consNarrative(this.getAttribute('class'));">Aquarius</button>
+                        <button class = "Aries" onclick="consNarrative(this.getAttribute('class'));">Aries</button>
+                        <button class = "Canis Major" onclick="consNarrative(this.getAttribute('class'));">Canis Major</button>
+                        <button class = "Capricorn" onclick="consNarrative(this.getAttribute('class'));">Capricorn</button>
                       </div>
                     </div>
                     <div class="col">  
                       <div class="row justify-content-around" style="margin-left: 1px;">
-                        <button id = "Draco">Draco</button>
-                        <button id = "Leo">Leo</button>
-                        <button id = "Scorpio">Scorpio</button>
-                        <button id = "Taurus">Taurus</button>
-                        <button id = "Ursa Major">Ursa Major</button>
+                        <button class = "Draco" onclick="consNarrative(this.getAttribute('class'));">Draco</button>
+                        <button class = "Leo" onclick="consNarrative(this.getAttribute('class'));">Leo</button>
+                        <button class = "Scorpio" onclick="consNarrative(this.getAttribute('class'));">Scorpio</button>
+                        <button class = "Taurus" onclick="consNarrative(this.getAttribute('class'));">Taurus</button>
+                        <button class = "Ursa Major" onclick="consNarrative(this.getAttribute('class'));">Ursa Major</button>
                       </div>
                     </div>
                   </div>
@@ -417,18 +473,18 @@
                   <div class="row justify-content-center">  
                     <div class="col">  
                       <div class="row justify-content-around"  style="margin-right: 1px;">
-                        <button id = "Bird">Bird</button>
-                        <button id = "Bull">Bull</button>
-                        <button id = "Dragon">Dragon</button>
-                        <button id = "Goat-Fish">Goat-Fish</button>
+                        <button class = "Bird" onclick="symNarrative(this.getAttribute('class'));">Bird</button>
+                        <button class = "Bull" onclick="symNarrative(this.getAttribute('class'));">Bull</button>
+                        <button class = "Dragon" onclick="symNarrative(this.getAttribute('class'));">Dragon</button>
+                        <button class = "Goat-Fish" onclick="symNarrative(this.getAttribute('class'));">Goat-Fish</button>
                       </div>
                     </div>
                     <div class="col">  
                       <div class="row justify-content-around" style="margin-left: 1px;">
-                        <button id = "Humanoid">Humanoid</button>
-                        <button id = "Lion">Lion</button>
-                        <button id = "Tiger">Tiger</button>
-                        <button id = "Turtle">Turtle</button>
+                        <button class = "Humanoid" onclick="symNarrative(this.getAttribute('class'));">Humanoid</button>
+                        <button class = "Lion" onclick="symNarrative(this.getAttribute('class'));">Lion</button>
+                        <button class = "Tiger" onclick="symNarrative(this.getAttribute('class'));">Tiger</button>
+                        <button class = "Turtle" onclick="symNarrative(this.getAttribute('class'));">Turtle</button>
                       </div>
                     </div>
                   </div>

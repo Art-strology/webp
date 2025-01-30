@@ -201,11 +201,5 @@ function headerImg () {
 	};
 
 	var img = document.querySelector('.top-image-container .top-img');
-
-	for(var key in dict) {
-		if(currentNarrative == key){
-			var value = dict[key];
-			img.src = value;
-		}
-	}
+	img.src = dict[currentNarrative];
 }
