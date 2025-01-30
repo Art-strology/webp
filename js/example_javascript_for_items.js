@@ -219,11 +219,11 @@ function otherNarrativesImg(){
 	for(let i = 0; i < cards.length; i++){
 		var narr = narrs[i];
 		var img = cards[i].getElementsByTagName("img");
-		img.src = dict[narr][0];
+		img.src = dict.narr[0];
 		var title = cards[i].querySelector('.card-body .card-title');
-		title.innerHTML = dict[narr][1];
+		title.innerHTML = dict.narr[1];
 		var text = cards[i].querySelector('.card-body .card-text');
-		text.innerHTML = dict[narr][2];
+		text.innerHTML = dict.narr[2];
 	};
 
 }
