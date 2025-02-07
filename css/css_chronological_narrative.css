@@ -70,7 +70,7 @@ h3 {
 
 .narrative-title {
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -83,13 +83,14 @@ h3 {
 
 @media (max-width: 1024px) {
     .narrative-title {
-        font-size: 3.5vw !important;
+        font-size: 4vw !important;
+        top: 21%;
     }
 }
 
 @media (max-width:768px) {
     .narrative-title {
-        font-size: 4.5vw;
+        font-size: 6vw !important;
     }
 
     .top-img {
