@@ -88,6 +88,10 @@ function showInfo(index) {    //is designed to display detailed information abou
 	inner("shortInfo",object.shortInfo)
 	inner("longerInfo","<p>"+ object.longerInfo.join("</p><p>") + "</p>")
 	inner("fullInfo", "<p>"+ object.fullInfo + "</p>")
+
+	var lightboxImage = byId("main-image");
+	lightboxImage.src = object.image;
+
 	
 	prepareNavigationButtons(index)
 	headerImg()
