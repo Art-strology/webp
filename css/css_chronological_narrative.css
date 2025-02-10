@@ -290,14 +290,13 @@ h3 {
 }
 
 #imageZoom { /*container*/
-    width: 550px;
+    width: 900px;
     height: 600px;
     position: relative;
     overflow: hidden;
 }
 
 #main-image {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
