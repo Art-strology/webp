@@ -45,6 +45,8 @@ h3 {
     }
 }
 
+
+
 /*NARRATIVE PART*/
 
 .top-image-container {
@@ -115,6 +117,12 @@ h3 {
 .data-container {
     padding-top: 20px;
 }
+
+.data-container a:link, .data-container a:visited {
+    color: #5389ab;
+}
+
+
 
 .image-container {
     flex: 1;                   
