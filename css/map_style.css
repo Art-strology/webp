@@ -152,13 +152,14 @@ g:hover .image-mapper-shape {
 }
 
 /*Map navba subnavigation*/
-.subnav {
+.subnav, .no_subnav_btn {
     float: left;
     overflow: hidden;
     font-family: Crimson Text, serif;
 }
 
-.subnav .subnavbtn {
+.subnav .subnavbtn, .no_subnav_btn {
+    width: inherit;
     font-size: 16px;
     border: none;
     outline: none;
@@ -174,13 +175,12 @@ g:hover .image-mapper-shape {
     margin: 0;
 }
 
-.narrative.active, .map_link.active, .subnav.active {
+.no_subnav_btn.active {
     background-color: purple;
-    margin: 0;
 }
 
 .subnavbtn.active {
-    background-color: rgb(246, 144, 246);
+    background-color: rgb(246, 144, 246); 
 }
 
 .subnav-content {
@@ -192,20 +192,25 @@ g:hover .image-mapper-shape {
     z-index: 1;
 }
 
-.subnav-content a {
+.subnav-content button {
     font-family: Crimson Text, serif;
     float: left;
     color: white;
     text-decoration: none;
-    border-color: black;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 20px 16px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
 }
 
-.subnav-content a:hover {
+.subnav-content button:hover {
     background-color: #bcd9d8;
     color: black;
 }
 
-.subnav-content a.active {
+.subnav-content button.active {
     background-color: purple;
     color: white;
 }
@@ -422,9 +427,10 @@ g:hover .image-mapper-shape {
         position: relative;
     }
 
-    .subnav-content a {
+    .subnav-content button {
         float: none;
         text-align: center;
+        height: inherit;
     }
 
     .explore_this_narrative_button_container {
