@@ -45,6 +45,8 @@ h3 {
     }
 }
 
+
+
 /*NARRATIVE PART*/
 
 .top-image-container {
@@ -70,7 +72,7 @@ h3 {
 
 .narrative-title {
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -83,13 +85,14 @@ h3 {
 
 @media (max-width: 1024px) {
     .narrative-title {
-        font-size: 3.5vw !important;
+        font-size: 4vw !important;
+        top: 21%;
     }
 }
 
 @media (max-width:768px) {
     .narrative-title {
-        font-size: 4.5vw;
+        font-size: 6vw !important;
     }
 
     .top-img {
@@ -114,6 +117,12 @@ h3 {
 .data-container {
     padding-top: 20px;
 }
+
+.data-container a:link, .data-container a:visited {
+    color: #5389ab;
+}
+
+
 
 .image-container {
     flex: 1;                   
@@ -289,31 +298,19 @@ h3 {
 }
 
 #imageZoom { /*container*/
-    width: 550px;
+    width: 900px;
     height: 600px;
     position: relative;
+    overflow: hidden;
 }
 
 #main-image {
-    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 0;
+    transition: transform 0.5s ease;
 }
 
-#imageZoom::after{
-    display: var(--display);
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: var(--url);
-    background-size: 200%;  /*potenza zoom*/
-    background-position: var(--zoom-x) var(--zoom-y);
-    position: absolute;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-}
+
 
 
 

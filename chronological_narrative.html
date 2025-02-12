@@ -113,7 +113,7 @@
         <div class="img-data-container">
             <div id="buttonPrevious" class="arrow left-arrow">&#10094;</div>
             <div class="image-container">
-                <img id="img" class = "obj-img" src="img_compressed/egyptian_two_turtle.jpg" alt="palette depicting a pair of mud turtles">
+                <img id="img" class = "obj-img"  alt="palette depicting a pair of mud turtles">
             </div>
 
             <!--LIGHTBOX -->
@@ -121,11 +121,8 @@
                 <div class="lightbox-container">
                     <div id="lightbox-content">
                         <button id="close-btn" onclick="closeLightbox()">✕</button>
-                        <div id="imageZoom" style="
-                            --url: url(https://github.com/IMWT-project/timeline/blob/main/img_compressed/egyptian_two_turtle.jpg?raw=true);
-                            --zoom-x: 0%; --zoom-y: 0%
-                            --display: none ">
-                            <img id="main-image" src="img_compressed/egyptian_two_turtle.jpg" alt="Artwork">
+                        <div id="imageZoom">
+                            <img id="main-image" src="">
                         </div>
                     </div>
                 </div>    
@@ -270,22 +267,23 @@
     document.querySelector(".obj-img").addEventListener("click", openLightbox);
 
     //zoom
-    let imageZoom = document.getElementById('imageZoom');
-    imageZoom.addEventListener('mousemove', (event) => {
-        imageZoom.style.setProperty('--display', 'block');
-        let pointer = {
-            x: (event.offsetX * 100) / imageZoom.offsetWidth,
-            y: (event.offsetY * 100) / imageZoom.offsetHeight
-        }
-        imageZoom.style.setProperty('--zoom-x', pointer.x + '%');
-        imageZoom.style.setProperty('--zoom-y', pointer.y + '%');
+    const imageZoom = document.getElementById('imageZoom');
+    const mainImage = document.getElementById('main-image');
 
-        console.log(pointer);
-    })
-    imageZoom.addEventListener('mouseout', () => {
-        imageZoom.style.setProperty('--display', 'none');
-    })
-    
+    imageZoom.addEventListener('mousemove', (event) => {
+        const rect = imageZoom.getBoundingClientRect(); // calcola dimensioni e posizione del contenitore che racchiude l'img
+        const x = event.clientX - rect.left; // fornisce le coordinate del cursore 
+        const y = event.clientY - rect.top;
+        const xPercent = (x / rect.width) * 100; //converto in percentuale 
+        const yPercent = (y / rect.height) * 100;
+        
+        mainImage.style.transformOrigin = `${xPercent}% ${yPercent}%`; //stabilisce da dove deve partire l'effetto zoom
+        mainImage.style.transform = 'scale(2)';
+});
+
+imageZoom.addEventListener('mouseout', () => {
+  mainImage.style.transform = 'scale(1)';
+});
     
 </script>
 

@@ -88,8 +88,14 @@ function showInfo(index) {    //is designed to display detailed information abou
 	inner("shortInfo",object.shortInfo)
 	inner("longerInfo","<p>"+ object.longerInfo.join("</p><p>") + "</p>")
 	inner("fullInfo", "<p>"+ object.fullInfo + "</p>")
+
+	var lightboxImage = byId("main-image");
+	lightboxImage.src = object.image;
+
 	
 	prepareNavigationButtons(index)
+	headerImg()
+	//otherNarrativesImg()
 }
 
 let currentState = 1;
@@ -192,3 +198,37 @@ function inner(id,content, emptyFirst=true) {
 	document.getElementById(id).innerHTML += content ; 
 }
 
+function headerImg () {
+	var dict = {"date" : "img_compressed/meridiana3.jpg",
+				"geography" : "img_compressed/worldmap1.jpg",
+				"constellation" : "img_compressed/constellation3.jpg",
+				"symbol" : "img_compressed/shapes_1_cutt.jpg"
+	};
+
+	var img = document.querySelector('.top-image-container .top-img');
+	img.src = dict[currentNarrative];
+}
+
+/*
+function otherNarrativesImg(){
+	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the timeline."],
+		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
+		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
+		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
+	};
+	let narrs = ["date","geography","symbol","constellation"];
+	const idx = narrs.indexOf(currentNarrative);
+	narrs = narrs.splice(idx,idx);
+	const cards = document.getElementsByClassName('card');
+	for(let i = 0; i < cards.length; i++){
+		var narr = narrs[i];
+		var img = cards[i].getElementsByTagName("img");
+		var currarr = dict[narr];
+		img.src = currarr[0];
+		var title = cards[i].querySelector('.card-body .card-title');
+		title.innerHTML = currarr[1];
+		var text = cards[i].querySelector('.card-body .card-text');
+		text.innerHTML = currarr[2];
+	};
+
+}*/
