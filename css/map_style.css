@@ -140,26 +140,14 @@ g:hover .image-mapper-shape {
     position: relative;
 }
 
-.map_navbar a {
-    float: left;
-    font-size: 16px;
-    font-family: Crimson Text, serif;
-    color: white;
-    text-align: center;
-    padding: 20px 16px;
-    border-color: black;
-    text-decoration: none;
-}
-
 /*Map navba subnavigation*/
-.subnav, .no_subnav_btn {
+.narrative {
     float: left;
     overflow: hidden;
     font-family: Crimson Text, serif;
 }
 
-.subnav .subnavbtn, .no_subnav_btn {
-    width: inherit;
+.narrative button {
     font-size: 16px;
     border: none;
     outline: none;
@@ -170,17 +158,12 @@ g:hover .image-mapper-shape {
     position: relative;
 }
 
-.map_link:hover, .subnav:hover {
+.narrative button:hover {
     background-color:#4d7a96 ;
-    margin: 0;
 }
 
-.no_subnav_btn.active {
+.narrative button.active {
     background-color: purple;
-}
-
-.subnavbtn.active {
-    background-color: rgb(246, 144, 246); 
 }
 
 .subnav-content {
@@ -190,19 +173,6 @@ g:hover .image-mapper-shape {
     background-color: #4d7a96;
     width: 100%;
     z-index: 1;
-}
-
-.subnav-content button {
-    font-family: Crimson Text, serif;
-    float: left;
-    color: white;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    padding: 20px 16px;
-    font-size: 16px;
-    transition: background-color 0.2s ease;
 }
 
 .subnav-content button:hover {
@@ -273,6 +243,9 @@ g:hover .image-mapper-shape {
     border-color: white;
     text-decoration: bold 20px;
     border-width: 3px;
+    padding-top: 12px;
+    justify-content: center;
+    text-align: center;
 }
 
 #narrative_button:hover {
@@ -281,25 +254,15 @@ g:hover .image-mapper-shape {
     border-color: #4d7a96;
 }
 
-.btn {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
 .items_links {
     display: none;
     flex-wrap: wrap; 
     justify-content: center; 
 }
 
-
 .items_links a:hover {
     background-color: #0056b3; 
 }
-
-
 
 @media screen and (max-width: 1300px) {
     
@@ -403,10 +366,15 @@ g:hover .image-mapper-shape {
         text-align: center;
     }
 
-    .narrative a {
+    .narrative button {
         float: none;
         text-align: center;
         width: 100%;
+        display: block;
+        text-align: center;
+        padding: 16px; 
+        width: 100%; 
+        font-size: 14px;
     }
 
     .subnavbtn {
