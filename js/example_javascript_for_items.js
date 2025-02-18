@@ -5,27 +5,33 @@ var currentSelection = []
 var currentNarrative = ""
 var currentValue = ""
 var currentSort = ""
-
+let cardCon = '' 
 document.addEventListener("DOMContentLoaded", async function(event) {
 	console.log("Ready to start with phase 4") //This line outputs a message ("Ready to start with phase 4") to the browser's console for debugging purposes//
-
+        cardCon = document.querySelectorAll('.cardCon')
 
 	fetch('js/objects.json') //he fetch() function is used to make a request to a URL and retrieve data from it --> it fetches a JSON file// //Why it’s useful: Fetch is an asynchronous function, meaning it doesn’t block the rest of the code from running while it waits for the response. This is useful for making HTTP requests (like getting data from a server or file) without freezing the rest of the page.//
 	.then(response => response.json()) //When the response is received, response.json() parses the response as JSON = JSON data is parsed as a JavaScript object (it's like a python dictionary).//
 	.then(data => {	//data = data obtained from the JSON file//
 		objects = data.objects //retriving properties from data//
 		narratives = data.meta.narratives
+                const urlParams = new URLSearchParams(window.location.search);
+		const urlNarrative = urlParams.get('narrative');
+		if(urlNarrative == null){
+			cardCon[3].style.display = 'none'
+			currentNarrative = 'date'
+			prepareNarratives()
+			}else {
+                            getItemfromLink ()
 
-        getItemfromLink ()
+		            const params = new URLSearchParams(window.location.search);//checks url
+                            if (!params.has("narrative") && !params.has("value")) {//if url does NOT have narrative and value parameters, 
 
-		const params = new URLSearchParams(window.location.search);//checks url
-        if (!params.has("narrative") && !params.has("value")) {//if url does NOT have narrative and value parameters, 
+	                 	currentNarrative = data.meta.startNarrative //startNarrative
+		                currentValue = data.meta.startValue //startValue 
+                                console.log(currentNarrative, currentValue);
 
-		currentNarrative = data.meta.startNarrative //startNarrative
-		currentValue = data.meta.startValue //startValue 
-        console.log(currentNarrative, currentValue);
-
-		prepareNarratives()
+		               prepareNarratives()
     }})
 })
 
@@ -40,6 +46,19 @@ function getItemfromLink (){
         console.log(urlNarrative, urlValue, urlObject);
 		
 		currentNarrative = urlNarrative
+		currentNarrative = urlNarrative
+		console.log(urlNarrative);// to see current narrative
+		//then show the card
+		if(urlNarrative == 'geography'){
+			console.log(1111); 
+			cardCon[0].style.display = 'none' //hide
+		}else if(urlNarrative == 'constellation'){
+			console.log(2222);
+			cardCon[2].style.display = 'none'
+		}else if(urlNarrative == 'symbol'){
+			console.log(3333);
+			cardCon[1].style.display = 'none'
+		}
 		const startObject = objects.find(i => i.itemName === urlObject);
 
 		if (startObject) {
