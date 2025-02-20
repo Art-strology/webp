@@ -21,12 +21,11 @@ html, body {
 }
 
 h2 {
-    font-family: Alatsi, sans-serif;
+    font-family:Crimson Text, serif;
 }
 
 p {
     font-size: 20px;
-    font-family:Crimson Text, serif;
 }
 
 hr {
@@ -96,21 +95,22 @@ g:hover .image-mapper-shape {
 }
 
 .popover {
-    background-color: black;
+    background-color: white;
     align-items: center;
     cursor: pointer;
     max-width: 210px; 
     display: flex;
     flex-direction: column;
     padding: 0px;
+
 }
 
 .popover-header {
-    background-color: black;
+    background-color: white;
     text-align: center;
-    color: white;
+    text-wrap: normal;
+    color: black;
     padding-top: 17px;
-    font-family: Crimson Text, serif;
 }
 
 .popover body {
@@ -144,7 +144,6 @@ g:hover .image-mapper-shape {
 .narrative {
     float: left;
     overflow: hidden;
-    font-family: Crimson Text, serif;
 }
 
 .narrative button {
@@ -164,6 +163,10 @@ g:hover .image-mapper-shape {
 
 .narrative button.active {
     background-color: purple;
+}
+
+.subnav button.active {
+    background-color: rgb(255, 159, 255);
 }
 
 .subnav-content {
@@ -200,7 +203,6 @@ g:hover .image-mapper-shape {
 }
 
 .sidebar a {
-    font-family: Crimson Text, serif;
     display: block;
     color: white;
     padding: 16px;
@@ -295,7 +297,7 @@ g:hover .image-mapper-shape {
     }
 
     .popover-header {
-        font-size: 10px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -352,17 +354,18 @@ g:hover .image-mapper-shape {
     }
 
     .narratives_container {
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 150px; 
-        overflow-y: scroll;
-        justify-content: center;
+        height: auto; 
+        overflow-y: auto;
+        justify-content: flex-start;
     }
+
 
     .narrative {
         width: 100%; 
         height: auto;
-        flex-direction: column;
         text-align: center;
     }
 
@@ -373,44 +376,42 @@ g:hover .image-mapper-shape {
         display: block;
         text-align: center;
         padding: 16px; 
-        width: 100%; 
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .subnavbtn {
-        display: block;
-        text-align: center;
+        display: block;       
         padding: 16px; 
         width: 100%; 
-        font-size: 14px;
     }
 
     .subnav-content {
-        width: 100%; 
-        height: auto;
-        overflow-y: scroll;
-        flex-direction: column;
-        text-align: center;
-        font-size: 20px;
+        
+        flex-wrap: wrap;
         position: relative;
+        justify-content: center;
     }
 
     .subnav-content button {
-        float: none;
-        text-align: center;
-        height: inherit;
+        display: inline-block;
+        width: auto;
     }
 
     .explore_this_narrative_button_container {
-        padding: 0px;
+        padding-top: 0px;
+        padding-bottom: 16px;
     }
 
     #narrative_button {
         width: 200px;
         height: 60px;
         font-size: 15px;
+        padding: 14px;
         text-align:center;
-        justify-content: center;
+    }
+    
+    .sidebar {
+        height: auto;
     }
 
     .sidebar a {
@@ -419,23 +420,32 @@ g:hover .image-mapper-shape {
     }
 
     .popover {
-        max-width: 24vw;
-        padding: 0px;
+        width: 35vw;
+    }
+
+    .popover-header {
+        font-size: 15px;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .popover-body {
+        padding: 4px;
     }
 
     .popover img.vertical_img {
-        width: 19vw;
-        height: 21vw;
+        width: 22vw;
+        height: 24vw;
     }
 
     .popover img.horizontal_img {
-        width: 21vw;
-        height: 19vw;
+        width: 24vw;
+        height: 22vw;
     }
 
     .popover img.square_img {
-        width: 21vw;
-        height: 21vw;
+        width: 24vw;
+        height: 24vw;
     }
 
 }
