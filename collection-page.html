@@ -329,16 +329,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".collection-card");
 
-  cards.forEach(function (card) {
-      card.addEventListener("click", function (event) {
-          event.preventDefault();
-          const itemName = card.getAttribute("data-item-name");
-          const encodedItemName = encodeURIComponent(itemName);
-          const baseURL = "chronological_narrative.html";
-          const cons = "?narrative=chronological"
-          const queryParams = `?narrative=chronological&item=${encodedItemName}`;
-          window.location.href = baseURL + queryParams;
+  cards.forEach(card => {
+    card.addEventListener("click", function (e) {
+      e.preventDefault();
+      
+     
+      const itemName = card.dataset.itemName;
+      const narrative = "chronological"; 
+      
+      const params = new URLSearchParams({
+        narrative: narrative,
+
+        item: encodeURIComponent(itemName)
       });
-  });
-});
+      
+      window.location.href = `chronological_narrative.html?${params}`;
 </script>
