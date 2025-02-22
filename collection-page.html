@@ -11,103 +11,42 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous">
     </script>
+  <script src = "js/navbar_script.js"></script>
+  <link rel="stylesheet" href="css/css_navbar.css">
 
   <body style="background-color: #efd199;">
     <header>
-      <style>
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -6px;
-            margin-left: 0;
-            border-radius: 0.25rem;
-            display: none;
-        }
-
-        .dropdown-submenu:hover .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu.show {
-            display: block;
-        }
-    </style>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Title</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"
-                     href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                        Narratives
-                    </a>
-                    <ul class="dropdown-menu" 
-                    aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" 
-                        href="#">Chronological</a></li>
-                        <li><a class="dropdown-item" 
-                          href="#">Zodiac</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item 
-                            dropdown-toggle" href="#">Geographical</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                href="#">Babylon</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">Egypt</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">Greece</a></li>
-                                <li><a class="dropdown-item"
-                                 href="#">China</a></li>  
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                          <a class="dropdown-item 
-                          dropdown-toggle" href="#">Shape/Symbol</a>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item"
-                              href="#">Bull</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Goat-Fish</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Humanoid</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Snake/Dragon</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Turtle</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Sheep</a></li>    
-                          </ul>
-                      </li>
-                    </ul>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="museum_map-main/museum_map.html">Map</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="timeline.html">Timeline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="collection-page.html">Collection</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
-                  </li>
-                  
-              </div>
-            </div>
+      <nav class="navbar navbar-expand-lg bg-nav py-0">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Title</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Narratives
+                </a>
+                <ul id= "navbar-dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseleave="hidemenu();" >
+                    <li><a class="dropdown-item" onclick="chroNarrative();">Chronological</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="museum_map.html">Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="timeline.html">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="collection-page.html">Collection</a>
+              </li>
+            </ul>     
+          </div>
+        </div>
       </nav>
     </header>
     <div>

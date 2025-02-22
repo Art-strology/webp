@@ -6,17 +6,16 @@
   body, html {
     height: 100%;
     margin: 0;
-    font-family: crimson text, serif;
+    background-color: rgb(240, 218, 179);
+    font-family: crimson text,"Inter", "DM Sans", Arial, sans-serif, serif;
   }
-
 
   /*Blocks*/
 
   section {
-  padding: 3rem;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  background-color: rgb(240, 218, 179);
+  padding: 2rem;
+  padding-left: 8vw;
+  padding-right: 8vw;
   }
 
   .container{
@@ -29,9 +28,17 @@
   .text-wrapper {
     padding-left: 3vw;
     padding-right: 5vw;
+    padding-bottom: 3vw;
   }
   
   h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: crimson text, serif;
+  }
+
+  h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -42,58 +49,32 @@
     font-family: sans-serif;
   }
 
-
-  /*Navbar*/
-
-  .bg-nav{
-    background-color: rgb(77, 122, 150);
-  }
-
-  .dropdown-submenu {
-    position: relative;
-    background-color: #bcd9d8;
-  }
-
-  .dropdown-submenu .dropdown-menu {
-      top: 0;
-      left: 100%;
-      margin-top: -6px;
-      margin-left: 0;
-      border-radius: 0.25rem;
-      display: none;
-      background-color: #bcd9d8;
-  }
-
-  .dropdown-menu .dropdown-item:hover{
-    background-color: lightblue;
-    cursor: pointer;
-  }
-
-  .nav-item:hover{
-    background-color: lightblue;
-  }
-
-  .dropdown-submenu:hover .dropdown-menu {
-      display: block;    
-  }
-
-  .dropdown-menu.show {
-      display: block;
-      background-color: #bcd9d8;
-  }
-
   /*Parallax*/
 
-  .parallax_hero {
+  .hero {
     position: relative;
-    background-image: url("https://github.com/colakogluezgi00/test/blob/main/52515250436_6ea8fea1ca_o.jpg?raw=true");
     min-height: 700px; 
-
-    background-attachment: fixed;
+    width: 100%;
+    background-image: url("https://github.com/colakogluezgi00/test/blob/main/IMG_6508%5B1%5D.JPG?raw=true");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /*
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;*/
   }
+
+  /*
+  @keyframes example {
+    0%   {
+        filter: blur(0px) brightness(1);
+    }
+    100%  {
+        filter: blur(2px) brightness(0.4);
+    }
+}*/
 
   .parallax {
     position: relative;
@@ -113,8 +94,12 @@
     text-align: center;
     color: #000;
   }
-    
 
+  .title {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+    
   /*Slider*/
 
   @keyframes scroll {
@@ -314,7 +299,6 @@
     font-size: 56px;
     margin: 0 0 10px;
   }
-
 
 /*Footer*/
 

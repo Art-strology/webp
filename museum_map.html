@@ -11,83 +11,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/css_navbar.css">
+        <script src = "js/navbar_script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Title</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"
-                     href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                        Narratives
-                    </a>
-                    <ul class="dropdown-menu" 
-                    aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" 
-                        href="#">Chronological</a></li>
-                        <li><a class="dropdown-item" 
-                          href="#">Zodiac</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item 
-                            dropdown-toggle" href="#">Geographical</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                href="chronological_narrative.html?startNarrative=geography&startValue=Babylon">Babylon</a></li>
-                                <li><a class="dropdown-item"
-                                 href="chronological_narrative.html?startNarrative=geography&startValue=Egypt">Egypt</a></li>
-                                <li><a class="dropdown-item"
-                                 href="chronological_narrative.html?startNarrative=geography&startValue=Greece">Greece</a></li>
-                                <li><a class="dropdown-item"
-                                 href="chronological_narrative.html?startNarrative=geography&startValue=Cina">China</a></li>  
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                          <a class="dropdown-item 
-                          dropdown-toggle" href="#">Shape/Symbol</a>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item"
-                              href="chronological_narrative.html?startNarrative=symbol&startValue=Bull">Bull</a></li>
-                              <li><a class="dropdown-item"
-                               href="chronological_narrative.html?startNarrative=symbol&startValue=Goat-Fish">Goat-Fish</a></li>
-                              <li><a class="dropdown-item"
-                               href="chronological_narrative.html?startNarrative=symbol&startValue=Humanoin">Humanoid</a></li>
-                              <li><a class="dropdown-item"
-                               href="chronological_narrative.html?startNarrative=symbol&startValue=Dragon">Snake/Dragon</a></li>
-                              <li><a class="dropdown-item"
-                               href="chronological_narrative.html?startNarrative=symbol&startValue=Turtle">Turtle</a></li>
-                              <li><a class="dropdown-item"
-                               href="#">Sheep</a></li>    
-                          </ul>
+            <nav class="navbar navbar-expand-lg bg-nav py-0">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">Title</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                       </li>
-                    </ul>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="museum_map.html">Map</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="timeline.html">Timeline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="collection-page.html">Collection</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
-                  </li>
-                  
-              </div>
-            </div>
-      </nav>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Narratives
+                        </a>
+                        <ul id= "navbar-dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseleave="hidemenu();" >
+                            <li><a class="dropdown-item" onclick="chroNarrative();">Chronological</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="museum_map.html">Map</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="timeline.html">Timeline</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="collection-page.html">Collection</a>
+                      </li>
+                    </ul>     
+                  </div>
+                </div>
+              </nav>
         </header>
         <div id="intro">
             <h2>INTERACTIVE MAP</h2>

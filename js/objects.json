@@ -3,7 +3,7 @@
 {
     "meta": {
       "startWith": 0,
-      "startNarrative": "geography",  
+      "startNarrative": "date",  
       "startValue": "Egypt",       
       "narratives": ["date", "geography", "constellation", "symbol"] 
     },

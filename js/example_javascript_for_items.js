@@ -92,7 +92,7 @@ function showInfo(index) {    //is designed to display detailed information abou
 	var lightboxImage = byId("main-image");
 	lightboxImage.src = object.image;
 
-	
+	updateURL(object)
 	prepareNavigationButtons(index)
 	headerImg()
 	//otherNarrativesImg()
@@ -154,25 +154,41 @@ function prepareNavigationButtons(index) {
 		byId("buttonPrevious").onclick = () => showInfo(index-1) //Sets the onclick event handler for the "Previous" button. When the button is clicked, it calls the showInfo() function and passes index-1 as the argument. This will show the information of the previous item in the currentSelection array//
 		//byId("buttonPrevious").innerHTML = currentSelection[index-1].shortName//Changes the label (inner text) of the "Previous" button to the shortName of the previous item in the currentSelection array//	
 	} else { //first item//
-		byId("buttonPrevious").disabled = true //Disables the "Previous" button//
-		byId("buttonPrevious").onclick = null 
+		byId("buttonPrevious").disabled = false //Disables the "Previous" button//
+		byId("buttonPrevious").onclick = () => showInfo(currentSelection.length-1)
 		//byId("buttonPrevious").innerHTML = "--" 
 	}
 	if (index < currentSelection.length-1) { //checks if there are more items after the current one//
 		byId("buttonNext").disabled = false //Enables the "Next"//
 		byId("buttonNext").onclick = () => showInfo(index+1) // When clicked, it will call showInfo() and pass index+1 as the argument to display the next item in the currentSelection array//
 		//byId("buttonNext").innerHTML = currentSelection[index+1].shortName
-	} else {
-		byId("buttonNext").disabled = true //Disables the "Next" button //
-		byId("buttonNext").onclick = null
-		//byId("buttonNext").innerHTML = "--"
 	}
+	else if (index == currentSelection.length-1){
+		byId("buttonNext").disabled = false //Enables the "Next"//
+		byId("buttonNext").onclick = () => showInfo(0)
+	}
+
+	//else {
+	//	byId("buttonNext").disabled = true //Disables the "Next" button //
+	//	byId("buttonNext").onclick = null
+		//byId("buttonNext").innerHTML = "--"
+	//}
+
 	if (currentNarrative!='date') {	
-		inner('narrative', currentNarrative+": "+currentValue)
+		inner('narrative', capitalizeFirstLetter(currentNarrative)+": "+currentValue)
 	} else {
-		inner('narrative', "chronological order")
+		inner('narrative', "Chronological Order")
 	}
  //This line updates an element (with the id="narrative") to display the current narrative and value//
+}
+
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
+function updateURL(object) {
+	const baseUrl = window.location.origin + window.location.pathname;
+	history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${currentValue}&object=${object.itemName}`);
 }
 
 function changeNarrative(narrative,value) {
@@ -209,26 +225,4 @@ function headerImg () {
 	img.src = dict[currentNarrative];
 }
 
-/*
-function otherNarrativesImg(){
-	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the timeline."],
-		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
-		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
-		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
-	};
-	let narrs = ["date","geography","symbol","constellation"];
-	const idx = narrs.indexOf(currentNarrative);
-	narrs = narrs.splice(idx,idx);
-	const cards = document.getElementsByClassName('card');
-	for(let i = 0; i < cards.length; i++){
-		var narr = narrs[i];
-		var img = cards[i].getElementsByTagName("img");
-		var currarr = dict[narr];
-		img.src = currarr[0];
-		var title = cards[i].querySelector('.card-body .card-title');
-		title.innerHTML = currarr[1];
-		var text = cards[i].querySelector('.card-body .card-text');
-		text.innerHTML = currarr[2];
-	};
 
-}*/
