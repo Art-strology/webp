@@ -1,0 +1,141 @@
+body {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+
+.doc_list {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h2 {
+    text-align: center;
+    font-family:Crimson Text, serif;
+    padding: 10px; 
+    margin-top: 30px; 
+    background-color: #f8f8f8;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+h3 {
+    font-family: Crimson Text, serif;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+}
+
+
+/*LINE*/
+.line {
+    background-color: #d18903;  
+    height: 1px;
+    border: none;
+}
+
+.line2 {
+    background-color: #d18903;  
+    height: 1px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/*NARRATIVE PART*/
+
+.top-image-container {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    height: 100px;
+    padding-top: 9%;
+    overflow: hidden; /* Nasconde le parti fuori dal riquadro */
+}
+
+.top-img {
+    position: absolute;
+    left: 50%; 
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -60%); 
+    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+    filter: opacity(0.9);
+}
+
+
+.narrative-title {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    background-color: transparent;
+    font-size: 2.5vw;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .narrative-title {
+        font-size: 4vw !important;
+        top: 21%;
+    }
+}
+
+@media (max-width:768px) {
+    .narrative-title {
+        font-size: 6vw !important;
+    }
+
+    .top-img {
+        transform: translate(-50%, -35%);
+    }
+}
+
+
+
+
+/* FOOTER */ 
+.footer {
+    background-color: #8DADC1;
+    margin: 0px;
+    padding: 15px;
+    clear: both;
+    text-align: right;
+
+}
+
+.footer a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.footer a:hover {
+    text-decoration: underline; 
+}
