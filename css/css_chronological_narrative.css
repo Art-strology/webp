@@ -257,6 +257,19 @@ h3 {
     content: "next object";
 }
 
+.disabled{
+    color: rgb(148, 148, 148);
+}
+
+.disabled:hover::after{
+    content: none;
+    
+}
+
+.disabled:hover{
+    cursor: default;
+}
+
 
 
 
