@@ -149,7 +149,6 @@ function createInfoTable(object) {
 }
 
 function prepareNavigationButtons(index) {
-	console.log(document.getElementById("buttonNext"))
 	if (index > 0) { //This would mean that the current item is not the first item in the currentSelection array//
 		byId("buttonPrevious").classList.remove("disabled") //Enables the "Previous" button = it can be clicked//
 		byId("buttonPrevious").onclick = () => showInfo(index-1) //Sets the onclick event handler for the "Previous" button. When the button is clicked, it calls the showInfo() function and passes index-1 as the argument. This will show the information of the previous item in the currentSelection array//
