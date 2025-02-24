@@ -107,15 +107,14 @@ AOS.init();
 collectionSlider();
 var textWrapper = document.getElementsByClassName('title')[0];
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: false})
-  .add({
-    targets: '.title .letter',
-    opacity: [0,1],
-    easing: "easeInOutQuad",
-    duration: 2250,
-    delay: (el, i) => 150 * (i+1)
-  })
+  anime.timeline({loop: false})
+    .add({
+      targets: '.title .letter',
+      opacity: [0,1],
+      easing: "easeInOutQuad",
+      duration: 2250,
+      delay: (el, i) => 150 * (i+1)
+    })
 
 fetch('js/objects.json').then(response => response.json())
 .then(data => {
