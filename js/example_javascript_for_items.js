@@ -201,7 +201,7 @@ function updateURL(object) {
 	if(currentNarrative!="date"){
 		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${currentValue}&object=${object.itemName}`);
 	}else{
-		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${"Egypt"}&object=${object.itemName}`);
+		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&object=${object.itemName}`);
 	}
 }
 
