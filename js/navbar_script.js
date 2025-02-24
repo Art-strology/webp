@@ -35,9 +35,8 @@ function chroNarrative(){
         innerAnchor.className = "dropdown-item "+ element;
         innerAnchor.innerHTML = element;
         let narrative = "?narrative=" + narrs_url[narr];
-        let value = "&value=" + element;
         let object = "&object=" + obj;
-        dynamicURL = base + narrative + value + object;
+        dynamicURL = base + narrative + object;
         innerAnchor.href = dynamicURL;
         innerListElem.appendChild(innerAnchor);
         ulElem.appendChild(innerListElem);
