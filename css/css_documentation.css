@@ -82,7 +82,7 @@ h3 {
     left: 50%; 
     width: 100%;
     height: auto;
-    transform: translate(-50%, -60%); 
+    transform: translate(-50%, -62%); 
     object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
     filter: opacity(0.9);
 }
