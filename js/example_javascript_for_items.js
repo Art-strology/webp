@@ -187,7 +187,11 @@ function capitalizeFirstLetter(val) {
 
 function updateURL(object) {
 	const baseUrl = window.location.origin + window.location.pathname;
-	history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${currentValue}&object=${object.itemName}`);
+	if(currentNarrative!="date"){
+		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${currentValue}&object=${object.itemName}`);
+	}else{
+		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${"Egypt"}&object=${object.itemName}`);
+	}
 }
 
 function changeNarrative(narrative,value) {

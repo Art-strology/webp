@@ -59,14 +59,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;*/
+    animation-fill-mode: forwards;
   }
 
-  /*
   @keyframes example {
     0%   {
         filter: blur(0px) brightness(1);
@@ -74,7 +72,7 @@
     100%  {
         filter: blur(2px) brightness(0.4);
     }
-}*/
+}
 
   .parallax {
     position: relative;
