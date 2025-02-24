@@ -32,20 +32,19 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 function getItemfromLink (){
 	const urlParams = new URLSearchParams(window.location.search);
     const urlNarrative = urlParams.get('narrative');
-    const urlValue = urlParams.get('value');
 	const urlObject = urlParams.get('object');
 
-	if (urlNarrative && urlValue && urlObject) {
+	if (urlNarrative && urlObject) {
 
-        console.log(urlNarrative, urlValue, urlObject);
+        console.log(urlNarrative, urlObject);
 		
 		currentNarrative = urlNarrative
 		const startObject = objects.find(i => i.itemName === urlObject);
 
 		if (startObject) {
-			currentValue = urlValue
+			currentValue = startObject.info[currentNarrative];
 			currentSort = startObject['@sort'];
-			console.log(currentValue, currentSort)
+			console.log(currentSort)
 
 			prepareNarratives();
 
@@ -150,26 +149,21 @@ function createInfoTable(object) {
 
 function prepareNavigationButtons(index) {
 	if (index > 0) { //This would mean that the current item is not the first item in the currentSelection array//
-		byId("buttonPrevious").classList.remove("disabled") //Enables the "Previous" button = it can be clicked//
+		byId("buttonPrevious").disabled = false //Enables the "Previous" button = it can be clicked//
 		byId("buttonPrevious").onclick = () => showInfo(index-1) //Sets the onclick event handler for the "Previous" button. When the button is clicked, it calls the showInfo() function and passes index-1 as the argument. This will show the information of the previous item in the currentSelection array//
 		//byId("buttonPrevious").innerHTML = currentSelection[index-1].shortName//Changes the label (inner text) of the "Previous" button to the shortName of the previous item in the currentSelection array//	
-	} 
-	else if (index==0 && currentSelection.length==1){
-		byId("buttonPrevious").classList.add("disabled");
-		byId("buttonNext").classList.add("disabled");
-	}
-	else { //first item//
-		byId("buttonPrevious").classList.remove("disabled")
+	} else { //first item//
+		byId("buttonPrevious").disabled = false //Disables the "Previous" button//
 		byId("buttonPrevious").onclick = () => showInfo(currentSelection.length-1)
-		//byId("buttonPrevious").innerHTML = "--"
+		//byId("buttonPrevious").innerHTML = "--" 
 	}
 	if (index < currentSelection.length-1) { //checks if there are more items after the current one//
-		byId("buttonNext").classList.remove("disabled") //Enables the "Next"//
+		byId("buttonNext").disabled = false //Enables the "Next"//
 		byId("buttonNext").onclick = () => showInfo(index+1) // When clicked, it will call showInfo() and pass index+1 as the argument to display the next item in the currentSelection array//
 		//byId("buttonNext").innerHTML = currentSelection[index+1].shortName
 	}
-	else if (index == currentSelection.length-1 && index!=0){
-		byId("buttonNext").classList.remove("disabled") //Enables the "Next"//
+	else if (index == currentSelection.length-1){
+		byId("buttonNext").disabled = false //Enables the "Next"//
 		byId("buttonNext").onclick = () => showInfo(0)
 	}
 
