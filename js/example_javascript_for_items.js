@@ -94,7 +94,7 @@ function showInfo(index) {    //is designed to display detailed information abou
 	updateURL(object)
 	prepareNavigationButtons(index)
 	headerImg()
-	//otherNarrativesImg()
+	otherNarrativesCards(object)
 }
 
 let currentState = 1;
@@ -133,7 +133,7 @@ function createInfoTable(object) {
 	inner("infoTable","",true) ; //clears info table --> takes away all the rows from the table body with id infoTable//
 	for (i in object.info) {    // iterates over all the properties (or keys) in the person.info object//
 		if (object.info[i] !== null) { //i guess that for the narrative that the object is not part of the value is null--> es. "zodiac":"null" if the item if notpart of the zodiac narrative//
-			if (narratives.includes(i)) { //checks whether the current property key (i) exists in the narratives array//
+			if (narratives.includes(i) && i != "date") { //checks whether the current property key (i) exists in the narratives array//
 				var items = object.info[i].split(", ") //splits the string value of person.info[i] into an array of items using the comma and space (", ") as a delimiter --> this is done in case, as in Vitali's example, you have more value for a narrative es. Los Angeles, California, USA; WE DIDN'T CONSIDER THIS POSSIBILITY//
 				var val = []
 				for (j in items) { //iterates over each item in the items array//
@@ -198,11 +198,7 @@ function capitalizeFirstLetter(val) {
 
 function updateURL(object) {
 	const baseUrl = window.location.origin + window.location.pathname;
-	if(currentNarrative!="date"){
-		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&value=${currentValue}&object=${object.itemName}`);
-	}else{
-		history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&object=${object.itemName}`);
-	}
+	history.replaceState(null, "", `${baseUrl}?narrative=${currentNarrative}&object=${object.itemName}`);
 }
 
 function changeNarrative(narrative,value) {
@@ -239,4 +235,32 @@ function headerImg () {
 	img.src = dict[currentNarrative];
 }
 
+function otherNarrativesCards(object){
+	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the chronological order of all objects."],
+		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
+		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
+		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
+	};
+	let narrs = ["date","geography","symbol","constellation"];
+	const idx = narrs.indexOf(currentNarrative);
+	narrs.splice(idx, 1); // 2nd parameter means remove one item only
+	const cards = [...document.getElementsByClassName('card')];
+	for(let i = 0; i < cards.length; i++){
+		var narr = narrs[i];
+		var img = cards[i].getElementsByTagName("img")[0];
+		var currarr = dict[narr];
+		img.src = currarr[0];
+		var title = cards[i].getElementsByClassName('card-title')[0];
+		title.innerHTML = currarr[1];
+		var text = cards[i].getElementsByClassName('card-text')[0];
+		text.innerHTML = currarr[2];
+		const baseUrl = window.location.origin + window.location.pathname;
+		var anchor = document.createElement('a');
+		anchor.style = "text-decoration: none; color: inherit;";
+		anchor.href = baseUrl + "?narrative=" + narrs[i] + "&object=" + object.itemName;
+		var parent = cards[i].parentNode;
+		parent.replaceChild(anchor,cards[i]);
+		anchor.appendChild(cards[i]);
+	};
 
+}
