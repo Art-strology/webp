@@ -1,6 +1,3 @@
-function chroNarrative(){
-  location.href = "chronological_narrative.html"
-}
 function geoNarrative (objects){
   const base = "chronological_narrative.html";
   const geo = "?narrative=geography";
@@ -14,9 +11,8 @@ function geoNarrative (objects){
     let currentSelection = objects.filter( i =>i.info["geography"]?.includes(element));                                                
     currentSelection.sort( (i,j) => i['@sort'] < j['@sort'] ? -1 : 1 );
     let obj = currentSelection[0]["itemName"];
-    var value = "&value=" + element;
     var object = "&object=" + obj;
-    var urlNarrative = base + geo + value + object;
+    var urlNarrative = base + geo + object;
     let button = document.createElement("button");
     button.className = element;
     button.innerHTML = element;
@@ -38,9 +34,8 @@ function consNarrative (objects){
       let currentSelection = objects.filter( i =>i.info["constellation"]?.includes(element));                                                
       currentSelection.sort( (i,j) => i['@sort'] < j['@sort'] ? -1 : 1 );
       let obj = currentSelection[0]["itemName"];
-      var value = "&value=" + element;
       var object = "&object=" + obj;
-      var urlNarrative = base + cons + value + object;
+      var urlNarrative = base + cons + object;
       let button = document.createElement("button");
       button.className = element;
       button.innerHTML = element;
@@ -65,9 +60,8 @@ function symNarrative(objects){
       let currentSelection = objects.filter( i =>i.info["symbol"]?.includes(element));                                                
       currentSelection.sort( (i,j) => i['@sort'] < j['@sort'] ? -1 : 1 );
       let obj = currentSelection[0]["itemName"];
-      var value = "&value=" + element;
       var object = "&object=" + obj;
-      var urlNarrative = base + sym + value + object;
+      var urlNarrative = base + sym + object;
       let button = document.createElement("button");
       button.className = element;
       button.innerHTML = element;
