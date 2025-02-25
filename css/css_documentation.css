@@ -85,6 +85,31 @@ h2 {
     margin-right: 2%;
 }
 
+.card-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border: solid;
+    border-color:#8DADC1;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.card h5{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 300px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -108,6 +133,11 @@ h3 {
     }
 }
 
+@media (max-width: 956px) {
+    .card-container {
+        flex-direction: column;
+    }
+}
 
 /*LINE*/
 .line {
