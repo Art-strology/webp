@@ -18,6 +18,7 @@
     color: rgb(53, 53, 57);
     padding: 0%;
     margin: 0%;   
+    font-size: x-large;
 }
 
 .section_1_footer {
@@ -26,6 +27,7 @@
 
 .section_2_footer {
     text-align: center;
+    font-size: medium !important;
 }
 
 .p_footer {
