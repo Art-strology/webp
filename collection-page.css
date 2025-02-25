@@ -1,26 +1,6 @@
-.top-image-container {
-    position: relative; 
+.top-message-container {
+    position: relative;
     width: 100%;
-    height: auto;
-}
-
-.top-image {
-    width: 100%;
-    display: block;
-    object-fit: cover; 
-}
-.top-message {
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    width: 80%;
-    max-width: 900px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 
