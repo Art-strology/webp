@@ -9,21 +9,15 @@
 
 @media (max-width: 768px) {
   .gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    max-width: 100%;
+    padding: 10px;
     margin-left: 20px; 
     margin-right: 20px;
   }
 }
 
-@media (min-width: 769px) { 
-  .gallery-container {
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px;
-  }
-}
 
 .collection-card {
   width: 250px; 
