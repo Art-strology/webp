@@ -67,7 +67,7 @@
 @media (max-width: 768px) {
   .gallery-container {
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    gap: 10px;
+    gap: 20px;
     max-width: 100%; 
     padding: 10px;
    
