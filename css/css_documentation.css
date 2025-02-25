@@ -82,6 +82,10 @@ p {
     padding: 30px;
 }
 
+.doc_nav a:link, .data-container a:visited {
+    color: #4881a5;
+}
+
 .item {
     margin: 10px 0;
   }
