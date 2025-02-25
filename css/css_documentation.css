@@ -73,7 +73,27 @@ p {
     margin-right: 10%;
 }
 
+.doc_nav {
+    width: 400px;
+    margin: 70px;
+    border: solid;
+    border-color: #8DADC1;
+    background-color: #f8f8f8;
+    padding: 30px;
+}
 
+.item {
+    margin: 10px 0;
+  }
+  
+  .sub-item {
+    margin-left: 20px; /* Indentation for sub-items */
+  }
+  
+  .sub-sub-item {
+    margin-left: 40px; /* Further indentation for sub-sub-items */
+  }
+  
 
 h2 {
     text-align: center;
