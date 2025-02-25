@@ -21,7 +21,6 @@
     margin-top: -6px;
     margin-left: -1px;
     border-radius: 0.25rem;
-    display: none;
     background-color: #bcd9d8;
 }
 
@@ -45,6 +44,5 @@
 }
 
 .dropdown-menu.show {
-    display: block;
     background-color: #bcd9d8;
 }
