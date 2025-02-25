@@ -22,11 +22,11 @@
 }
 
 .section_1_footer {
-    text-align: center;
+    text-align: center !important;
 }
 
 .section_2_footer {
-    text-align: center;
+    text-align: center !important;
     font-size: medium !important;
 }
 
@@ -34,7 +34,7 @@
     color: rgb(53, 53, 57);
     padding: 0%;
     margin: 0%;
-    text-align: center;
+    text-align: center !important;
     font-size: small;
 }
 
