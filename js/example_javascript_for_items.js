@@ -237,7 +237,7 @@ function headerImg () {
 
 function otherNarrativesCards(object){
 	var dict = {"date" : ["img_compressed/meridiana3.jpg","Chronological Narrative","Explore the artwork's position in the chronological order of all objects."],
-		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore artworks coming from the same place."],
+		"geography" : ["img_compressed/worldmap1.jpg","Geographical Narrative","Explore all the artworks coming from the same place."],
 		"constellation" : ["img_compressed/constellation3.jpg","Constellation Narrative","Explore artworks representing the same constellation."],
 		"symbol" : ["img_compressed/shapes_1_cutt.jpg","Symbols Narrative","Explore artworks representing constallations with same shape."]
 	};
