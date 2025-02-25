@@ -2,7 +2,8 @@
 .color2 {color: #cbc7a6;}
 .color3 {color: #212d55;}
 .color4 {color: #4d7a96;}
-.color5 {color: #bcd9d8;}
+.color5 {color: #bcd9d8;}    
+.color6 {color: #f8f8f8}
 
 html, body {
     overflow-x: hidden;
@@ -14,8 +15,8 @@ html, body {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;  
-    background-color: #212d55;
-    color: white;
+    background-color: #f8f8f8;
+    color: black;
     text-align: left;
     text-decoration: solid;
 }
@@ -29,7 +30,7 @@ p {
 }
 
 hr {
-    color: #f0dab3;
+    color: #d18903;
 }
 
 .kanit-regular-italic {
@@ -61,12 +62,12 @@ hr {
 }
 
 .image-mapper-shape {
-    fill: blue;
+    fill: aqua;
     opacity: 30%;
 }
 
 g:hover .image-mapper-shape {
-    fill:aqua;
+    fill: blue;
     stroke: white;
     stroke-width: 2px;
     opacity: 30%;
@@ -113,7 +114,7 @@ g:hover .image-mapper-shape {
 /*Map navbar*/
 
 .map_navbar {
-    background-color: #212d55;
+    background-color: #8DADC1;
     padding: 0px;
     position: relative;
 }
@@ -125,53 +126,56 @@ g:hover .image-mapper-shape {
 }
 
 .narrative button {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     border: none;
     outline: none;
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 20px 16px;
     background-color: inherit;
     position: relative;
 }
 
 .narrative button:hover {
-    background-color:#4d7a96 ;
+    background-color: #4d7a96;
+    color: white;
 }
 
 .narrative button.active {
-    background-color: purple;
+    background-color: #4d7a96;
+    color: white;
+    text-decoration: underline;
 }
 
-.subnav button.active {
-    background-color: rgb(255, 159, 255);
-}
+
 
 .subnav-content {
     display: none;
     position: absolute;
     left: 0;
-    background-color: #4d7a96;
+    background-color: lightblue;
     width: 100%;
     z-index: 1;
 }
 
 .subnav-content button:hover {
-    background-color: #bcd9d8;
-    color: black;
+    background-color: #4d7a96;
+    color: white;
 }
 
 .subnav-content button.active {
-    background-color: purple;
+    background-color: #4d7a96;;
     color: white;
+    text-decoration: underline;
 }
 
 /*Items link subnav*/
 .sidebar {
-    background-color: #212d55;
+    background-color: #8DADC1;
     float: right;
     margin: 0;          
-    padding-top: 50px;
+    padding-top: 70px;
     padding-left: 0px;
     padding-right: 0px;
     width: 250px;
@@ -181,17 +185,17 @@ g:hover .image-mapper-shape {
 }
 
 .sidebar a {
+    font-weight: 400;
     display: block;
-    color: white;
+    color: black;
     padding: 16px;
     text-decoration: none;
     cursor: pointer;
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #bcd9d8;
-    color: black;
-    text-decoration: underline;
+    background-color: #4d7a96;
+    color: white;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -199,7 +203,7 @@ g:hover .image-mapper-shape {
 }
 .sidebar::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: #25335f;
+    background: #8DADC1;
 }
 .sidebar::-webkit-scrollbar-thumb {
     background: #4d7a96;
@@ -218,7 +222,7 @@ g:hover .image-mapper-shape {
             
 #narrative_button {
     display: none;
-    background-color: #4d7a96;
+    background-color: #212d55;
     color: white;
     border-color: white;
     text-decoration: bold 20px;
@@ -230,8 +234,8 @@ g:hover .image-mapper-shape {
 
 #narrative_button:hover {
     background-color: white;
-    color: #4d7a96;
-    border-color: #4d7a96;
+    color: #212d55;
+    border-color: #212d55;
 }
 
 .items_links {
@@ -318,7 +322,7 @@ g:hover .image-mapper-shape {
     }
 }   
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 770px) {
 
     #intro {
         margin-top: 35px;
@@ -354,7 +358,7 @@ g:hover .image-mapper-shape {
         display: block;
         text-align: center;
         padding: 16px; 
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .subnavbtn {

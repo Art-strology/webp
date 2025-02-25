@@ -52,15 +52,20 @@ subNavBtns.forEach(subnavBtn => {
             else {
                 if (subNavContentToShow.style.display ==='block') {
                     subNavContentToShow.style.display ='none'
+                    subnavBtn.classList.remove('active');
                 }
                 else {
-                    subNavContentToShow.style.display ='block'  
+                    subNavContentToShow.style.display ='block'
                 }
             }
         });
-        colorChangeForActiveLinks(subNavBtns, subnavBtn)
+        subNavContentLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                colorChangeForActiveLinks(subNavBtns, subnavBtn); // Change color of subnavbtn
+            });
+        });
     });
-});
+});    
 
 function showItems (narrative) {
     if (narrative != 'all'){
