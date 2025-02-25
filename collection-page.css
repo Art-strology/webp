@@ -1,4 +1,4 @@
- * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -82,52 +82,79 @@
               box-shadow: 0 2px 8px rgba(0,0,0,0.1);
           }
   
-          .collection-card {
-              position: relative;
-              overflow: hidden;
-              border-radius: 8px;
-              transition: transform 0.3s ease;
-              aspect-ratio: 3/4;
-              min-width: 0; /* 修复内容溢出问题 */
-          }
+          /* 卡片容器 */
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    aspect-ratio: 3/4;
+    max-width: 280px; /* 控制最大尺寸 */
+    margin: 0 auto;
+  }
   
-          .collection-card:hover {
-              transform: scale(1.03);
-              z-index: 2;
-          }
+  /* 悬停时整体效果 */
+  .collection-card:hover {
+    transform: scale(1.03);
+    z-index: 2;
+  }
   
-          .image-overlay {
-              position: relative;
-              width: 100%;
-              height: 100%;
-          }
+  /* 图片容器 */
+  .image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   
-          .image-overlay img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              display: block;
-          }
+  /* 图片模糊效果 */
+  .image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* 位于图片上方，信息框下方 */
+  }
   
-          .collection-info {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: calc(100% - 40px);
-              padding: 1rem;
-              background: rgba(0,0,0,0.75);
-              color: white;
-              text-align: center;
-              border-radius: 8px;
-              opacity: 0;
-              transition: opacity 0.3s ease;
-          }
+  /* 悬停时显示模糊层 */
+  .collection-card:hover .image-overlay::before {
+    opacity: 1;
+  }
   
-          .collection-card:hover .collection-info {
-              opacity: 1;
-          }
+  /* 原始图片样式 */
+  .image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   
+  /* 信息框样式 */
+  .collection-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    padding: 1.2rem;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s; /* 添加延迟 */
+    z-index: 2; /* 确保在模糊层上方 */
+  }
+  
+  /* 悬停时显示信息 */
+  .collection-card:hover .collection-info {
+    opacity: 1;
+  }
           
           @media (max-width: 768px) {
               .gallery-container {
@@ -151,6 +178,12 @@
   
   
            
+      
+  
+        
+      
+       
+  
       
   
         
