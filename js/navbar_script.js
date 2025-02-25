@@ -22,6 +22,9 @@ function chroNarrative(){
       outerList.className = "dropdown-submenu "+ narr;
       let outerAnchor = document.createElement("a");
       outerAnchor.className = "dropdown-item dropdown-toggle";
+      outerAnchor.role = "button";
+      outerAnchor.setAttribute("data-bs-toggle","dropdown-submenu "+ narr);
+      outerAnchor.setAttribute("aria-expanded","false");
       outerAnchor.innerHTML = narr;
       let ulElem = document.createElement("ul");
       ulElem.className = "dropdown-menu";
