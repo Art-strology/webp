@@ -1,17 +1,15 @@
-var mapContainer = document.getElementsByClassName('map_container');            
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
     trigger: 'hover focus',
     container: '.map_container',
 }));
 
-const mapLinks = document.querySelectorAll('.map_link') 
-const noSubnavBtn = document.querySelectorAll('.no_subnav_btn')
-const subNavBtns = document.querySelectorAll('.subnavbtn')
-const subNavContents = document.querySelectorAll('.subnav-content')
-const subNavContentLinks = document.querySelectorAll('.subnav-content-link')
-const subnavs = document.querySelectorAll('.subnav')
+const mapLinks = document.querySelectorAll('.map_link'); 
+const noSubnavBtn = document.querySelectorAll('.no_subnav_btn');
+const subNavBtns = document.querySelectorAll('.subnavbtn');
+const subNavContents = document.querySelectorAll('.subnav-content');
+const subNavContentLinks = document.querySelectorAll('.subnav-content-link');
+const subnavs = document.querySelectorAll('.subnav');
 const gElements = document.querySelectorAll('g');
 const narrativeButton = document.getElementById('narrative_button');
 const allItems = document.querySelector('.all_items');
@@ -47,15 +45,15 @@ subNavBtns.forEach(subnavBtn => {
         const subNavContentToShow = document.getElementById(subNavContentId);
         subNavContents.forEach(subNavContent => {
             if (subNavContent != subNavContentToShow) {
-                subNavContent.style.display ='none'
+                subNavContent.style.display ='none';
             }    
             else {
                 if (subNavContentToShow.style.display ==='block') {
-                    subNavContentToShow.style.display ='none'
-                    subnavBtn.classList.remove('active');
+                    subNavContentToShow.style.display ='none';
+                    
                 }
                 else {
-                    subNavContentToShow.style.display ='block'
+                    subNavContentToShow.style.display ='block';
                 }
             }
         });

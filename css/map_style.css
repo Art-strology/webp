@@ -255,7 +255,7 @@ g:hover .image-mapper-shape {
 
     .sidebar {
         width: 100%; /* Full width for sidebar */
-        height: 200px;
+        height: 400px;
         overflow-y: auto;
     }
 
