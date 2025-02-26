@@ -278,6 +278,7 @@ g:hover .image-mapper-shape {
     }
 
     .popover-header {
+        flex-wrap: wrap;
         font-size: 15px;
         text-align: center;
     }
