@@ -14,8 +14,7 @@
     <!--link for icon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -23,14 +22,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <!--lightbox-->
-    <link href="path/to/lightbox.css" rel="stylesheet" />
     <!--css-->
     <link rel="stylesheet" href="css/css_chronological_narrative.css">
     <link rel="stylesheet" href="css/css_navbar.css">
     <link rel="stylesheet" href="css/css_footer.css">
     <script src = "js/navbar_script.js"></script>
-
 </head>
 
 <body>
@@ -149,7 +145,7 @@
                     <div id="lightbox-content">
                         <button id="close-btn" onclick="closeLightbox()">✕</button>
                         <div id="imageZoom">
-                            <img id="main-image" src="">
+                            <img id="main-image">
                         </div>
                     </div>
                 </div>    
@@ -218,7 +214,7 @@
         <h4>EXPLORE RELATED NARRATIVES</h4>
         <div class="row">
             <!--card 1-->
-            <div class="col-md-4 col-sm-12 mb-4">
+            <div class="col-md-4 col-sm-12 mb-4">  <!--mb-4 Bootstrap option, add margin at bottom-->
                 <div class="card">
                     <img src="img_compressed/worldmap1.jpg" class="card-img-top" alt="world map">
                     <div class="card-body">
@@ -301,7 +297,7 @@
         document.getElementById("lightbox").style.display = "none";
     }
 
-    // Event listener per aprire la lightbox al clic sull'immagine principale
+    // Event listener: quando clicchi sull'img apre la lighbox 
     document.querySelector(".obj-img").addEventListener("click", openLightbox);
 
     //zoom
