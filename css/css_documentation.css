@@ -92,6 +92,9 @@ p {
         margin: 70px auto;
     }
 }
+a {
+    text-decoration: none;
+}
 
 .item {
     margin: 10px 0;
