@@ -81,8 +81,13 @@
               border-radius: 12px;
               box-shadow: 0 2px 8px rgba(0,0,0,0.1);
           }
-  
-         
+           @media (max-width: 768px) {
+       .gallery-container {
+        grid-template-columns: repeat(2, minmax(calc((100% - 40px)/2), 1fr));
+    }
+}
+
+
 .collection-card {
   position: relative;
   overflow: hidden;
