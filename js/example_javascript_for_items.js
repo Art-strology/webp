@@ -97,7 +97,10 @@ function showInfo(index) {    //is designed to display detailed information abou
 	otherNarrativesCards(object)
 }
 
-let currentState = 1;
+
+
+//PARAGRAFI OGGETTI 
+let currentState = 1;  //variabile currentState indica lo stato corrente dei paragrafi
 
 function toggleDescription() {
     const para1 = document.getElementById('shortInfo');
