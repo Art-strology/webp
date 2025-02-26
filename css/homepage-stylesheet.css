@@ -427,8 +427,17 @@
     display: none;
   }
 
-  .hover-wrapper {
-    height: 150px;
+  .card-wrapper:hover .caption.bottom-up {
+    top: 20%;
+  }
+
+  section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    }
+
+  .box{
+    border-radius: 0;
   }
 
 }
@@ -436,11 +445,5 @@
 @media (max-width: 425px) {
   .parallax-text p{
     font-size: 1em;
-  }
-}
-
-@media (max-width: 320px){
-  .parallax-text p{
-    font-size: 0.5em;
   }
 }
