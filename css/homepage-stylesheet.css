@@ -353,18 +353,7 @@
     display: none;
   }
 
-/*Footer*/
 
-.footer {
-  margin: auto;
-  padding: 3rem 5vw;
-  border-top: solid 1px grey;
-  font-size: 1.2rem;
-  color: white;
-  background-color: #8DADC1;
-  text-wrap: wrap;
-  text-align: justify;
-}
 
 /*Media Queries*/
 
@@ -418,6 +407,13 @@
 
 }
 
+@media (max-width: 660px)
+{
+  .hover-wrapper {
+    height: 200px;
+  }
+}
+
 @media (max-width: 576px) {
   .parallax-text p{
     font-size: 1.2em;
@@ -433,7 +429,6 @@
 
   .hover-wrapper {
     height: 150px;
-    padding: 5% 5%;
   }
 
 }
