@@ -21,23 +21,81 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg bg-nav py-0">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="index.html">Title</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                       </li>
                       <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Narratives
-                        </a>
-                        <ul id= "navbar-dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseleave="hidemenu();" >
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Narratives</a>
+                          <ul id= "navbar-dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" onmouseleave="hidemenu();">
                             <li><a class="dropdown-item" onclick="chroNarrative();">Chronological</a></li>
-                        </ul>
+                              <li class="dropdown-submenu">
+                                  <a class="dropdown-item dropdown-toggle Geographical" href="#">Geographical</a>
+                                  <ul id ="navbar-submenu-Geographical" class="dropdown-menu">
+                                    <li><a class="dropdown-item Babylon"
+                                      onclick="geoNarrative(this.getAttribute('class'));">Babylon</a></li>
+                                      <li><a class="dropdown-item Egypt"
+                                      onclick="geoNarrative(this.getAttribute('class'));">Egypt</a></li>
+                                      <li><a class="dropdown-item Greece"
+                                      onclick="geoNarrative(this.getAttribute('class'));">Greece</a></li>
+                                      <li><a class="dropdown-item China"
+                                      onclick="geoNarrative(this.getAttribute('class'));">China</a></li> 
+                                  </ul>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle Constellations" href="#">Constellations</a>
+                                <ul id ="navbar-submenu-Constellations" class="dropdown-menu">
+                                  <li><a class="dropdown-item Andromeda"
+                                    onclick="consNarrative(this.getAttribute('class'));">Andromeda</a></li>
+                                    <li><a class="dropdown-item Aquarius"
+                                    onclick="consNarrative(this.getAttribute('class'));">Aquarius</a></li>
+                                    <li><a class="dropdown-item Aries"
+                                    onclick="consNarrative(this.getAttribute('class'));">Aries</a></li>
+                                    <li><a class="dropdown-item Canis Major"
+                                    onclick="consNarrative(this.getAttribute('class'));">Canis Major</a></li>
+                                    <li><a class="dropdown-item Capricorn"
+                                    onclick="consNarrative(this.getAttribute('class'));">Capricorn</a></li>
+                                    <li><a class="dropdown-item Draco"
+                                    onclick="consNarrative(this.getAttribute('class'));">Draco</a></li>
+                                    <li><a class="dropdown-item Leo"
+                                    onclick="consNarrative(this.getAttribute('class'));">Leo</a></li>
+                                    <li><a class="dropdown-item Scorpio"
+                                    onclick="consNarrative(this.getAttribute('class'));">Scorpio</a></li>
+                                    <li><a class="dropdown-item Taurus"
+                                    onclick="consNarrative(this.getAttribute('class'));">Taurus</a></li> 
+                                    <li><a class="dropdown-item Ursa Major"
+                                    onclick="consNarrative(this.getAttribute('class'));">Ursa Major</a></li>
+                                </ul>
+                              </li>
+                              <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle Symbols" href="#">Symbols</a>
+                                <ul id ="navbar-submenu-Symbols" class="dropdown-menu">
+                                  <li><a class="dropdown-item Bird"
+                                    onclick="symNarrative(this.getAttribute('class'));">Bird</a></li>
+                                    <li><a class="dropdown-item Bull"
+                                    onclick="symNarrative(this.getAttribute('class'));">Bull</a></li>
+                                    <li><a class="dropdown-item Dragon"
+                                    onclick="symNarrative(this.getAttribute('class'));">Dragon</a></li>
+                                    <li><a class="dropdown-item Goat-Fish"
+                                    onclick="symNarrative(this.getAttribute('class'));">Goat-Fish</a></li>
+                                    <li><a class="dropdown-item Humanoid"
+                                    onclick="symNarrative(this.getAttribute('class'));">Humanoid</a></li>
+                                    <li><a class="dropdown-item Lion"
+                                    onclick="symNarrative(this.getAttribute('class'));">Lion</a></li>
+                                    <li><a class="dropdown-item Tiger"
+                                    onclick="symNarrative(this.getAttribute('class'));">Tiger</a></li>
+                                    <li><a class="dropdown-item Turtle"
+                                    onclick="symNarrative(this.getAttribute('class'));">Turtle</a></li>
+                                </ul>
+                              </li>    
+                          </ul>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="museum_map.html">Map</a>
@@ -48,10 +106,9 @@
                       <li class="nav-item">
                         <a class="nav-link" href="collection-page.html">Collection</a>
                       </li>
-                    </ul>     
-                  </div>
+                    </ul>
                 </div>
-              </nav>
+            </nav>
         </header>
         <div id="intro">
             <h2>Interactive Map</h2>

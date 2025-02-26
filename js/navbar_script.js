@@ -1,61 +1,96 @@
-var objects = [];
 
 function chroNarrative(){
     location.href = "chronological_narrative.html"
   }
+
 
   function hidemenu()
   {
     document.getElementById('navbar-dropdown-menu').className = "dropdown-menu";
   }
 
-  function navbarSubnarratives(objects){
-    var navbarMenu = document.getElementById("navbar-dropdown-menu");
+  function geoNarrative (class_){
     const base = "chronological_narrative.html";
-    const narr_value = {"Geographical":["Babylon","Egypt","Greece","China"],
-      "Constellations":["Andromeda","Aquarius","Aries","Canis Major","Capricorn","Draco","Leo","Scorpius","Taurus","Ursa Major"],
-      "Symbols":["Bird","Bull","Dragon","Goat-Fish","Humanoid","Lion","Tiger","Turtle"]};
-    const narrs_url = {"Geographical":"geography","Constellations":"constellation","Symbols":"symbol"}
+    const geo = "?narrative=geography";
+    const objects = {"Babylon": "&object=ORANGE-CREAM SHELL CYLINDER SEAL",
+                  "Egypt": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+                  "Greece": "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
+                  "China": "&object=ROOF TILE END WITH ZHUQUE",};
+    
+    for(key in objects){
+        if(class_.includes(key)){
+            class_ = key;
+        };
+    };
+    var obj = objects[class_];
+    var urlNarrative = base + geo + obj;
+    location.href = urlNarrative;
+    
+  }
 
-    for(narr in narr_value){
-      let outerList = document.createElement("li");
-      outerList.className = "dropdown-submenu "+ narr;
-      let outerAnchor = document.createElement("a");
-      outerAnchor.className = "dropdown-item dropdown-toggle";
-      outerAnchor.role = "button";
-      outerAnchor.setAttribute("data-bs-toggle","dropdown-submenu "+ narr);
-      outerAnchor.setAttribute("aria-expanded","false");
-      outerAnchor.innerHTML = narr;
-      let ulElem = document.createElement("ul");
-      ulElem.className = "dropdown-menu";
-      let values = narr_value[narr];
-      values.forEach(element => {
-        let currentSelection = objects.filter( i =>i.info[narrs_url[narr]]?.includes(element))                                                
-        currentSelection.sort( (i,j) => i['@sort'] < j['@sort'] ? -1 : 1 );
-        let obj = currentSelection[0]["itemName"];
-        let innerListElem = document.createElement("li");
-        let innerAnchor = document.createElement("a");
-        innerAnchor.className = "dropdown-item "+ element;
-        innerAnchor.innerHTML = element;
-        let narrative = "?narrative=" + narrs_url[narr];
-        let object = "&object=" + obj;
-        dynamicURL = base + narrative + object;
-        innerAnchor.href = dynamicURL;
-        innerListElem.appendChild(innerAnchor);
-        ulElem.appendChild(innerListElem);
-      });
-      outerList.appendChild(outerAnchor);
-      outerList.appendChild(ulElem);
-      navbarMenu.appendChild(outerList);
-    }                  
-  };
+  function consNarrative (class_){
+    const base = "chronological_narrative.html";
+    const cons = "?narrative=constellation";
+    const objects = {"Andromeda" : "&object=LIMESTONE CYLINDER SEAL",
+                  "Aquarius" : "&object=THE ADDA SEAL",
+                  "Aries" : "&object=ORANGE-CREAM SHELL CYLINDER SEAL",
+                  "Canis Major" : "&object=ISIS OF COPTOS",
+                  "Capricorn" : "&object=CEREMONIAL BASIN",
+                  "Draco" : "&object=HERAKLES AND THE GOLDEN APPLES",
+                  "Leo" : "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+                  "Scorpius" : "&object=MIRROR WITH ANIMAL HEADS AND AZURE DRAGONS",
+                  "Taurus" : "&object=VOTIVE RELIEF",
+                  "Ursa Major": "&object=STELE OF ABKAOU",
+    };
+    for(key in objects){
+        if(class_.includes(key)){
+            class_ = key;
+        };
+    };
+    var obj = objects[class_];
+    var urlNarrative = base + cons + obj;
+    location.href = urlNarrative;
+  }
+
+  function symNarrative(class_){
+    const base = "chronological_narrative.html";
+    const sym = "?narrative=symbol";
+    const objects = {"Bird" : "&object=ROOF TILE END WITH ZHUQUE",
+                  "Bull" : "&object=VOTIVE RELIEF",
+                  "Dragon" : "&object=HERAKLES AND THE GOLDEN APPLES",
+                  "Goat-Fish" : "&object=CEREMONIAL BASIN",
+                  "Humanoid" : "&object=ORANGE-CREAM SHELL CYLINDER SEAL",
+                  "Lion" : "&object=NECK AMPHORA: HERAKLES AND THE NEMEAN LION",
+                  "Tiger" : "&object=ROOF TILE END WITH BAIHU",
+                  "Turtle": "&object=PALETTE DEPICTING A PAIR OF MUD TURTLES",
+    };
+    for(key in objects){
+        if(class_.includes(key)){
+            class_ = key;
+        };
+    };
+    var obj = objects[class_];
+    var urlNarrative = base + sym + obj;
+    location.href = urlNarrative;
+  }
 
   document.addEventListener("DOMContentLoaded", function(e) {
-    fetch('js/objects.json').then(response => response.json())
-    .then(data => {
-      objects = data.objects;
-      navbarSubnarratives(objects);
-    });
+    document.querySelectorAll(".dropdown-submenu a")
+    .forEach(function (element) {
+        element.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var submenu = [document.getElementById("navbar-submenu-Geographical"), document.getElementById("navbar-submenu-Constellations"), document.getElementById("navbar-submenu-Symbols")];
+            for(let i = 0 ; i<submenu.length; i++){
+              if(submenu[i].classList.contains("show")){
+                submenu[i].classList.remove("show");
+                
+              }
+              else{
+                this.nextElementSibling.classList.toggle("show");
+              }
 
-    
+            } 
+        });
+    });
   });

@@ -10,6 +10,7 @@
   background-color: #8DADC1;
 }
 
+
 .dropdown-submenu {
   position: relative;
   background-color: #bcd9d8;
@@ -29,20 +30,37 @@
   margin-left: -15px;
 }
 
+.dropdown-menu.show {
+  background-color: #bcd9d8;
+}
+
+
+.dropdown-menu .dropdown-item:focus{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+
+.nav-item:focus{
+  background-color: lightblue;
+}
 
 .dropdown-menu .dropdown-item:hover{
   background-color: lightblue;
   cursor: pointer;
 }
 
+
 .nav-item:hover{
   background-color: lightblue;
 }
 
-.dropdown-submenu:hover .dropdown-menu {
-    display: block;    
+
+.dropdown-submenu .dropdown-menu {
+  display: none;
 }
 
-.dropdown-menu.show {
-    background-color: #bcd9d8;
+.dropdown-submenu .dropdown-menu.show {
+  display: block;
 }
+   
