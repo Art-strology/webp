@@ -97,7 +97,6 @@
     text-align: center;
     color: #000;
     background-color: rgba(224, 224, 224, 0.8);
-    white-space: nowrap;
     padding: 10px;
   }
 
@@ -116,7 +115,7 @@
 
   .title {
     font-weight: 900;
-    font-size: 3.5em;
+    font-size: 3.5rem;
   }
 
   .fade-in {
@@ -173,33 +172,15 @@
     animation-play-state: paused;
   }
 
-  @media (max-width: 768px) {
-    .slider {
-      height: 200px;
-    }
 
-    .slider .slide {
-      height: 200px;
-      width: 200px;
-    }
-
-    .slider .slide img{
-      height: 200px;
-      width: 200px;
-    }
-
-  }
-
+  /*Cards*/
 
   .desc-adapt{
     display: none;
   }
 
-  /*Cards*/
-
   .card-wrapper {
     font-weight: 300;
-    color: #444;
     position: relative;
     display: flex;
     align-items: center;
@@ -378,6 +359,20 @@
 
   .parallax-text p{
     font-size: 1.5em;
+  }
+
+  .slider {
+    height: 200px;
+  }
+
+  .slider .slide {
+    height: 200px;
+    width: 200px;
+  }
+
+  .slider .slide img{
+    height: 200px;
+    width: 200px;
   }
 
   .card-wrapper .h1-horizontal {
