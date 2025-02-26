@@ -255,7 +255,7 @@ g:hover .image-mapper-shape {
 
     .sidebar {
         width: 100%; /* Full width for sidebar */
-        height: 200px;
+        height: 400px;
         overflow-y: auto;
     }
 
@@ -278,6 +278,7 @@ g:hover .image-mapper-shape {
     }
 
     .popover-header {
+        flex-wrap: wrap;
         font-size: 15px;
         text-align: center;
     }

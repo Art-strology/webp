@@ -1,4 +1,4 @@
-function geoNarrative (objects){
+function geoNarrativeButtons (objects){
   const base = "chronological_narrative.html";
   const geo = "?narrative=geography";
   const values = ["Babylon","Egypt","Greece","China"];
@@ -21,7 +21,7 @@ function geoNarrative (objects){
   });
 }
 
-function consNarrative (objects){
+function consNarrativeButtons (objects){
   const base = "chronological_narrative.html";
   const cons = "?narrative=constellation";
   var cons_block = document.getElementsByClassName("row justify-content-around Constellations");
@@ -47,7 +47,7 @@ function consNarrative (objects){
   };
 }
 
-function symNarrative(objects){
+function symNarrativeButtons(objects){
   const base = "chronological_narrative.html";
   const sym = "?narrative=symbol";
   var sym_block = document.getElementsByClassName("row justify-content-around Symbols");
@@ -114,9 +114,9 @@ fetch('js/objects.json').then(response => response.json())
 .then(data => {
   objects = data.objects;
 
-  geoNarrative(objects);
-  consNarrative(objects);
-  symNarrative(objects);
+  geoNarrativeButtons(objects);
+  consNarrativeButtons(objects);
+  symNarrativeButtons(objects);
 
 });
 });
