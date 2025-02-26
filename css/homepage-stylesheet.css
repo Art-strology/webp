@@ -430,6 +430,12 @@
   .card-wrapper .caption.right-left{
     display: none;
   }
+
+  .hover-wrapper {
+    height: 150px;
+    padding: 5% 5%;
+  }
+
 }
 
 @media (max-width: 425px) {
