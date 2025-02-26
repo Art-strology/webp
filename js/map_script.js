@@ -1,9 +1,9 @@
-var mapContainer = document.getElementById('map_container');            
+var mapContainer = document.getElementsByClassName('map_container');            
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
     trigger: 'hover focus',
-    container: '.map_container'
+    container: '.map_container',
 }));
 
 const mapLinks = document.querySelectorAll('.map_link') 
